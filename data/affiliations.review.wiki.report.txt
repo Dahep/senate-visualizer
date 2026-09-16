@@ -1,3 +1,13 @@
+2002-2006: JUNK row skipped name='30px'
+2002-2006: JUNK row skipped name='30px'
+2002-2006: JUNK row skipped name='30px'
+2002-2006: JUNK row skipped name='30px'
+2002-2006: unmapped party 'IND-DC' (full 'Partido Demócrata Cristiano de Chile') for Alejandra Sepúlveda Orbenes
+2006-2010: JUNK row skipped name='30px'
+2006-2010: JUNK row skipped name='30px'
+2006-2010: JUNK row skipped name='30px'
+2006-2010: JUNK row skipped name='30px'
+2006-2010: JUNK row skipped name='30px'
 2010-2014: JUNK row skipped name='30px'
 2010-2014: JUNK row skipped name='30px'
 2010-2014: JUNK row skipped name='30px'

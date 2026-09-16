@@ -23,16 +23,20 @@ import urllib.parse
 import urllib.request
 
 PERIODS = {
+    "2002-2006": ("LI periodo legislativo del Congreso Nacional de Chile", "A"),
+    "2006-2010": ("LII periodo legislativo del Congreso Nacional de Chile", "A"),
     "2010-2014": ("LIII periodo legislativo del Congreso Nacional de Chile", "A"),
     "2014-2018": ("LIV periodo legislativo del Congreso Nacional de Chile", "A"),
     "2018-2022": ("LV periodo legislativo del Congreso Nacional de Chile", "B"),
     "2022-2026": ("LVI periodo legislativo del Congreso Nacional de Chile", "B"),
     "2026-2030": ("LVII periodo legislativo del Congreso Nacional de Chile", "C"),
 }
-PERIOD_STARTS = {"2010-2014": "2010-03-11", "2014-2018": "2014-03-11",
+PERIOD_STARTS = {"2002-2006": "2002-03-11", "2006-2010": "2006-03-11",
+                 "2010-2014": "2010-03-11", "2014-2018": "2014-03-11",
                  "2018-2022": "2018-03-11", "2022-2026": "2022-03-11",
                  "2026-2030": "2026-03-11"}
-PERIOD_ENDS = {"2010-2014": "2014-03-10", "2014-2018": "2018-03-10",
+PERIOD_ENDS = {"2002-2006": "2006-03-10", "2006-2010": "2010-03-10",
+               "2010-2014": "2014-03-10", "2014-2018": "2018-03-10",
                "2018-2022": "2022-03-10", "2022-2026": "2026-03-10",
                "2026-2030": None}
 

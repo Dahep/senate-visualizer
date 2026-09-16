@@ -1,7 +1,32 @@
 {
   "_note": "BOT DRAFT (wikipedia rosters) - human review before `sync -seed`",
-  "_generated_at": "2026-09-16T11:14:00-03:00",
+  "_generated_at": "2026-09-16T11:31:15-03:00",
   "unmatched": [
+    {
+      "period": "2002-2006",
+      "name": "Juan Masferrer Pellizari",
+      "party": "UDI"
+    },
+    {
+      "period": "2002-2006",
+      "name": "Adriana Muñoz D’Albora",
+      "party": "PPD"
+    },
+    {
+      "period": "2002-2006",
+      "name": "Víctor Barrueto Jeame",
+      "party": "PPD"
+    },
+    {
+      "period": "2006-2010",
+      "name": "Juan Masferrer Pellizari",
+      "party": "UDI"
+    },
+    {
+      "period": "2006-2010",
+      "name": "Adriana Muñoz D’Albora",
+      "party": "PPD"
+    },
     {
       "period": "2010-2014",
       "name": "Pablo Lorenizini Basso",
@@ -794,6 +819,1651 @@
     }
   ],
   "affiliations": [
+    {
+      "chamber": "camara",
+      "external_id": "882",
+      "party": "PS",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "159",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "907",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "170",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "890",
+      "party": "PS",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "242",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "844",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "910",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "190",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "151",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "176",
+      "party": "PS",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "812",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "889",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "808",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "897",
+      "party": "??IND-DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "859",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "962",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "205",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "811",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "872",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "888",
+      "party": "PR",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "821",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "226",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "211",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "814",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "802",
+      "party": "PS",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1064",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "918",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "832",
+      "party": "PS",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "862",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "806",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "187",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "902",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "881",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "912",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "185",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "908",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "819",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "140",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "840",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "863",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "855",
+      "party": "PR",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "178",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "817",
+      "party": "PS",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "868",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "177",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "899",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "166",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "906",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "165",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "848",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "879",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "830",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "914",
+      "party": "PR",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "164",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "195",
+      "party": "PS",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "220",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "865",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "181",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "150",
+      "party": "PS",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "875",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "179",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "892",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "208",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "885",
+      "party": "PR",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "158",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "878",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "132",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "239",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "849",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "175",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "155",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "886",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "202",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "234",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "813",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "894",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "823",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "816",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "904",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "826",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "818",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "903",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "843",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "866",
+      "party": "PR",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "828",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "161",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "825",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "224",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "822",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "800",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "854",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "917",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "916",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "895",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "877",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "850",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "870",
+      "party": "PS",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "921",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "887",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "837",
+      "party": "PS",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "871",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "137",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "173",
+      "party": "PR",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "172",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "884",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "222",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "805",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "810",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "834",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "804",
+      "party": "PS",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "842",
+      "party": "RN",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "221",
+      "party": "PPD",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "857",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "213",
+      "party": "DC",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "807",
+      "party": "UDI",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "193",
+      "party": "PS",
+      "start": "2002-03-11",
+      "end": "2006-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "882",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "909",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "907",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "883",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "890",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "853",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "910",
+      "party": "IND",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "844",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "836",
+      "party": "PR",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "919",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "900",
+      "party": "PR",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "812",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "808",
+      "party": "PRI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "889",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "897",
+      "party": "PRI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "859",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "801",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "858",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "811",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "872",
+      "party": "PRI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "888",
+      "party": "PR",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "860",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "821",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "827",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "814",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "802",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "915",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "918",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "832",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "862",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "921",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "841",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "902",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "881",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "833",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "912",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "819",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "908",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "876",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "840",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "863",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "855",
+      "party": "PR",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "920",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "851",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "868",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "893",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "899",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "846",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "906",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "901",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "848",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "820",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "879",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "830",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "831",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "914",
+      "party": "PR",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "880",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "815",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "865",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "898",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "869",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "875",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "892",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "891",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "885",
+      "party": "PR",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "861",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "845",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "878",
+      "party": "PRI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "913",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "809",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "849",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "874",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "886",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "838",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "835",
+      "party": "IND",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "896",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "813",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "894",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "823",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "816",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "904",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "826",
+      "party": "PRI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "922",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "818",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "866",
+      "party": "PR",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "843",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "828",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "867",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "824",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "825",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "822",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "800",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "854",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "917",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "916",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "895",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "877",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "850",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "870",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "829",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "837",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "887",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "871",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "856",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "905",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "911",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "852",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "884",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "810",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "805",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "804",
+      "party": "PS",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "834",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "803",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "842",
+      "party": "RN",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "839",
+      "party": "PPD",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "857",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "847",
+      "party": "DC",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "807",
+      "party": "UDI",
+      "start": "2006-03-11",
+      "end": "2010-03-10"
+    },
     {
       "chamber": "camara",
       "external_id": "960",
