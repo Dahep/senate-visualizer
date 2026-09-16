@@ -1,6 +1,6 @@
 {
   "_note": "BOT DRAFT (wikipedia rosters) - human review before `sync -seed`",
-  "_generated_at": "2026-09-16T11:12:05-03:00",
+  "_generated_at": "2026-09-16T11:14:00-03:00",
   "unmatched": [
     {
       "period": "2010-2014",
@@ -13,49 +13,9 @@
       "party": "PPD"
     },
     {
-      "period": "2010-2014",
-      "name": "30px",
-      "party": "Alejandra Sepúlveda Orbenes"
-    },
-    {
-      "period": "2010-2014",
-      "name": "30px",
-      "party": "Patricio Melero Abaroa"
-    },
-    {
-      "period": "2010-2014",
-      "name": "30px",
-      "party": "Nicolás Monckeberg Díaz"
-    },
-    {
-      "period": "2010-2014",
-      "name": "30px",
-      "party": "Edmundo Eluchans Urenda"
-    },
-    {
       "period": "2014-2018",
       "name": "Pepe Auth Steward",
       "party": "PPD"
-    },
-    {
-      "period": "2014-2018",
-      "name": "30px",
-      "party": "Aldo Cornejo González"
-    },
-    {
-      "period": "2014-2018",
-      "name": "30px",
-      "party": "Marco Antonio Núñez Lozano"
-    },
-    {
-      "period": "2014-2018",
-      "name": "30px",
-      "party": "Osvaldo Andrade Lara"
-    },
-    {
-      "period": "2014-2018",
-      "name": "30px",
-      "party": "Fidel Espinoza Sandoval"
     },
     {
       "period": "2018-2022",
@@ -928,7 +888,7 @@
     {
       "chamber": "camara",
       "external_id": "808",
-      "party": "??PRI",
+      "party": "PRI",
       "start": "2010-03-11",
       "end": "2014-03-10"
     },
@@ -942,7 +902,7 @@
     {
       "chamber": "camara",
       "external_id": "897",
-      "party": "??PRI",
+      "party": "PRI",
       "start": "2010-03-11",
       "end": "2014-03-10"
     },
@@ -1026,7 +986,7 @@
     {
       "chamber": "camara",
       "external_id": "802",
-      "party": "??IC",
+      "party": "IC",
       "start": "2010-03-11",
       "end": "2014-03-10"
     },
@@ -1845,7 +1805,7 @@
     {
       "chamber": "camara",
       "external_id": "802",
-      "party": "??IC",
+      "party": "IC",
       "start": "2014-03-11",
       "end": "2018-03-10"
     },
@@ -2006,7 +1966,7 @@
     {
       "chamber": "camara",
       "external_id": "846",
-      "party": "??AMP",
+      "party": "AMP",
       "start": "2014-03-11",
       "end": "2018-03-10"
     },
@@ -2419,7 +2379,7 @@
     {
       "chamber": "camara",
       "external_id": "927",
-      "party": "??AMP",
+      "party": "AMP",
       "start": "2014-03-11",
       "end": "2018-03-10"
     },

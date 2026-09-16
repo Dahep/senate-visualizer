@@ -133,5 +133,20 @@
   "name": "Comunes",
   "color": "#7CB342",
   "short_name": "COM"
+ },
+ {
+  "short_name": "PRI",
+  "name": "Partido Regionalista Independiente",
+  "color": "#00897B"
+ },
+ {
+  "short_name": "IC",
+  "name": "Izquierda Ciudadana",
+  "color": "#BF360C"
+ },
+ {
+  "short_name": "AMP",
+  "name": "Amplitud",
+  "color": "#FF7043"
  }
 ]

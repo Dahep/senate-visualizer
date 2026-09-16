@@ -219,6 +219,9 @@ def main():
         seen = set()
         kept = []
         for name, full, short in rows:
+            if name.strip() == "30px" or not name or len(name) < 3:
+                report.append(f"{period}: JUNK row skipped name={name!r}")
+                continue
             k = (name, short)
             if k in seen:
                 continue

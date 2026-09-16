@@ -1,20 +1,14 @@
-2010-2014: unmapped party 'PRI' (full 'Partido Regionalista de los Independientes') for Pedro Araya Guerrero
-2010-2014: unmapped party 'PRI' (full 'Partido Regionalista de los Independientes') for Alejandra Sepúlveda Orbenes
-2010-2014: unmapped party 'IC' (full 'Izquierda Ciudadana') for Sergio Aguiló Melo
-2010-2014: unmapped party 'Alejandra Sepúlveda Orbenes' (full 'Alejandra Sepúlveda') for 30px
-2010-2014: unmapped party 'Patricio Melero Abaroa' (full 'Patricio Melero') for 30px
-2010-2014: unmapped party 'Nicolás Monckeberg Díaz' (full 'Nicolás Monckeberg') for 30px
-2010-2014: unmapped party 'Edmundo Eluchans Urenda' (full 'Edmundo Eluchans Urenda') for 30px
+2010-2014: JUNK row skipped name='30px'
+2010-2014: JUNK row skipped name='30px'
+2010-2014: JUNK row skipped name='30px'
+2010-2014: JUNK row skipped name='30px'
+2014-2018: JUNK row skipped name='30px'
+2014-2018: JUNK row skipped name='30px'
+2014-2018: JUNK row skipped name='30px'
+2014-2018: JUNK row skipped name='30px'
 2014-2018: unmapped party 'MIRAS' (full 'Movimiento Independiente Regionalista Agrario y Social') for Alejandra Sepúlveda Orbenes
-2014-2018: unmapped party 'IC' (full 'Izquierda Ciudadana') for Sergio Aguiló Melo
-2014-2018: unmapped party 'AMP' (full 'Amplitud (partido político)') for Joaquín Godoy Ibáñez
 2014-2018: unmapped party 'IND-PS' (full 'Partido Socialista de Chile') for Roberto Poblete Zapata
-2014-2018: unmapped party 'AMP' (full 'Amplitud (partido político)') for Pedro Browne Urrejola
 2014-2018: unmapped party 'IND-PDC' (full 'Partido Demócrata Cristiano de Chile') for Iván Fuentes Castillo
-2014-2018: unmapped party 'Aldo Cornejo González' (full 'Aldo Cornejo') for 30px
-2014-2018: unmapped party 'Marco Antonio Núñez Lozano' (full 'Marco Antonio Núñez') for 30px
-2014-2018: unmapped party 'Osvaldo Andrade Lara' (full 'Osvaldo Andrade') for 30px
-2014-2018: unmapped party 'Fidel Espinoza Sandoval' (full 'Fidel Espinoza') for 30px
 2022-2026: unmapped party 'Ind-PL' (full 'Partido Liberal de Chile (2013)') for Sebastián Videla Castillo
 2022-2026: unmapped party 'AH' (full 'Acción Humanista') for Ana María Gazmuri Vieira
 2022-2026: unmapped party 'Ind-PDC' (full 'Partido Demócrata Cristiano de Chile') for Felipe Camaño Cárdenas
