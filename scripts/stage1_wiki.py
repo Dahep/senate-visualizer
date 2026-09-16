@@ -155,6 +155,24 @@ def extract(period, page, style):
     return fn(seg)
 
 
+def load_activity():
+    """Min/max vote_date per external_id from our own ingested history -
+    used as a same-name-family tie-breaker (no external source needed)."""
+    import sqlite3
+    db = os.path.join("data", "congress.db")
+    if not os.path.exists(db):
+        return {}
+    con = sqlite3.connect(db)
+    rows = con.execute(
+        "SELECT r.external_id, min(v.vote_date), max(v.vote_date) "
+        "FROM individual_votes iv "
+        "JOIN representatives r ON r.id = iv.representative_id "
+        "JOIN votations v ON v.id = iv.votation_id "
+        "GROUP BY r.external_id").fetchall()
+    con.close()
+    return {ext: (lo, hi) for ext, lo, hi in rows}
+
+
 def main():
     os.chdir(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     parties = json.load(open("data/parties.json"))
@@ -162,11 +180,35 @@ def main():
     short_by_short_lower = {norm(p["short_name"]): p["short_name"] for p in parties}
 
     rosters = json.load(open("data/deputies_roster.json"))
+    seen_ids = set()
+    rosters = [r for r in rosters
+               if not (r["external_id"] in seen_ids or seen_ids.add(r["external_id"]))]
+    activity = load_activity()
+
+    def attach_check(cand_ids, period):
+        """Tie-break equal DIPIDs using the per-DIPID vote activity window
+        from our own ingest history (no external source needed)."""
+        if len(cand_ids) <= 1:
+            return cand_ids
+        p_lo, p_hi = PERIOD_STARTS[period], PERIOD_ENDS[period] or "2999-01-01"
+        kept = [str(cid) for cid in cand_ids
+                if (str(cid) in activity
+                    and activity[str(cid)][0] <= p_hi
+                    and activity[str(cid)][1] >= p_lo)]
+        return kept or [str(c) for c in cand_ids]
+
+    # index helpers
     last2 = {}
+    first_last3 = {}
+    name_full = {}
     for r in rosters:
-        tokens = r["name"].split()
-        if len(tokens) >= 2:
-            last2.setdefault(norm(" ".join(tokens[-2:])), []).append(r["external_id"])
+        ext = r["external_id"]
+        toks = r["name"].split()
+        name_full[norm(r["name"])] = ext
+        if len(toks) >= 2:
+            last2.setdefault(norm(" ".join(toks[-2:])), []).append(ext)
+        if len(toks) >= 3:
+            first_last3.setdefault(norm(toks[0]) + "|" + norm(" ".join(toks[-2:])), []).append(ext)
 
     draft = []
     unmatched = []
@@ -194,34 +236,38 @@ def main():
                 if got is None:
                     got = "??" + short
                     report.append(f"{period}: unmapped party {short!r} (full {full!r}) for {name}")
-                tokens = name.split()
-                external_id = ""
-                if len(tokens) >= 3:
-                    fullkey = norm(name)
-                    cand_ids = [r["external_id"] for r in rosters
-                                if norm(r["name"]) == fullkey]
+                toks = name.split()
+                cand_ids = []
+                if len(toks) >= 3:
+                    cand_ids = [name_full.get(norm(name))] if norm(name) in name_full else []
                     if not cand_ids:
-                        cand_ids = last2.get(norm(" ".join(tokens[-2:]))) or []
+                        cand_ids = first_last3.get(norm(toks[0]) + "|" + norm(" ".join(toks[-2:])), [])
+                    if not cand_ids:
+                        cand_ids = last2.get(norm(" ".join(toks[-2:])), [])
                 else:
-                    cand_ids = last2.get(norm(" ".join(tokens[-2:]))) or []
+                    cand_ids = last2.get(norm(" ".join(toks[-2:])), [])
+                if len(cand_ids) > 1:
+                    cand_ids = attach_check(cand_ids, period)
+                    if len(cand_ids) > 1:
+                        report.append(f"{period}: AMBIGUOUS after activity tie-break {name} -> ids {cand_ids}")
                 if not cand_ids:
                     unmatched.append((period, name, short, full))
+                    external_id = ""
                 elif len(cand_ids) > 1:
-                    report.append(f"{period}: AMBIGUOUS {name} -> ids {cand_ids}")
+                    external_id = ""
                 else:
                     external_id = str(cand_ids[0])
                 wr.writerow([name, full, short, got, period, external_id,
                              "matched" if external_id else "unmatched", page])
                 if external_id:
                     gk = (period, external_id)
-                    if gk in seen_global:
-                        continue
-                    seen_global.add(gk)
-                    draft.append({
-                        "chamber": "camara", "external_id": external_id,
-                        "party": got, "start": PERIOD_STARTS[period],
-                        "end": PERIOD_ENDS[period],
-                    })
+                    if gk not in seen_global:
+                        seen_global.add(gk)
+                        draft.append({
+                            "chamber": "camara", "external_id": external_id,
+                            "party": got, "start": PERIOD_STARTS[period],
+                            "end": PERIOD_ENDS[period],
+                        })
         time.sleep(6)
 
     with open("data/affiliations.draft.wiki.json", "w") as f:

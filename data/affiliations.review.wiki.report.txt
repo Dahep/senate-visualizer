@@ -15,13 +15,9 @@
 2014-2018: unmapped party 'Marco Antonio Núñez Lozano' (full 'Marco Antonio Núñez') for 30px
 2014-2018: unmapped party 'Osvaldo Andrade Lara' (full 'Osvaldo Andrade') for 30px
 2014-2018: unmapped party 'Fidel Espinoza Sandoval' (full 'Fidel Espinoza') for 30px
-2018-2022: AMBIGUOUS Pablo Prieto Lorca -> ids ['209', '1064']
-2022-2026: unmapped party 'PSC' (full 'Partido Social Cristiano (Chile, 2022)') for PRCh
-2022-2026: unmapped party 'PSC' (full 'Partido Social Cristiano (Chile, 2022)') for Juan Castro Prieto
 2022-2026: unmapped party 'Ind-PL' (full 'Partido Liberal de Chile (2013)') for Sebastián Videla Castillo
 2022-2026: unmapped party 'AH' (full 'Acción Humanista') for Ana María Gazmuri Vieira
 2022-2026: unmapped party 'Ind-PDC' (full 'Partido Demócrata Cristiano de Chile') for Felipe Camaño Cárdenas
-2022-2026: AMBIGUOUS Miguel Becker Alvear -> ids ['813', '1106']
 2022-2026: unmapped party 'Ind-PRCh' (full 'Partido Republicano de Chile (2019)') for Harry Jürgensen Rundshagen
 2022-2026: unmapped party 'Ind-DEM' (full 'Demócratas (Chile)') for Miguel Ángel Calisto Águila
 2026-2030: unmapped party 'Unidad por Chile' (full 'Unidad por Chile') for Luis Malla
@@ -88,7 +84,6 @@
 2026-2030: unmapped party 'Unidad por Chile' (full 'Unidad por Chile') for Felipe Camaño
 2026-2030: unmapped party 'Ind-PDC' (full 'Partido Demócrata Cristiano (Chile)') for Unidad por Chile
 2026-2030: unmapped party 'Cambio por Chile' (full 'Cambio por Chile') for Sara Concha
-2026-2030: unmapped party 'PSC' (full 'Partido Social Cristiano (Chile, 2022)') for Cambio por Chile
 2026-2030: unmapped party 'Cambio por Chile' (full 'Cambio por Chile') for Francesca Muñoz
 2026-2030: unmapped party 'Chile Grande y Unido' (full 'Chile Grande y Unido') for Marlene Pérez
 2026-2030: unmapped party 'Unidad por Chile' (full 'Unidad por Chile') for Álvaro Ortiz

@@ -118,5 +118,20 @@
   "short_name": "DEM",
   "name": "Partido Demócratas Chile",
   "color": "#0097A7"
+ },
+ {
+  "name": "Partido Social Cristiano (Chile, 2022)",
+  "color": "#FFD54F",
+  "short_name": "PSC"
+ },
+ {
+  "name": "Convergencia Social",
+  "color": "#F4B400",
+  "short_name": "CS"
+ },
+ {
+  "name": "Comunes",
+  "color": "#7CB342",
+  "short_name": "COM"
  }
 ]

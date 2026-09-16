@@ -1,6 +1,6 @@
 {
   "_note": "BOT DRAFT (wikipedia rosters) - human review before `sync -seed`",
-  "_generated_at": "2026-09-16T10:57:18-03:00",
+  "_generated_at": "2026-09-16T11:12:05-03:00",
   "unmatched": [
     {
       "period": "2010-2014",
@@ -3034,6 +3034,13 @@
     },
     {
       "chamber": "camara",
+      "external_id": "1064",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
       "external_id": "1076",
       "party": "PR",
       "start": "2018-03-11",
@@ -3939,6 +3946,13 @@
       "chamber": "camara",
       "external_id": "1138",
       "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1106",
+      "party": "RN",
       "start": "2022-03-11",
       "end": "2026-03-10"
     },
