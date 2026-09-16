@@ -1,19 +1,122 @@
 [
-  { "short_name": "UDI",         "name": "Unión Demócrata Independiente",        "color": "#003C8F" },
-  { "short_name": "RN",          "name": "Renovación Nacional",                  "color": "#4A90D9" },
-  { "short_name": "REP",         "name": "Partido Republicano de Chile",         "color": "#232946" },
-  { "short_name": "EVOPOLI",     "name": "Evolución Política",                   "color": "#00B3E3" },
-  { "short_name": "PL",          "name": "Partido Liberal de Chile",             "color": "#F07D00" },
-  { "short_name": "PH",          "name": "Partido Humanista",                    "color": "#8E44AD" },
-  { "short_name": "PC",          "name": "Partido Comunista de Chile",           "color": "#8E0000" },
-  { "short_name": "PS",          "name": "Partido Socialista de Chile",          "color": "#E53935" },
-  { "short_name": "RD",          "name": "Revolución Democrática",               "color": "#00BFA5" },
-  { "short_name": "FRVS",        "name": "Federación Regionalista Verde Social", "color": "#558B2F" },
-  { "short_name": "DC",          "name": "Democracia Cristiana",                 "color": "#3949AB" },
-  { "short_name": "PPD",         "name": "Partido por la Democracia",            "color": "#FFD600" },
-  { "short_name": "RF",          "name": "RF",                                   "color": "#A1887F" },
-  { "short_name": "PATCHARAHUI", "name": "PATCHARAHUI",                          "color": "#C0CA33" },
-  { "short_name": "LIR",         "name": "LIR",                                  "color": "#F06292" },
-  { "short_name": "IND",         "name": "Independientes",                       "color": "#808080" },
-  { "short_name": "OTRO",        "name": "Otro / sin partido",                   "color": "#BDBDBD" }
+ {
+  "short_name": "UDI",
+  "name": "Unión Demócrata Independiente",
+  "color": "#003C8F"
+ },
+ {
+  "short_name": "RN",
+  "name": "Renovación Nacional",
+  "color": "#4A90D9"
+ },
+ {
+  "short_name": "REP",
+  "name": "Partido Republicano",
+  "color": "#232946"
+ },
+ {
+  "short_name": "EVOPOLI",
+  "name": "Evolución Política",
+  "color": "#00B3E3"
+ },
+ {
+  "short_name": "PL",
+  "name": "Partido Liberal de Chile",
+  "color": "#F07D00"
+ },
+ {
+  "short_name": "PH",
+  "name": "Partido Humanista",
+  "color": "#8E44AD"
+ },
+ {
+  "short_name": "PC",
+  "name": "Partido Comunista",
+  "color": "#8E0000"
+ },
+ {
+  "short_name": "PS",
+  "name": "Partido Socialista",
+  "color": "#E53935"
+ },
+ {
+  "short_name": "RD",
+  "name": "Revolución Democrática",
+  "color": "#00BFA5"
+ },
+ {
+  "short_name": "FRVS",
+  "name": "Federación Regionalista Verde Social",
+  "color": "#558B2F"
+ },
+ {
+  "short_name": "DC",
+  "name": "Partido Demócrata Cristiano",
+  "color": "#3949AB"
+ },
+ {
+  "short_name": "PPD",
+  "name": "Partido Por la Democracia",
+  "color": "#FFD600"
+ },
+ {
+  "short_name": "RF",
+  "name": "RF (name curation pending)",
+  "color": "#A1887F"
+ },
+ {
+  "short_name": "PATCHARAHUI",
+  "name": "PATCHARAHUI",
+  "color": "#C0CA33"
+ },
+ {
+  "short_name": "LIR",
+  "name": "LIR",
+  "color": "#F06292"
+ },
+ {
+  "short_name": "IND",
+  "name": "Independientes",
+  "color": "#808080"
+ },
+ {
+  "short_name": "OTRO",
+  "name": "Otro / sin partido",
+  "color": "#BDBDBD"
+ },
+ {
+  "short_name": "NLI",
+  "name": "Partido Nacional Libertario",
+  "color": "#0D47A1"
+ },
+ {
+  "short_name": "PR",
+  "name": "Partido Radical de Chile",
+  "color": "#7C4DFF"
+ },
+ {
+  "short_name": "FA",
+  "name": "Frente Amplio",
+  "color": "#00B8D4"
+ },
+ {
+  "short_name": "PCH",
+  "name": "Partido Cristiano de Chile",
+  "color": "#5C6BC0"
+ },
+ {
+  "short_name": "PAC",
+  "name": "Partido Acción Humanista",
+  "color": "#64DD17"
+ },
+ {
+  "short_name": "PDG",
+  "name": "Partido de la Gente",
+  "color": "#FF7A00"
+ },
+ {
+  "short_name": "DEM",
+  "name": "Partido Demócratas Chile",
+  "color": "#0097A7"
+ }
 ]

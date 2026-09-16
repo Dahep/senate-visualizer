@@ -1,0 +1,1246 @@
+{
+  "_note": "BOT DRAFT - review before applying: `go run ./cmd/sync -seed data/affiliations.draft.json`",
+  "_generated_at": "2026-09-16T00:28:10-03:00",
+  "affiliations": [
+    {
+      "chamber": "camara",
+      "external_id": "843",
+      "party": "RN",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "915",
+      "party": "NLI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1009",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1012",
+      "party": "PC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1017",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1025",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1038",
+      "party": "PS",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1044",
+      "party": "PS",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1056",
+      "party": "PS",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1065",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1073",
+      "party": "PS",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1075",
+      "party": "RN",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1086",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1099",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1104",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1105",
+      "party": "DC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1110",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1131",
+      "party": "RN",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1132",
+      "party": "EVOPOLI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1140",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1141",
+      "party": "PL",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1148",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1152",
+      "party": "NLI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1165",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1119",
+      "party": "PCH",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1180",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1054",
+      "party": "PCH",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1171",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1172",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1174",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1175",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1183",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1184",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1186",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1195",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1199",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1204",
+      "party": "PS",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1203",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1208",
+      "party": "DC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1212",
+      "party": "NLI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1217",
+      "party": "NLI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1220",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1222",
+      "party": "PS",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1223",
+      "party": "NLI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1230",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1236",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1241",
+      "party": "DC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1242",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1232",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1243",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1061",
+      "party": "PPD",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1213",
+      "party": "PC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1193",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1259",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "803",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1021",
+      "party": "RN",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1059",
+      "party": "RN",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1087",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1114",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1133",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1153",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1177",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1194",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1240",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1107",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1205",
+      "party": "PPD",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1250",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1216",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1150",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1256",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "986",
+      "party": "PR",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1077",
+      "party": "PPD",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1170",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1028",
+      "party": "RN",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1117",
+      "party": "PC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1181",
+      "party": "PS",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1229",
+      "party": "DC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1214",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1258",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1191",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1211",
+      "party": "PC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1225",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1219",
+      "party": "EVOPOLI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1189",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1248",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1254",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1263",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1237",
+      "party": "RN",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1015",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1074",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1116",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1159",
+      "party": "PC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1190",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1210",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1182",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1122",
+      "party": "PC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1255",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "872",
+      "party": "FRVS",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1100",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1142",
+      "party": "PS",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1178",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1202",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1233",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "815",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1013",
+      "party": "PL",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1039",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1062",
+      "party": "DEM",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1082",
+      "party": "NLI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1108",
+      "party": "RN",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1128",
+      "party": "PAC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1146",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1166",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1176",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1188",
+      "party": "PC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1197",
+      "party": "RN",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1206",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1218",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1228",
+      "party": "NLI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1238",
+      "party": "DC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1198",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1234",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1127",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1143",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1157",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1173",
+      "party": "PC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1187",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1192",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1196",
+      "party": "DC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1201",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1224",
+      "party": "DC",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1227",
+      "party": "RN",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1231",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1235",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1239",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1200",
+      "party": "PDG",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1244",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1245",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1246",
+      "party": "PS",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1247",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1249",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1251",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1252",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1253",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1257",
+      "party": "UDI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1260",
+      "party": "PS",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1261",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1262",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1264",
+      "party": "PPD",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1209",
+      "party": "FA",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1221",
+      "party": "REP",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1226",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1060",
+      "party": "RN",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1207",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1215",
+      "party": "NLI",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1102",
+      "party": "IND",
+      "start": "2026-03-11",
+      "end": null,
+      "source": ""
+    }
+  ]
+}

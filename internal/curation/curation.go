@@ -60,7 +60,14 @@ func LoadAffiliations(partiesPath, affiliationsPath string) (AffiliationsFile, e
 		return f, fmt.Errorf("parties: %w", err)
 	}
 	if err := parseJSON(affiliationsPath, &f.Affiliations); err != nil {
-		return f, fmt.Errorf("affiliations: %w", err)
+		// Accept the annotated bot-draft shape: {"_note":..., "affiliations":[...]}
+		var doc struct {
+			Affiliations []Affiliation `json:"affiliations"`
+		}
+		if err2 := parseJSON(affiliationsPath, &doc); err2 != nil || doc.Affiliations == nil {
+			return f, fmt.Errorf("affiliations: %w", err)
+		}
+		f.Affiliations = doc.Affiliations
 	}
 	return f, nil
 }
