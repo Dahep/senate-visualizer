@@ -1,0 +1,31 @@
+{{define "base"}}<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{block "title" .}}Congreso Visible{{end}}</title>
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/vendor/htmx.min.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="/">Congreso Visible</a>
+      <nav class="site-nav">
+        <a href="/votations">Votaciones</a>
+        <a href="/representatives">Diputados</a>
+        <a href="/parties">Partidos</a>
+        <a href="/bills">Boletines</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    {{block "content" .}}{{end}}
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>Datos: API de datos abiertos de la C&aacute;mara de Diputadas y Diputados de Chile. MVP: solo C&aacute;mara.</p>
+    </div>
+  </footer>
+</body>
+</html>{{end}}

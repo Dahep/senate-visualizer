@@ -1,0 +1,33 @@
+{{define "title"}}Votaciones · Congreso Visible{{end}}
+{{define "content"}}
+<h1>Votaciones</h1>
+
+{{if .Votations}}
+<table>
+  <thead>
+    <tr><th>Fecha</th><th>Materia</th><th>Resultado</th><th class="num">S&iacute;</th><th class="num">No</th><th class="num">Abst.</th><th class="num">Disp.</th></tr>
+  </thead>
+  <tbody>
+    {{range .Votations}}
+    <tr>
+      <td>{{day .Date}}</td>
+      <td><a href="/votations/{{.ID}}">{{if .Subject.Valid}}{{.Subject.String}}{{else if .BillTitle.Valid}}{{.BillTitle.String}}{{else}}(sin materia){{end}}</a></td>
+      <td>{{ns .Result}}</td>
+      <td class="num">{{.TotalYes}}</td>
+      <td class="num">{{.TotalNo}}</td>
+      <td class="num">{{.TotalAbstain}}</td>
+      <td class="num">{{.TotalDispensed}}</td>
+    </tr>
+    {{end}}
+  </tbody>
+</table>
+
+<nav class="pager">
+  {{if .Pagination.HasPrev}}<a href="/votations?page={{.Pagination.PrevPage}}">&larr; Anterior</a>{{end}}
+  <span>P&aacute;gina {{.Pagination.Page}} de {{.Pagination.Pages}}</span>
+  {{if .Pagination.HasNext}}<a href="/votations?page={{.Pagination.NextPage}}">Siguiente &rarr;</a>{{end}}
+</nav>
+{{else}}
+<p class="empty">A&uacute;n no hay votaciones. Ejecuta la sincronizaci&oacute;n inicial (<code>make ingest-full</code>).</p>
+{{end}}
+{{end}}

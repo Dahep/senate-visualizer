@@ -1,0 +1,23 @@
+{{define "title"}}Partidos · Congreso Visible{{end}}
+{{define "content"}}
+<h1>Partidos</h1>
+
+{{if .Parties}}
+<table>
+  <thead>
+    <tr><th></th><th>Partido</th><th>Sigla</th></tr>
+  </thead>
+  <tbody>
+    {{range .Parties}}
+    <tr>
+      <td><span class="chip" style="background-color:{{.Color}}"></span></td>
+      <td><a href="/parties/{{.ID}}">{{.Name}}</a></td>
+      <td>{{.ShortName}}</td>
+    </tr>
+    {{end}}
+  </tbody>
+</table>
+{{else}}
+<p class="empty">A&uacute;n no hay partidos. Carga el registro con <code>make seed</code>.</p>
+{{end}}
+{{end}}

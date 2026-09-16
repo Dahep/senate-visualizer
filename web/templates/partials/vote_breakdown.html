@@ -1,0 +1,28 @@
+{{define "vote_breakdown"}}
+{{range .Parties}}
+<section class="party-block">
+  <h3><span class="chip" style="background-color:{{.Color}}"></span>{{.Name}} <small>({{.Short}})</small></h3>
+  <p class="counts">
+    <span class="badge yes">S&iacute; {{.Yes}}</span>
+    <span class="badge no">No {{.No}}</span>
+    <span class="badge abstain">Abst. {{.Abstain}}</span>
+    <span class="badge absent">No vota {{.Absent}}</span>
+    <span class="badge dispensed">Disp. {{.Dispensed}}</span>
+    {{if .Paired}}<span class="badge paired">Pareo {{.Paired}}</span>{{end}}
+    {{if .Other}}<span class="badge other">Otro {{.Other}}</span>{{end}}
+  </p>
+  <table class="votes">
+    <tbody>
+      {{range .Voters}}
+      <tr>
+        <td><a href="/representatives/{{.RepID}}">{{.Name}}</a></td>
+        <td><span class="badge {{.Vote}}">{{votelabel .Vote}}</span></td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+</section>
+{{else}}
+<p class="empty">Sin votos registrados para esta votaci&oacute;n.</p>
+{{end}}
+{{end}}

@@ -1,0 +1,35 @@
+{{define "title"}}Inicio · Congreso Visible{{end}}
+{{define "content"}}
+<h1>Congreso Visible</h1>
+<p class="lede">Votaciones de la C&aacute;mara de Diputados de Chile, voto a voto.</p>
+
+<section class="stats">
+  <a class="stat" href="/votations"><span class="stat-n">{{.Votations}}</span><span class="stat-l">Votaciones</span></a>
+  <a class="stat" href="/representatives"><span class="stat-n">{{.Representatives}}</span><span class="stat-l">Diputados</span></a>
+  <a class="stat" href="/parties"><span class="stat-n">{{.Parties}}</span><span class="stat-l">Partidos</span></a>
+  <a class="stat" href="/bills"><span class="stat-n">{{.Bills}}</span><span class="stat-l">Boletines</span></a>
+</section>
+
+<h2>&Uacute;ltimas votaciones</h2>
+{{if .Latest}}
+<table>
+  <thead>
+    <tr><th>Fecha</th><th>Materia</th><th>Resultado</th><th class="num">S&iacute;</th><th class="num">No</th><th class="num">Abst.</th></tr>
+  </thead>
+  <tbody>
+    {{range .Latest}}
+    <tr>
+      <td>{{day .Date}}</td>
+      <td><a href="/votations/{{.ID}}">{{if .Subject.Valid}}{{.Subject.String}}{{else if .BillTitle.Valid}}{{.BillTitle.String}}{{else}}(sin materia){{end}}</a></td>
+      <td>{{ns .Result}}</td>
+      <td class="num">{{.TotalYes}}</td>
+      <td class="num">{{.TotalNo}}</td>
+      <td class="num">{{.TotalAbstain}}</td>
+    </tr>
+    {{end}}
+  </tbody>
+</table>
+{{else}}
+<p class="empty">A&uacute;n no hay votaciones. Ejecuta la sincronizaci&oacute;n inicial (<code>make ingest-full</code>).</p>
+{{end}}
+{{end}}

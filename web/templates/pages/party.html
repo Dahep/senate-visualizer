@@ -1,0 +1,25 @@
+{{define "title"}}{{.Party.Name}} · Congreso Visible{{end}}
+{{define "content"}}
+<article>
+  <h1><span class="chip" style="background-color:{{.Party.Color}}"></span>{{.Party.Name}} <small>({{.Party.ShortName}})</small></h1>
+
+  <h2>Miembros actuales</h2>
+  {{if .Members}}
+  <table>
+    <thead>
+      <tr><th>Nombre</th><th>Estado</th></tr>
+    </thead>
+    <tbody>
+      {{range .Members}}
+      <tr>
+        <td><a href="/representatives/{{.ID}}">{{.LastName}}{{if .SecondLastName}} {{.SecondLastName}}{{end}}, {{.FirstName}}</a></td>
+        <td>{{if eq .Active 1}}<span class="badge yes">Activo</span>{{else}}<span class="badge absent">Hist&oacute;rico</span>{{end}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+  {{else}}
+  <p class="empty">Sin miembros actuales registrados.</p>
+  {{end}}
+</article>
+{{end}}
