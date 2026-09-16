@@ -1,6 +1,8 @@
 package handlers
 
 import (
+	"database/sql"
+
 	"net/http"
 
 	"congress-visualizer/internal/database"
@@ -23,7 +25,7 @@ func (s *Server) Home(w http.ResponseWriter, req *http.Request) {
 
 	var err error
 	if data.Votations, err = s.Q.CountVotations(ctx, database.CountVotationsParams{
-		Column1: "camara", ChamberID: "camara",
+		Column1: "camara", ChamberID: "camara", Column3: "", Result: sql.NullString{}, Column5: "", BillID: sql.NullString{},
 	}); err != nil {
 		s.dbErr(w, req, err)
 		return
@@ -46,7 +48,7 @@ func (s *Server) Home(w http.ResponseWriter, req *http.Request) {
 	data.Parties = int64(len(parties))
 
 	latest, err := s.Q.ListVotations(ctx, database.ListVotationsParams{
-		Column1: "camara", ChamberID: "camara", Limit: 10,
+		Column1: "camara", ChamberID: "camara", Column3: "", Result: sql.NullString{}, Column5: "", BillID: sql.NullString{}, Limit: 10,
 	})
 	if err != nil {
 		s.dbErr(w, req, err)

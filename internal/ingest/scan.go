@@ -133,8 +133,8 @@ func (s *Syncer) probeAheadDown(ctx context.Context, id int64) (int64, bool) {
 	// ladder: distance run*10^k, k=1..4
 	for k := int64(1); k <= 4; k++ {
 		dist := run * pow10(k)
-		if id-dist < 1 {
-			return 0, false
+		if dist >= id {
+			continue // out of range distance: probe the next ladder rung
 		}
 		if o := s.SyncVotationID(ctx, id-dist); o.Hit {
 			return id - dist, true
@@ -144,7 +144,7 @@ func (s *Syncer) probeAheadDown(ctx context.Context, id int64) (int64, bool) {
 	for m := int64(1); m <= 1000; m++ {
 		probe := id - run*m
 		if probe < 1 {
-			return 0, false
+			break // below ID 1: no further runs reachable
 		}
 		if o := s.SyncVotationID(ctx, probe); o.Hit {
 			return probe, true
