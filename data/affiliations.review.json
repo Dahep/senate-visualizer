@@ -1,0 +1,893 @@
+{
+  "_note": "BOT DRAFT from Wikipedia per-legislature rosters; unmatched or ambiguous rows are in _report.",
+  "_generated": "2026-09-16T10:47:13-03:00",
+  "unmatched": [
+    {
+      "wiki_name": "Pepe Auth Steward",
+      "party": "PPD",
+      "period": "2014-2018"
+    }
+  ],
+  "affiliations": [
+    {
+      "chamber": "camara",
+      "external_id": "1000",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "991",
+      "party": "PL",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "883",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "937",
+      "party": "PC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1003",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "931",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "967",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "836",
+      "party": "PR",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "919",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "947",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "177",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "986",
+      "party": "PR",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "994",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "897",
+      "party": "??MIRAS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "942",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "930",
+      "party": "PC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "975",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "811",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "979",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "998",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "888",
+      "party": "PR",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "860",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "945",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1001",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "985",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "802",
+      "party": "??IC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "915",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "993",
+      "party": "PC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "862",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "923",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "902",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "938",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "944",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1004",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "819",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "908",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "876",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "948",
+      "party": "IND",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "855",
+      "party": "PR",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "863",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "955",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "920",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "893",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "974",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "933",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "846",
+      "party": "??AMP",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "929",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "906",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "848",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1005",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "879",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "959",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "957",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "940",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "880",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "977",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "898",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "865",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "869",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "875",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "891",
+      "party": "IND",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "980",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "885",
+      "party": "PR",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "997",
+      "party": "??IND-PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "868",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "913",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "999",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "973",
+      "party": "PC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "874",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "934",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "995",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "989",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "981",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "949",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "935",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "987",
+      "party": "IND",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "866",
+      "party": "PR",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "843",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "867",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "954",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "982",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "971",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "996",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "857",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "854",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "984",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "839",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "969",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "877",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "850",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1006",
+      "party": "PC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "939",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "837",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "978",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "856",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "990",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "911",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "905",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "956",
+      "party": "PC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "927",
+      "party": "??AMP",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "968",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "952",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "924",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "946",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "983",
+      "party": "??IND-PDC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "951",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1002",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "970",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "972",
+      "party": "IND",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    },
+    {
+      "chamber": "camara",
+      "external_id": "992",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10",
+      "source": "wikipedia:LIV "
+    }
+  ]
+}

@@ -1,0 +1,4072 @@
+{
+  "_note": "BOT DRAFT (wikipedia rosters) - human review before `sync -seed`",
+  "_generated_at": "2026-09-16T10:57:18-03:00",
+  "unmatched": [
+    {
+      "period": "2010-2014",
+      "name": "Pablo Lorenizini Basso",
+      "party": "PDC"
+    },
+    {
+      "period": "2010-2014",
+      "name": "Pepe Auth Steward",
+      "party": "PPD"
+    },
+    {
+      "period": "2010-2014",
+      "name": "30px",
+      "party": "Alejandra Sepúlveda Orbenes"
+    },
+    {
+      "period": "2010-2014",
+      "name": "30px",
+      "party": "Patricio Melero Abaroa"
+    },
+    {
+      "period": "2010-2014",
+      "name": "30px",
+      "party": "Nicolás Monckeberg Díaz"
+    },
+    {
+      "period": "2010-2014",
+      "name": "30px",
+      "party": "Edmundo Eluchans Urenda"
+    },
+    {
+      "period": "2014-2018",
+      "name": "Pepe Auth Steward",
+      "party": "PPD"
+    },
+    {
+      "period": "2014-2018",
+      "name": "30px",
+      "party": "Aldo Cornejo González"
+    },
+    {
+      "period": "2014-2018",
+      "name": "30px",
+      "party": "Marco Antonio Núñez Lozano"
+    },
+    {
+      "period": "2014-2018",
+      "name": "30px",
+      "party": "Osvaldo Andrade Lara"
+    },
+    {
+      "period": "2014-2018",
+      "name": "30px",
+      "party": "Fidel Espinoza Sandoval"
+    },
+    {
+      "period": "2018-2022",
+      "name": "Celso Morales Espinosa",
+      "party": "UDI"
+    },
+    {
+      "period": "2018-2022",
+      "name": "Frank Sauberbaum Muñoz",
+      "party": "RN"
+    },
+    {
+      "period": "2022-2026",
+      "name": "Alejandra Sepúlveda",
+      "party": "FRVS"
+    },
+    {
+      "period": "2022-2026",
+      "name": "PRCh",
+      "party": "PSC"
+    },
+    {
+      "period": "2022-2026",
+      "name": "Sebastián Keitel",
+      "party": "EVO"
+    },
+    {
+      "period": "2022-2026",
+      "name": "Juan Castro Prieto",
+      "party": "PSC"
+    },
+    {
+      "period": "2022-2026",
+      "name": "Alejandro Kusanovic",
+      "party": "RN"
+    },
+    {
+      "period": "2022-2026",
+      "name": "Daniel Manouchehri Moghadam Kashan Lobos",
+      "party": "PS"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Luis Malla",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Unidad por Chile",
+      "party": "PL"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Jorge Díaz",
+      "party": "PDC"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Cambio por Chile",
+      "party": "PRCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Carlos Carvajal",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Unidad por Chile",
+      "party": "Ind-PPD"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Chile Grande y Unido",
+      "party": "Ind-UDI"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Álvaro Jofré",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Cambio por Chile",
+      "party": "PNL"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Sebastián Videla",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Unidad por Chile",
+      "party": "Ind-PL"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Jaime Araya",
+      "party": "Ind-PPD"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Marcela Hernando",
+      "party": "PR"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Partido de la Gente",
+      "party": "PDG"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Juan Santana",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Unidad por Chile",
+      "party": "PS"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Cristian Tapia",
+      "party": "Ind-PPD"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Jaime Mulet",
+      "party": "Verdes, Regionalistas y Humanistas"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Verdes, Regionalistas y Humanistas",
+      "party": "FRVS"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Daniel Manouchehri",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Nathalie Castillo",
+      "party": "PCCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Carolina Tello",
+      "party": "FA"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Marco Sulantay",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Chile Grande y Unido",
+      "party": "UDI"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Erich Grohs",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Nelson Venegas",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Sofía González",
+      "party": "PCCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Cristian Mella",
+      "party": "PDC"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Francisca Bello",
+      "party": "FA"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Chiara Barchiesi",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Luis Pardo",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Chile Grande y Unido",
+      "party": "RN"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Javier Olivares",
+      "party": "Partido de la Gente"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Jaime Bassa",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Unidad por Chile",
+      "party": "FA"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Luis Cuello",
+      "party": "PCCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Luis Sánchez",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Sebastián Zamora",
+      "party": "Ind-PRCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Hotuiti Teao",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Andrés Celis",
+      "party": "RN"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Juan Valenzuela",
+      "party": "Partido de la Gente"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Gustavo Gatica",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Unidad por Chile",
+      "party": "Ind-PCCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Marcos Barraza",
+      "party": "PCCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Tatiana Urrutia",
+      "party": "FA"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Agustín Romero",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Enrique Bassaletti",
+      "party": "Ind-PRCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Pier Karlezi",
+      "party": "PNL"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Cristian Contreras",
+      "party": "Partido de la Gente"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Mario Olavarría",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Carlos Cuadrado",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Unidad por Chile",
+      "party": "PPD"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Boris Barrera",
+      "party": "PCCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "César Valenzuela",
+      "party": "PS"
+    },
+    {
+      "period": "2026-2030",
+      "name": "José Meza",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Guillermo Ramírez",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Gonzalo Winter",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Irací Hassler",
+      "party": "PCCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "José Kast",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Hans Marowski",
+      "party": "PNL"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Francisco Orrego",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Jorge Alessandri",
+      "party": "UDI"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Diego Schalper",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Constanza Hube",
+      "party": "UDI"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Catalina del Real",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Constanza Schönhaut",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Álvaro Carter",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Pamela Jiles",
+      "party": "Partido de la Gente"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Ana Gazmuri",
+      "party": "Verdes, Regionalistas y Humanistas"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Verdes, Regionalistas y Humanistas",
+      "party": "AH"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Ximena Ossandón",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Daniela Serrano",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Unidad por Chile",
+      "party": "PCCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Gael Yeomans",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Lorena Pizarro",
+      "party": "PCCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Eduardo Durán",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Ignacio Achurra",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Marisela Santibáñez",
+      "party": "Ind-PCCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Raúl Leiva",
+      "party": "PS"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Diego Vergara",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Jaime Coloma",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Raúl Soto",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Valentina Cáceres",
+      "party": "Ind-FA"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Natalia Romero",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Fernando Ugarte",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Carolina Cucumides",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Unidad por Chile",
+      "party": "Ind-PS"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Félix Bugueño",
+      "party": "FA"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Ricardo Neumann",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Unidad por Chile",
+      "party": "PDC"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Roberto Celedón",
+      "party": "Ind-FA"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Benjamín Moreno",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Germán Verdugo",
+      "party": "PNL"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Jorge Guzmán",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Chile Grande y Unido",
+      "party": "EVO"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Cristián Menchaca",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Cambio por Chile",
+      "party": "Ind-PRCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Consuelo Veloso",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Unidad por Chile",
+      "party": "Ind-PR"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Rodrigo Ramírez",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Chile Grande y Unido",
+      "party": "Ind-RN"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Cristóbal Martínez",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Carlos Chandía",
+      "party": "RN"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Felipe Camaño",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Unidad por Chile",
+      "party": "Ind-PDC"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Sara Concha",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Cambio por Chile",
+      "party": "PSC"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Francesca Muñoz",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Paz Charpentier",
+      "party": "PRCh"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Marlene Pérez",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Sergio Bobadilla",
+      "party": "UDI"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Álvaro Ortiz",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Antonio Rivas",
+      "party": "PS"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Patricio Briones",
+      "party": "Partido de la Gente"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Flor Weisse",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Joanna Pérez",
+      "party": "DEM"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Cristóbal Urruticoechea",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Eduardo Cretton",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Juan Beltrán",
+      "party": "RN"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Gloria Naveillán",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Andrea Parra",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "José Montalva",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Ericka Ñanco",
+      "party": "FA"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Stephan Schubert",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Tomás Kast",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "René García",
+      "party": "RN"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Marcos Ilabaca",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Matías Fernández",
+      "party": "FA"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Omar Sabat",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Daniel Valenzuela",
+      "party": "Ind-RN"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Leandro Kunstmann",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Héctor Barría",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Emilia Nuyado",
+      "party": "PS"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Daniel Lilayu",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Paulina Muñoz",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Alejandro Bernales",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Héctor Ulloa",
+      "party": "Ind-PPD"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Mauro González",
+      "party": "Chile Grande y Unido"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Claudia Reyes",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Alex Nahuelquín",
+      "party": "Partido de la Gente"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Andrea Macías",
+      "party": "Unidad por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "René Alinco",
+      "party": "Verdes, Regionalistas y Humanistas"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Verdes, Regionalistas y Humanistas",
+      "party": "Ind-FRVS"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Carlos Bianchi",
+      "party": "Independiente"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Independiente",
+      "party": "Ind."
+    },
+    {
+      "period": "2026-2030",
+      "name": "Alejandro Riquelme",
+      "party": "Cambio por Chile"
+    },
+    {
+      "period": "2026-2030",
+      "name": "Javiera Morales",
+      "party": "Unidad por Chile"
+    }
+  ],
+  "affiliations": [
+    {
+      "chamber": "camara",
+      "external_id": "960",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "926",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "965",
+      "party": "IND",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "883",
+      "party": "PS",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "853",
+      "party": "IND",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "937",
+      "party": "PC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "967",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "931",
+      "party": "PS",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "919",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "836",
+      "party": "PR",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "947",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "812",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "889",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "808",
+      "party": "??PRI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "942",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "897",
+      "party": "??PRI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "930",
+      "party": "PC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "962",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "858",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "811",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "888",
+      "party": "PR",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "928",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "860",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "945",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "827",
+      "party": "PS",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "814",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "915",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "802",
+      "party": "??IC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "963",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "961",
+      "party": "IND",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "923",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "941",
+      "party": "PS",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "873",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "938",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "902",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "944",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "932",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "819",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "908",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "948",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "876",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "855",
+      "party": "PR",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "863",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "955",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "920",
+      "party": "PS",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "953",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "893",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "846",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "933",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "929",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "906",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "831",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "848",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "879",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "959",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "940",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "957",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "815",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "880",
+      "party": "PS",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "865",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "898",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "869",
+      "party": "PS",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "875",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "892",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "891",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "966",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "885",
+      "party": "PR",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "936",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "868",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "809",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "913",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "849",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "874",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "934",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "838",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "964",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "813",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "950",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "816",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "949",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "958",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "935",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "818",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "922",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "866",
+      "party": "PR",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "843",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "867",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "954",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "825",
+      "party": "IND",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "824",
+      "party": "PS",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "822",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "800",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "917",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "854",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "895",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "916",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "877",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "850",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "870",
+      "party": "PS",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "939",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "837",
+      "party": "PS",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "887",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "871",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "856",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "905",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "911",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "956",
+      "party": "PC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "927",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "952",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "810",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "924",
+      "party": "PS",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "946",
+      "party": "RN",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "951",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "803",
+      "party": "IND",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "839",
+      "party": "PPD",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "857",
+      "party": "UDI",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "847",
+      "party": "DC",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "943",
+      "party": "IND",
+      "start": "2010-03-11",
+      "end": "2014-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1000",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "991",
+      "party": "PL",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "883",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "976",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "937",
+      "party": "PC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1003",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "931",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "967",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "836",
+      "party": "PR",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "919",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "947",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "177",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "986",
+      "party": "PR",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "994",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "897",
+      "party": "??MIRAS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "942",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "930",
+      "party": "PC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "975",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "811",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "979",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "998",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "888",
+      "party": "PR",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "860",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "945",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1001",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "985",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "802",
+      "party": "??IC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "915",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "963",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "993",
+      "party": "PC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "862",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "923",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "941",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1007",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "902",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "938",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "944",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1004",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "819",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "908",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "876",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "948",
+      "party": "IND",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "855",
+      "party": "PR",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "863",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "955",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "920",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "893",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "974",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "933",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "846",
+      "party": "??AMP",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "929",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "906",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "848",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1005",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "879",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "959",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "957",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "940",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "880",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "977",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "898",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "865",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "869",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "875",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "891",
+      "party": "IND",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "980",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "885",
+      "party": "PR",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "997",
+      "party": "??IND-PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "936",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "868",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "913",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "999",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "973",
+      "party": "PC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "874",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "934",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "995",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "989",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "950",
+      "party": "IND",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "813",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "981",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "949",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "958",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "935",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "987",
+      "party": "IND",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "988",
+      "party": "EVOPOLI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "866",
+      "party": "PR",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "843",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "867",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "954",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "982",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "971",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "996",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "857",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "854",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "984",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "839",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "969",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "877",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "850",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1006",
+      "party": "PC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "939",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "837",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "978",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "856",
+      "party": "PPD",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "990",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "911",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "905",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "956",
+      "party": "PC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "927",
+      "party": "??AMP",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "968",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "952",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "924",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "946",
+      "party": "RN",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "983",
+      "party": "??IND-PDC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "951",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1002",
+      "party": "PS",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "970",
+      "party": "UDI",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "972",
+      "party": "IND",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "992",
+      "party": "DC",
+      "start": "2014-03-11",
+      "end": "2018-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "991",
+      "party": "PL",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "926",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1000",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1003",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1032",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "994",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1019",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "986",
+      "party": "PR",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1083",
+      "party": "FRVS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1063",
+      "party": "RD",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "975",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1073",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1022",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1055",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "872",
+      "party": "FRVS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "985",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1031",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1029",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "993",
+      "party": "PC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1001",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "963",
+      "party": "DC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1046",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1060",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1030",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1041",
+      "party": "EVOPOLI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "920",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1048",
+      "party": "PPD",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1084",
+      "party": "DC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "940",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1005",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1021",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1015",
+      "party": "RD",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "848",
+      "party": "PPD",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "957",
+      "party": "DC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "989",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1035",
+      "party": "PC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "898",
+      "party": "DC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1057",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1027",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1042",
+      "party": "EVOPOLI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "973",
+      "party": "PC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1012",
+      "party": "PC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "936",
+      "party": "PPD",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1058",
+      "party": "RD",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1079",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1009",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1024",
+      "party": "EVOPOLI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "987",
+      "party": "RD",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1018",
+      "party": "IND",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "981",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "984",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1025",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1047",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1081",
+      "party": "EVOPOLI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1065",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1059",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "946",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1039",
+      "party": "PH",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1023",
+      "party": "RD",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1006",
+      "party": "PC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1043",
+      "party": "PC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "956",
+      "party": "PC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "856",
+      "party": "PPD",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1028",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1053",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "976",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1044",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1002",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "942",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1075",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "931",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "811",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1080",
+      "party": "IND",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "897",
+      "party": "FRVS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1049",
+      "party": "PR",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "923",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1067",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1076",
+      "party": "PR",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1066",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "660",
+      "party": "DC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "74",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1072",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "893",
+      "party": "DC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "959",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "815",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1054",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1069",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1071",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1078",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "879",
+      "party": "DC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1034",
+      "party": "EVOPOLI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "875",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "885",
+      "party": "PR",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "869",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1062",
+      "party": "DC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "995",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "999",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1061",
+      "party": "PPD",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "913",
+      "party": "DC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "843",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1050",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1052",
+      "party": "EVOPOLI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1010",
+      "party": "EVOPOLI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1020",
+      "party": "PPD",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "866",
+      "party": "IND",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "950",
+      "party": "IND",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "917",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1038",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "982",
+      "party": "DC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "850",
+      "party": "UDI",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "837",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1056",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "952",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "172",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "968",
+      "party": "PS",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1013",
+      "party": "PL",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "810",
+      "party": "DC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1016",
+      "party": "DC",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1045",
+      "party": "RN",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1014",
+      "party": "PR",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1011",
+      "party": "IND",
+      "start": "2018-03-11",
+      "end": "2022-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "991",
+      "party": "PL",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1141",
+      "party": "PL",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1162",
+      "party": "PC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1103",
+      "party": "PS",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1182",
+      "party": "??Ind-PL",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1099",
+      "party": "PPD",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1019",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "975",
+      "party": "PS",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1073",
+      "party": "PS",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1175",
+      "party": "PPD",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "872",
+      "party": "FRVS",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1174",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1031",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1117",
+      "party": "PC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1118",
+      "party": "DC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1158",
+      "party": "DEM",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1107",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1048",
+      "party": "PPD",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1181",
+      "party": "PS",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1046",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1030",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1104",
+      "party": "REP",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1137",
+      "party": "PR",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1068",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1015",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1122",
+      "party": "PC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1021",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1170",
+      "party": "REP",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1035",
+      "party": "PC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1051",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1165",
+      "party": "REP",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1179",
+      "party": "DC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "973",
+      "party": "PC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1012",
+      "party": "PC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1058",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1129",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1027",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1146",
+      "party": "REP",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1086",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1127",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1160",
+      "party": "PC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1009",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1120",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1147",
+      "party": "PPD",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1100",
+      "party": "REP",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1081",
+      "party": "EVOPOLI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1065",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1059",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1128",
+      "party": "??AH",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1173",
+      "party": "PC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1087",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1159",
+      "party": "PC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1028",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1053",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "990",
+      "party": "PS",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1044",
+      "party": "PS",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1002",
+      "party": "PS",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "976",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1133",
+      "party": "REP",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1077",
+      "party": "PPD",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1075",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1166",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1149",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1121",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1049",
+      "party": "PR",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1067",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1132",
+      "party": "EVOPOLI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1126",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1076",
+      "party": "PR",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1150",
+      "party": "REP",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1136",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1109",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1143",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1113",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "953",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1116",
+      "party": "??Ind-PDC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "815",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1157",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1097",
+      "party": "DC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1096",
+      "party": "PC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1183",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1169",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "999",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1108",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1168",
+      "party": "DEM",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1138",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1172",
+      "party": "REP",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1153",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1038",
+      "party": "PS",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1112",
+      "party": "PS",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "917",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "971",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1056",
+      "party": "PS",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1105",
+      "party": "DC",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1140",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1040",
+      "party": "??Ind-PRCh",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1013",
+      "party": "PL",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1131",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1111",
+      "party": "UDI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1167",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1016",
+      "party": "??Ind-DEM",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1163",
+      "party": "RN",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1144",
+      "party": "EVOPOLI",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    },
+    {
+      "chamber": "camara",
+      "external_id": "1148",
+      "party": "FA",
+      "start": "2022-03-11",
+      "end": "2026-03-10"
+    }
+  ]
+}
