@@ -10,6 +10,16 @@
     <dt>ID externo</dt><dd>{{.Representative.ExternalID}}</dd>
   </dl>
 
+  <h2>Lealtad de partido</h2>
+  {{if gt .Loyalty.Votations 0}}
+  <dl class="meta">
+    <dt>Lealtad</dt><dd>{{pctf1 .Loyalty.Score}}</dd>
+    <dt>Votos con mayoria del partido</dt><dd>{{.Loyalty.Majority}} de {{.Loyalty.Votations}}</dd>
+  </dl>
+  {{else}}
+  <p class="empty">Sin lealtad calculable (votos sin partido en la fecha).</p>
+  {{end}}
+
   <h2>Historial de votaci&oacute;n</h2>
   {{if .History}}
   <table>

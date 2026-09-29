@@ -45,6 +45,7 @@ type RepresentativeData struct {
 	Representative database.GetRepresentativeRow
 	History        []database.GetRepresentativeVotingHistoryRow
 	Pagination     Pagination
+	Loyalty        RepresentativeLoyaltyData
 }
 
 // RepresentativeDetail shows a deputy and their voting history (50/page).
@@ -74,9 +75,15 @@ func (s *Server) RepresentativeDetail(w http.ResponseWriter, req *http.Request) 
 		s.dbErr(w, req, err)
 		return
 	}
+	loyalty, err := s.RepresentativeLoyalty(req, id)
+	if err != nil {
+		s.dbErr(w, req, err)
+		return
+	}
 	s.page(w, render.PageRepresentative, RepresentativeData{
 		Representative: rep,
 		History:        history,
 		Pagination:     Pagination{Page: page, Size: historySize, Total: total},
+		Loyalty:        loyalty,
 	})
 }

@@ -19,6 +19,13 @@ LEFT JOIN representative_parties rp ON rp.representative_id = r.id AND rp.end_da
 LEFT JOIN parties p ON p.id = rp.party_id
 WHERE r.id = ?;
 
+-- name: GetRepresentativeNames :many
+-- Display names for an explicit ID set (alignment pairs fetch names for the
+-- reps actually shown instead of scanning the whole table).
+SELECT id, first_name, last_name, second_last_name
+FROM representatives
+WHERE id IN (sqlc.slice('rep_ids'));
+
 -- name: ListRepresentatives :many
 SELECT r.*, p.short_name AS party_short, p.name AS party_name
 FROM representatives r

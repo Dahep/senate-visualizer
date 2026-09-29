@@ -25,11 +25,13 @@ func (s *Server) Parties(w http.ResponseWriter, req *http.Request) {
 
 // PartyData is the party detail page.
 type PartyData struct {
-	Party   database.Party
-	Members []database.PartyMembersRow
+	Party    database.Party
+	Members  []database.PartyMembersRow
+	Cohesion PartyCohesionData
 }
 
-// PartyDetail shows one party and its current members.
+// PartyDetail shows one party and its current members, with the Phase-2
+// Rice-cohesion summary (full history unless ?from/?to given).
 func (s *Server) PartyDetail(w http.ResponseWriter, req *http.Request) {
 	id, ok := idParam(req)
 	if !ok {
@@ -46,5 +48,10 @@ func (s *Server) PartyDetail(w http.ResponseWriter, req *http.Request) {
 		s.dbErr(w, req, err)
 		return
 	}
-	s.page(w, render.PageParty, PartyData{Party: party, Members: members})
+	coh, err := s.PartyCohesion(req, id)
+	if err != nil {
+		s.dbErr(w, req, err)
+		return
+	}
+	s.page(w, render.PageParty, PartyData{Party: party, Members: members, Cohesion: coh})
 }

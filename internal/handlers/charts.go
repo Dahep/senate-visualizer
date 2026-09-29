@@ -31,6 +31,12 @@ func (s *Server) PartyBreakdownChart(w http.ResponseWriter, req *http.Request) {
 		s.dbErr(w, req, err)
 		return
 	}
+	s.writeSVG(w, svg)
+}
+
+// writeSVG serves a rendered chart as a standalone image/svg+xml document
+// (never inlined through template.HTML).
+func (s *Server) writeSVG(w http.ResponseWriter, svg []byte) {
 	w.Header().Set("Content-Type", "image/svg+xml")
 	if _, err := w.Write(svg); err != nil {
 		s.Log.Error("write chart", "err", err)

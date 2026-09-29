@@ -8,6 +8,7 @@ package database
 import (
 	"context"
 	"database/sql"
+	"strings"
 )
 
 const countRepresentatives = `-- name: CountRepresentatives :one
@@ -106,6 +107,59 @@ func (q *Queries) GetRepresentativeInternalID(ctx context.Context, arg GetRepres
 	var id int64
 	err := row.Scan(&id)
 	return id, err
+}
+
+const getRepresentativeNames = `-- name: GetRepresentativeNames :many
+SELECT id, first_name, last_name, second_last_name
+FROM representatives
+WHERE id IN (/*SLICE:rep_ids*/?)
+`
+
+type GetRepresentativeNamesRow struct {
+	ID             int64  `json:"id"`
+	FirstName      string `json:"first_name"`
+	LastName       string `json:"last_name"`
+	SecondLastName string `json:"second_last_name"`
+}
+
+// Display names for an explicit ID set (alignment pairs fetch names for the
+// reps actually shown instead of scanning the whole table).
+func (q *Queries) GetRepresentativeNames(ctx context.Context, repIds []int64) ([]GetRepresentativeNamesRow, error) {
+	query := getRepresentativeNames
+	var queryParams []interface{}
+	if len(repIds) > 0 {
+		for _, v := range repIds {
+			queryParams = append(queryParams, v)
+		}
+		query = strings.Replace(query, "/*SLICE:rep_ids*/?", strings.Repeat(",?", len(repIds))[1:], 1)
+	} else {
+		query = strings.Replace(query, "/*SLICE:rep_ids*/?", "NULL", 1)
+	}
+	rows, err := q.db.QueryContext(ctx, query, queryParams...)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	items := []GetRepresentativeNamesRow{}
+	for rows.Next() {
+		var i GetRepresentativeNamesRow
+		if err := rows.Scan(
+			&i.ID,
+			&i.FirstName,
+			&i.LastName,
+			&i.SecondLastName,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Close(); err != nil {
+		return nil, err
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
 }
 
 const listRepresentatives = `-- name: ListRepresentatives :many

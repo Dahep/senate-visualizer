@@ -24,6 +24,14 @@ func FuncMap() template.FuncMap {
 			}
 			return fmt.Sprintf("%.0f%%", 100*float64(n)/float64(total))
 		},
+		// pctf formats an already-computed fraction [0..1] as a percentage.
+		"pctf": func(f float64) string {
+			return fmt.Sprintf("%.0f%%", 100*f)
+		},
+		// pctf1 formats an already-computed fraction with one decimal.
+		"pctf1": func(f float64) string {
+			return fmt.Sprintf("%.1f%%", 100*f)
+		},
 		// ns unwraps a nullable DB string for display.
 		"ns": func(v sql.NullString) string {
 			if !v.Valid {

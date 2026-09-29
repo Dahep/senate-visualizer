@@ -25,7 +25,20 @@ type Querier interface {
 	EnrichRepresentative(ctx context.Context, arg EnrichRepresentativeParams) error
 	FailCandidate(ctx context.Context, arg FailCandidateParams) error
 	GetBill(ctx context.Context, id string) (Bill, error)
+	// Per-(party, votation) CAST-vote counts in a chamber + [from,to] vote_date
+	// window (empty string = open bound), optional party filter (0 = all).
+	// Cast votes only (yes/no/abstain): absent/dispensed/paired are not
+	// positions and are excluded from every Rice aggregate (DESIGN.md gap 8).
+	GetCohesionRows(ctx context.Context, arg GetCohesionRowsParams) ([]GetCohesionRowsRow, error)
+	// Rep-level cast votes with party-at-date in the window. Feeds the
+	// loyalty/'rebels' arithmetic: per (party, votation) modal vote across ALL
+	// party members, then each rep's vote compared against it.
+	GetLoyaltyRows(ctx context.Context, arg GetLoyaltyRowsParams) ([]GetLoyaltyRowsRow, error)
 	GetMinVoteDate(ctx context.Context) (string, error)
+	// Pairwise same-cast-vote counts for the alignment matrix: deputy pairs that
+	// were both present (cast) on the same votation, how often they agreed.
+	// Optional party filter applies party-at-date to BOTH pair members.
+	GetPairAgreementRows(ctx context.Context, arg GetPairAgreementRowsParams) ([]GetPairAgreementRowsRow, error)
 	GetParty(ctx context.Context, id int64) (Party, error)
 	GetPartyByShortName(ctx context.Context, shortName string) (Party, error)
 	// Per-party vote counts for one votation (party-at-date join). Consumed by
@@ -33,6 +46,9 @@ type Querier interface {
 	GetPartyVoteCounts(ctx context.Context, votationID int64) ([]GetPartyVoteCountsRow, error)
 	GetRepresentative(ctx context.Context, id int64) (GetRepresentativeRow, error)
 	GetRepresentativeInternalID(ctx context.Context, arg GetRepresentativeInternalIDParams) (int64, error)
+	// Display names for an explicit ID set (alignment pairs fetch names for the
+	// reps actually shown instead of scanning the whole table).
+	GetRepresentativeNames(ctx context.Context, repIds []int64) ([]GetRepresentativeNamesRow, error)
 	GetRepresentativeVotingHistory(ctx context.Context, arg GetRepresentativeVotingHistoryParams) ([]GetRepresentativeVotingHistoryRow, error)
 	GetSyncValue(ctx context.Context, key string) (string, error)
 	GetVotation(ctx context.Context, id int64) (Votation, error)

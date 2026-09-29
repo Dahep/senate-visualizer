@@ -1,0 +1,49 @@
+{{define "title"}}Alineaci&oacute;n de diputados · Congreso Visible{{end}}
+{{define "content"}}
+<h1>Alineaci&oacute;n entre diputados</h1>
+<p class="lede">Pares de diputados que votaron juntos: % de votaciones en que ambos
+ emitieron el MISMO voto (s&iacute;/no/abstenci&oacute;n) en la ventana. Solo pares con al
+ menos {{.MinJoint}} votaciones conjuntas. M&aacute;s alineados primero; filtro de partido
+ limita el pair a miembros de ese partido en la fecha de cada voto.</p>
+
+<form class="search" method="get" action="/alignment">
+  <label for="party">Partido</label>
+  <select id="party" name="party">
+    <option value="">Todos</option>
+    {{range .Parties}}
+    <option value="{{.ID}}" {{if eq $.PartyID .ID}}selected{{end}}>{{.Name}}</option>
+    {{end}}
+  </select>
+  <label for="from">Desde</label>
+  <input id="from" type="date" name="from" value="{{.From}}">
+  <label for="to">Hasta</label>
+  <input id="to" type="date" name="to" value="{{.To}}">
+  <button type="submit">Aplicar</button>
+</form>
+
+{{if .Pairs}}
+<p class="note">
+  {{if eq .Order "most"}}M&aacute;s alineados primero.{{else}}Menos alineados primero.{{end}}
+  Mostrando {{len .Pairs}} de {{.TotalPairs}} pares &mdash;
+  <a href="/alignment?party={{.PartyID}}&amp;from={{.From}}&amp;to={{.To}}&amp;order={{if eq .Order "most"}}least{{else}}most{{end}}">invertir orden</a>
+</p>
+<table>
+  <thead>
+    <tr><th>Diputado A</th><th>Diputado B</th><th class="num">% igual</th><th class="num">Iguales</th><th class="num">Conjuntas</th></tr>
+  </thead>
+  <tbody>
+    {{range .Pairs}}
+    <tr>
+      <td>{{.AN}}</td>
+      <td>{{.BN}}</td>
+      <td class="num">{{pctf .Agreement}}</td>
+      <td class="num">{{.Same}}</td>
+      <td class="num">{{.Joint}}</td>
+    </tr>
+    {{end}}
+  </tbody>
+</table>
+{{else}}
+<p class="empty">Sin pares con votaciones conjuntas suficientes en la ventana.</p>
+{{end}}
+{{end}}

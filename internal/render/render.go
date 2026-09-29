@@ -55,16 +55,18 @@ func New(fsys fs.FS, fm template.FuncMap) (*Renderer, error) {
 
 // Pages of the MVP (compile-checked names for handlers).
 const (
-	PageHome              Page = "templates/pages/home.html"
-	PageVotations         Page = "templates/pages/votations.html"
-	PageVotationDetail    Page = "templates/pages/votation_detail.html"
-	PageRepresentatives   Page = "templates/pages/representatives.html"
-	PageRepresentative    Page = "templates/pages/representative.html"
-	PageParties           Page = "templates/pages/parties.html"
-	PageParty             Page = "templates/pages/party.html"
-	PageBills             Page = "templates/pages/bills.html"
-	PageBill              Page = "templates/pages/bill.html"
-	PartialVoteBreakdown  Page = "templates/partials/vote_breakdown.html"
+	PageHome             Page = "templates/pages/home.html"
+	PageVotations        Page = "templates/pages/votations.html"
+	PageVotationDetail   Page = "templates/pages/votation_detail.html"
+	PageRepresentatives  Page = "templates/pages/representatives.html"
+	PageRepresentative   Page = "templates/pages/representative.html"
+	PageParties          Page = "templates/pages/parties.html"
+	PageParty            Page = "templates/pages/party.html"
+	PageBills            Page = "templates/pages/bills.html"
+	PageBill             Page = "templates/pages/bill.html"
+	PageRebels           Page = "templates/pages/rebels.html"
+	PageAlignment        Page = "templates/pages/alignment.html"
+	PartialVoteBreakdown Page = "templates/partials/vote_breakdown.html"
 )
 
 func (r *Renderer) set(p Page) *template.Template {

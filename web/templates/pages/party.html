@@ -3,6 +3,20 @@
 <article>
   <h1><span class="chip" style="background-color:{{.Party.Color}}"></span>{{.Party.Name}} <small>({{.Party.ShortName}})</small></h1>
 
+  <h2>Coherencia de voto (Rice)</h2>
+  <dl class="meta">
+    <dt>&Iacute;ndice de coherencia</dt><dd>{{if .Cohesion.Meaningful}}{{pctf1 .Cohesion.Score}}{{else}}n/a (1 voto por votaci&oacute;n){{end}}</dd>
+    <dt>Votos casteados</dt><dd class="num">{{.Cohesion.Cast}}</dd>
+    <dt>Votaciones</dt><dd class="num">{{.Cohesion.Votations}}</dd>
+  </dl>
+  <p class="note">{{if .Cohesion.From}}Ventana {{.Cohesion.From}}&ndash;{{if .Cohesion.To}}{{.Cohesion.To}}{{else}}(abierto){{end}}.{{else}}Todo el historial ingerido.{{end}}
+  Fracci&oacute;n de votos que siguen al voto mayoritario del partido en cada
+  votaci&oacute;n (s&oacute;lo votos casteados s&iacute;/no/abstenci&oacute;n; excluye ausencias,
+  pareos y dispensados).</p>
+  <div class="chart">
+    <img src="/charts/party-cohesion/{{.Party.ID}}" alt="Coherencia mensual de {{.Party.Name}}" loading="lazy">
+  </div>
+
   <h2>Miembros actuales</h2>
   {{if .Members}}
   <table>

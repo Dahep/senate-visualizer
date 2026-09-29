@@ -29,9 +29,14 @@ func (s *Server) Routes() http.Handler {
 	r.Get("/bills", s.Bills)
 	r.Get("/bills/{id}", s.BillDetail)
 
-	// HTMX partial + standalone SVG chart (image/svg+xml; never inlined).
+	// Phase-2 analytics pages.
+	r.Get("/rebels", s.Rebels)
+	r.Get("/alignment", s.Alignment)
+
+	// HTMX partial + standalone SVG charts (image/svg+xml; never inlined).
 	r.Get("/partials/vote-breakdown/{id}", s.VoteBreakdownPartial)
 	r.Get("/charts/party-breakdown/{id}", s.PartyBreakdownChart)
+	r.Get("/charts/party-cohesion/{id}", s.PartyCohesionChart)
 
 	// Static assets (css; js/ intentionally empty — zero authored JS).
 	r.Handle("/static/*", http.StripPrefix("/static/",

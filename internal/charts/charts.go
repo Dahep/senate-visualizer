@@ -9,6 +9,8 @@ import (
 	"fmt"
 	"html"
 
+	"congress-visualizer/internal/analytics"
+
 	"github.com/wcharczuk/go-chart"
 	"github.com/wcharczuk/go-chart/drawing"
 )
@@ -68,6 +70,65 @@ func PartyStack(layers []PartyLayer, width, height int) ([]byte, error) {
 		return nil, err
 	}
 	return buf.Bytes(), nil
+}
+
+// TrendLine renders a monthly series (chronological points, fixed 0..1
+// scale) as a single line — used for party cohesion trends. Month labels go
+// on sparse X ticks; labels are literal 'YYYY-MM' strings we generate, not
+// API-derived text.
+func TrendLine(points []analytics.TrendPoint, color string, width, height int) ([]byte, error) {
+	if width <= 0 {
+		width, height = 900, 320
+	}
+	if len(points) == 0 {
+		return []byte("<svg xmlns=\"http://www.w3.org/2000/svg\"><text x=\"10\" y=\"50\">sin datos</text></svg>"), nil
+	}
+	x := make([]float64, len(points))
+	y := make([]float64, len(points))
+	ticks := []chart.Tick{}
+	for i, p := range points {
+		x[i] = float64(i)
+		y[i] = p.Score
+		if isLabelTick(i, len(points)) {
+			ticks = append(ticks, chart.Tick{Value: float64(i), Label: p.Month})
+		}
+	}
+	c := chart.Chart{
+		Title:      "Cohesión mensual",
+		TitleStyle: chart.StyleShow(),
+		Width:      width,
+		Height:     height,
+		XAxis: chart.XAxis{
+			Style: chart.StyleShow(),
+			Ticks: ticks,
+		},
+		YAxis: chart.YAxis{
+			Style: chart.StyleShow(),
+			Range: &chart.ContinuousRange{Min: 0, Max: 1},
+		},
+		Series: []chart.Series{chart.ContinuousSeries{
+			Style: chart.Style{
+				Show:        true,
+				StrokeColor: hexToColor(color),
+				StrokeWidth: 2,
+			},
+			XValues: x,
+			YValues: y,
+		}},
+	}
+	var buf bytes.Buffer
+	if err := c.Render(chart.SVG, &buf); err != nil {
+		return nil, err
+	}
+	return buf.Bytes(), nil
+}
+
+func isLabelTick(i, n int) bool {
+	if n <= 10 {
+		return true
+	}
+	step := (n + 9) / 10
+	return i%step == 0
 }
 
 func esc(s string) string { return html.EscapeString(s) }
