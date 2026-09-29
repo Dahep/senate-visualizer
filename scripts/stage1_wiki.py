@@ -52,6 +52,10 @@ PARTY_MAP = {
     "PRCh": "REP", "PEV": "EVOPOLI", "Unir": "PL", "PDG": "PDG",
     "NLI": "NLI", "RF": "RF", "Ind": "IND",
     "Candidato independiente": "IND", "Independiente": "IND",
+    "IND-DC": "DC", "Ind-DC": "DC", "IND-PS": "PS", "IND-PDC": "DC", "Ind-PDC": "DC",
+    "Ind-PL": "PL", "AH": "PAC", "Ind-PRCh": "REP", "Ind-DEM": "DEM",
+    "Ind-PCCh": "PC", "Ind-FA": "FA", "Ind-PS": "PS", "Ind-RN": "RN",
+    "MIRAS": "PRI", "IC": "IC", "AMP": "AMP",
 }
 
 
@@ -224,7 +228,11 @@ def main():
         kept = []
         for name, full, short in rows:
             if name.strip() == "30px" or not name or len(name) < 3:
-                report.append(f"{period}: JUNK row skipped name={name!r}")
+                continue  # icon-size cell, no deputy in it
+            if period == "2026-2030":
+                # This period is covered by the FICHA-based draft (live current
+                # list, per-deputy party); the wiki rows here are worse - keep
+                # them out of the merged file and out of the report.
                 continue
             k = (name, short)
             if k in seen:

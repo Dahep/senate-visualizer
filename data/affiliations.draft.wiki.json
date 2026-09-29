@@ -1,6 +1,6 @@
 {
   "_note": "BOT DRAFT (wikipedia rosters) - human review before `sync -seed`",
-  "_generated_at": "2026-09-16T11:31:15-03:00",
+  "_generated_at": "2026-09-29T09:27:30-03:00",
   "unmatched": [
     {
       "period": "2002-2006",
@@ -81,741 +81,6 @@
       "period": "2022-2026",
       "name": "Daniel Manouchehri Moghadam Kashan Lobos",
       "party": "PS"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Luis Malla",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Unidad por Chile",
-      "party": "PL"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Jorge Díaz",
-      "party": "PDC"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Cambio por Chile",
-      "party": "PRCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Carlos Carvajal",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Unidad por Chile",
-      "party": "Ind-PPD"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Chile Grande y Unido",
-      "party": "Ind-UDI"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Álvaro Jofré",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Cambio por Chile",
-      "party": "PNL"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Sebastián Videla",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Unidad por Chile",
-      "party": "Ind-PL"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Jaime Araya",
-      "party": "Ind-PPD"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Marcela Hernando",
-      "party": "PR"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Partido de la Gente",
-      "party": "PDG"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Juan Santana",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Unidad por Chile",
-      "party": "PS"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Cristian Tapia",
-      "party": "Ind-PPD"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Jaime Mulet",
-      "party": "Verdes, Regionalistas y Humanistas"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Verdes, Regionalistas y Humanistas",
-      "party": "FRVS"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Daniel Manouchehri",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Nathalie Castillo",
-      "party": "PCCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Carolina Tello",
-      "party": "FA"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Marco Sulantay",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Chile Grande y Unido",
-      "party": "UDI"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Erich Grohs",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Nelson Venegas",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Sofía González",
-      "party": "PCCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Cristian Mella",
-      "party": "PDC"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Francisca Bello",
-      "party": "FA"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Chiara Barchiesi",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Luis Pardo",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Chile Grande y Unido",
-      "party": "RN"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Javier Olivares",
-      "party": "Partido de la Gente"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Jaime Bassa",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Unidad por Chile",
-      "party": "FA"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Luis Cuello",
-      "party": "PCCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Luis Sánchez",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Sebastián Zamora",
-      "party": "Ind-PRCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Hotuiti Teao",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Andrés Celis",
-      "party": "RN"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Juan Valenzuela",
-      "party": "Partido de la Gente"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Gustavo Gatica",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Unidad por Chile",
-      "party": "Ind-PCCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Marcos Barraza",
-      "party": "PCCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Tatiana Urrutia",
-      "party": "FA"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Agustín Romero",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Enrique Bassaletti",
-      "party": "Ind-PRCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Pier Karlezi",
-      "party": "PNL"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Cristian Contreras",
-      "party": "Partido de la Gente"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Mario Olavarría",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Carlos Cuadrado",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Unidad por Chile",
-      "party": "PPD"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Boris Barrera",
-      "party": "PCCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "César Valenzuela",
-      "party": "PS"
-    },
-    {
-      "period": "2026-2030",
-      "name": "José Meza",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Guillermo Ramírez",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Gonzalo Winter",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Irací Hassler",
-      "party": "PCCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "José Kast",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Hans Marowski",
-      "party": "PNL"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Francisco Orrego",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Jorge Alessandri",
-      "party": "UDI"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Diego Schalper",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Constanza Hube",
-      "party": "UDI"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Catalina del Real",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Constanza Schönhaut",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Álvaro Carter",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Pamela Jiles",
-      "party": "Partido de la Gente"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Ana Gazmuri",
-      "party": "Verdes, Regionalistas y Humanistas"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Verdes, Regionalistas y Humanistas",
-      "party": "AH"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Ximena Ossandón",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Daniela Serrano",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Unidad por Chile",
-      "party": "PCCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Gael Yeomans",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Lorena Pizarro",
-      "party": "PCCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Eduardo Durán",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Ignacio Achurra",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Marisela Santibáñez",
-      "party": "Ind-PCCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Raúl Leiva",
-      "party": "PS"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Diego Vergara",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Jaime Coloma",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Raúl Soto",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Valentina Cáceres",
-      "party": "Ind-FA"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Natalia Romero",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Fernando Ugarte",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Carolina Cucumides",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Unidad por Chile",
-      "party": "Ind-PS"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Félix Bugueño",
-      "party": "FA"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Ricardo Neumann",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Unidad por Chile",
-      "party": "PDC"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Roberto Celedón",
-      "party": "Ind-FA"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Benjamín Moreno",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Germán Verdugo",
-      "party": "PNL"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Jorge Guzmán",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Chile Grande y Unido",
-      "party": "EVO"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Cristián Menchaca",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Cambio por Chile",
-      "party": "Ind-PRCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Consuelo Veloso",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Unidad por Chile",
-      "party": "Ind-PR"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Rodrigo Ramírez",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Chile Grande y Unido",
-      "party": "Ind-RN"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Cristóbal Martínez",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Carlos Chandía",
-      "party": "RN"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Felipe Camaño",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Unidad por Chile",
-      "party": "Ind-PDC"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Sara Concha",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Cambio por Chile",
-      "party": "PSC"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Francesca Muñoz",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Paz Charpentier",
-      "party": "PRCh"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Marlene Pérez",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Sergio Bobadilla",
-      "party": "UDI"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Álvaro Ortiz",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Antonio Rivas",
-      "party": "PS"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Patricio Briones",
-      "party": "Partido de la Gente"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Flor Weisse",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Joanna Pérez",
-      "party": "DEM"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Cristóbal Urruticoechea",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Eduardo Cretton",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Juan Beltrán",
-      "party": "RN"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Gloria Naveillán",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Andrea Parra",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "José Montalva",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Ericka Ñanco",
-      "party": "FA"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Stephan Schubert",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Tomás Kast",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "René García",
-      "party": "RN"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Marcos Ilabaca",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Matías Fernández",
-      "party": "FA"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Omar Sabat",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Daniel Valenzuela",
-      "party": "Ind-RN"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Leandro Kunstmann",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Héctor Barría",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Emilia Nuyado",
-      "party": "PS"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Daniel Lilayu",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Paulina Muñoz",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Alejandro Bernales",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Héctor Ulloa",
-      "party": "Ind-PPD"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Mauro González",
-      "party": "Chile Grande y Unido"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Claudia Reyes",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Alex Nahuelquín",
-      "party": "Partido de la Gente"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Andrea Macías",
-      "party": "Unidad por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "René Alinco",
-      "party": "Verdes, Regionalistas y Humanistas"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Verdes, Regionalistas y Humanistas",
-      "party": "Ind-FRVS"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Carlos Bianchi",
-      "party": "Independiente"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Independiente",
-      "party": "Ind."
-    },
-    {
-      "period": "2026-2030",
-      "name": "Alejandro Riquelme",
-      "party": "Cambio por Chile"
-    },
-    {
-      "period": "2026-2030",
-      "name": "Javiera Morales",
-      "party": "Unidad por Chile"
     }
   ],
   "affiliations": [
@@ -920,7 +185,7 @@
     {
       "chamber": "camara",
       "external_id": "897",
-      "party": "??IND-DC",
+      "party": "DC",
       "start": "2002-03-11",
       "end": "2006-03-10"
     },
@@ -3391,7 +2656,7 @@
     {
       "chamber": "camara",
       "external_id": "897",
-      "party": "??MIRAS",
+      "party": "PRI",
       "start": "2014-03-11",
       "end": "2018-03-10"
     },
@@ -3762,7 +3027,7 @@
     {
       "chamber": "camara",
       "external_id": "997",
-      "party": "??IND-PS",
+      "party": "PS",
       "start": "2014-03-11",
       "end": "2018-03-10"
     },
@@ -4084,7 +3349,7 @@
     {
       "chamber": "camara",
       "external_id": "983",
-      "party": "??IND-PDC",
+      "party": "DC",
       "start": "2014-03-11",
       "end": "2018-03-10"
     },
@@ -5008,7 +4273,7 @@
     {
       "chamber": "camara",
       "external_id": "1182",
-      "party": "??Ind-PL",
+      "party": "PL",
       "start": "2022-03-11",
       "end": "2026-03-10"
     },
@@ -5316,7 +4581,7 @@
     {
       "chamber": "camara",
       "external_id": "1128",
-      "party": "??AH",
+      "party": "PAC",
       "start": "2022-03-11",
       "end": "2026-03-10"
     },
@@ -5505,7 +4770,7 @@
     {
       "chamber": "camara",
       "external_id": "1116",
-      "party": "??Ind-PDC",
+      "party": "DC",
       "start": "2022-03-11",
       "end": "2026-03-10"
     },
@@ -5652,7 +4917,7 @@
     {
       "chamber": "camara",
       "external_id": "1040",
-      "party": "??Ind-PRCh",
+      "party": "REP",
       "start": "2022-03-11",
       "end": "2026-03-10"
     },
@@ -5687,7 +4952,7 @@
     {
       "chamber": "camara",
       "external_id": "1016",
-      "party": "??Ind-DEM",
+      "party": "DEM",
       "start": "2022-03-11",
       "end": "2026-03-10"
     },
