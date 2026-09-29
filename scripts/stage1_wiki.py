@@ -240,7 +240,7 @@ def main():
             seen.add(k)
             kept.append((name, full, short))
         print(period, "rows:", len(rows), "->", len(kept))
-        with open(f"data/affiliations.review.{period}.csv", "w", newline="") as f:
+        with open(f"data/traces/affiliations.review.{period}.csv", "w", newline="") as f:
             wr = csv.writer(f)
             wr.writerow(["wiki_name", "party_full", "party_short", "party", "period",
                          "external_id", "status", "source"])
@@ -285,14 +285,14 @@ def main():
                         })
         time.sleep(6)
 
-    with open("data/affiliations.draft.wiki.json", "w") as f:
+    with open("data/traces/affiliations.draft.wiki.json", "w") as f:
         json.dump({
             "_note": "BOT DRAFT (wikipedia rosters) - human review before `sync -seed`",
             "_generated_at": os.popen("date -Iseconds").read().strip(),
             "unmatched": [{"period": p[0], "name": p[1], "party": p[2]} for p in unmatched],
             "affiliations": draft,
         }, f, ensure_ascii=False, indent=2)
-    with open("data/affiliations.review.wiki.report.txt", "w") as f:
+    with open("data/traces/affiliations.wiki.report.txt", "w") as f:
         f.write("\n".join(report) + "\n")
     print(f"matched={len(draft)} unmatched={len(unmatched)} problems={len(report)}")
 
@@ -302,13 +302,13 @@ if __name__ == "__main__":
 
 
 def write_draft():
-    with open("data/affiliations.draft.wiki.json", "w") as f:
+    with open("data/traces/affiliations.draft.wiki.json", "w") as f:
         json.dump({
             "_note": "BOT DRAFT (wikipedia rosters) - human review before `sync -seed`",
             "_generated_at": os.popen("date -Iseconds").read().strip(),
             "unmatched": [{"period": p[0], "name": p[1], "party": p[2]} for p in unmatched],
             "affiliations": draft,
         }, f, ensure_ascii=False, indent=2)
-    with open("data/affiliations.review.wiki.report.txt", "w") as f:
+    with open("data/traces/affiliations.wiki.report.txt", "w") as f:
         f.write("\n".join(report) + "\n")
     print(f"\nmatched={len(draft)} unmatched={len(unmatched)} problems={len(report)}")

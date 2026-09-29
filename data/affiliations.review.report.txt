@@ -1,8 +1,0 @@
-2014-2018: len mismatch: ['Luis Lemus|Luis Lemus Aracena', 'Miguel Ángel Alvarado Ramírez', 'Jorge Insunza|Jorge Insunza Gregorio de Las Heras', 'Ministerio Secretaría General de la Presidencia de Chile|ministro Secretario General de la Presidencia', 'Michelle Bachelet', 'Elección complementaria de Chile de 2015| consulta voluntaria, participativa y ciudadana'] <> [('Partido Socialista de Chile', 'PS'), ('Partido por la Democracia', 'PPD')]
-AMBIGUOUS name Juan Antonio Coloma Álamos: ids ['976', '1199']
-AMBIGUOUS name Matías Walker Prieto: ids ['918', '963', '119']
-AMBIGUOUS name Cristina Girardi Lavín: ids ['936', '158']
-AMBIGUOUS name René Saffirio Espinoza: ids ['950', '1168']
-AMBIGUOUS name Germán Becker Alvear: ids ['813', '1106']
-AMBIGUOUS name Joaquín Tuma Zedan: ids ['904', '958']
-AMBIGUOUS name Felipe Kast Sommerhoff: ids ['988', '1041', '1219']

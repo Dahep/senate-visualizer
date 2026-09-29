@@ -109,17 +109,17 @@ func main() {
 		Affiliations []Affiliation `json:"affiliations"`
 	}
 	doc := draftDoc{
-		Note: "BOT DRAFT - review before applying: `go run ./cmd/sync -seed data/affiliations.draft.json`",
+		Note: "BOT DRAFT - review before applying: `go run ./cmd/sync -seed traces/affiliations.draft.json`",
 		GeneratedAt: time.Now().Format(time.RFC3339),
 		Affiliations: affiliations,
 	}
 	body, _ := json.MarshalIndent(doc, "", "  ")
-	if err := os.WriteFile("data/affiliations.draft.json", body, 0o644); err != nil {
+	if err := os.WriteFile("traces/affiliations.draft.json", body, 0o644); err != nil {
 		log.Error("write draft", "err", err)
 		os.Exit(1)
 	}
 	// CSV review sheet alongside (one row per deputy, visual diff surface)
-	f, err := os.Create("data/affiliations.review.csv")
+	f, err := os.Create("traces/affiliations.review.ficha.csv")
 	if err != nil {
 		log.Error("write review", "err", err)
 		os.Exit(1)
@@ -128,7 +128,7 @@ func main() {
 	w := csv.NewWriter(f)
 	_ = w.WriteAll(rows)
 	w.Flush()
-	log.Info("draft written", "deputies", len(deps), "unmapped", nMissing, "out", "data/affiliations.draft.json")
+	log.Info("draft written", "deputies", len(deps), "unmapped", nMissing, "out", "traces/affiliations.draft.json")
 }
 
 func fetch(hc *http.Client, url string) (string, error) {
