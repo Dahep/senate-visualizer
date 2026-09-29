@@ -1,0 +1,38 @@
+{{define "title"}}Bolet&iacute;n {{.Bill.ID}} · Congreso Visible{{end}}
+{{define "content"}}
+<article>
+  <h1>Bolet&iacute;n {{.Bill.ID}}</h1>
+
+  <dl class="meta">
+    <dt>T&iacute;tulo</dt>
+    <dd>
+      {{.Bill.Title}}
+      {{if .Provisional}}<span class="note">(t&iacute;tulo provisional, derivado de la votaci&oacute;n m&aacute;s reciente)</span>{{end}}
+    </dd>
+    {{if .Bill.TitleDate.Valid}}<dt>Fecha del t&iacute;tulo</dt><dd>{{day .Bill.TitleDate.String}}</dd>{{end}}
+  </dl>
+
+  <h2>Votaciones asociadas</h2>
+  {{if .Votations}}
+  <table>
+    <thead>
+      <tr><th>Fecha</th><th>Materia</th><th>Resultado</th><th class="num">S&iacute;</th><th class="num">No</th><th class="num">Abst.</th></tr>
+    </thead>
+    <tbody>
+      {{range .Votations}}
+      <tr>
+        <td>{{day .Date}}</td>
+        <td><a href="/votations/{{.ID}}">{{if .Subject.Valid}}{{.Subject.String}}{{else}}(sin materia){{end}}</a></td>
+        <td>{{ns .Result}}</td>
+        <td class="num">{{.TotalYes}}</td>
+        <td class="num">{{.TotalNo}}</td>
+        <td class="num">{{.TotalAbstain}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+  {{else}}
+  <p class="empty">Sin votaciones asociadas.</p>
+  {{end}}
+</article>
+{{end}}

@@ -1,0 +1,29 @@
+{{define "title"}}Diputados · Congreso Visible{{end}}
+{{define "content"}}
+<h1>Diputados</h1>
+
+{{if .Representatives}}
+<table>
+  <thead>
+    <tr><th>Nombre</th><th>Partido actual</th><th>Estado</th></tr>
+  </thead>
+  <tbody>
+    {{range .Representatives}}
+    <tr>
+      <td><a href="/representatives/{{.ID}}">{{.LastName}}{{if .SecondLastName}} {{.SecondLastName}}{{end}}, {{.FirstName}}</a></td>
+      <td>{{if .PartyName.Valid}}{{.PartyName.String}}{{else}}<span class="note">Sin partido</span>{{end}}</td>
+      <td>{{if eq .Active 1}}<span class="badge yes">Activo</span>{{else}}<span class="badge absent">Hist&oacute;rico</span>{{end}}</td>
+    </tr>
+    {{end}}
+  </tbody>
+</table>
+
+<nav class="pager">
+  {{if .Pagination.HasPrev}}<a href="/representatives?page={{.Pagination.PrevPage}}">&larr; Anterior</a>{{end}}
+  <span>P&aacute;gina {{.Pagination.Page}} de {{.Pagination.Pages}}</span>
+  {{if .Pagination.HasNext}}<a href="/representatives?page={{.Pagination.NextPage}}">Siguiente &rarr;</a>{{end}}
+</nav>
+{{else}}
+<p class="empty">A&uacute;n no hay diputados. Ejecuta la sincronizaci&oacute;n de diputados.</p>
+{{end}}
+{{end}}

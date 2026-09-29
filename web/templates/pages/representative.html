@@ -1,0 +1,53 @@
+{{define "title"}}{{.Representative.FirstName}} {{.Representative.LastName}} · Congreso Visible{{end}}
+{{define "content"}}
+<article>
+  <h1>{{.Representative.FirstName}} {{.Representative.LastName}}{{if .Representative.SecondLastName}} {{.Representative.SecondLastName}}{{end}}</h1>
+
+  <dl class="meta">
+    <dt>Partido actual</dt><dd>{{.Representative.PartyName}}</dd>
+    <dt>Estado</dt><dd>{{if eq .Representative.Active 1}}Activo{{else}}Hist&oacute;rico{{end}}</dd>
+    {{if .Representative.BirthDate.Valid}}<dt>Fecha de nacimiento</dt><dd>{{day .Representative.BirthDate.String}}</dd>{{end}}
+    <dt>ID externo</dt><dd>{{.Representative.ExternalID}}</dd>
+  </dl>
+
+  <h2>Lealtad de partido</h2>
+  {{if gt .Loyalty.Votations 0}}
+  <dl class="meta">
+    <dt>Lealtad</dt><dd>{{pctf1 .Loyalty.Score}}</dd>
+    <dt>Votos con mayoria del partido</dt><dd>{{.Loyalty.Majority}} de {{.Loyalty.Votations}}</dd>
+  </dl>
+  {{else}}
+  <p class="empty">Sin lealtad calculable (votos sin partido en la fecha).</p>
+  {{end}}
+
+  <h2>Historial de votaci&oacute;n</h2>
+  {{if .History}}
+  <table>
+    <thead>
+      <tr><th>Fecha</th><th>Materia</th><th>Voto</th><th>Resultado</th></tr>
+    </thead>
+    <tbody>
+      {{range .History}}
+      <tr>
+        <td>{{day .Date}}</td>
+        <td>
+          <a href="/votations/{{.VotationID}}">{{if .Subject.Valid}}{{.Subject.String}}{{else}}(sin materia){{end}}</a>
+          {{if .BillID.Valid}}<a class="note" href="/bills/{{.BillID.String}}">[{{.BillID.String}}]</a>{{end}}
+        </td>
+        <td><span class="badge {{.Vote}}">{{votelabel .Vote}}</span></td>
+        <td>{{ns .Result}}</td>
+      </tr>
+      {{end}}
+    </tbody>
+  </table>
+
+  <nav class="pager">
+    {{if .Pagination.HasPrev}}<a href="/representatives/{{$.Representative.ID}}?page={{.Pagination.PrevPage}}">&larr; Anterior</a>{{end}}
+    <span>P&aacute;gina {{.Pagination.Page}} de {{.Pagination.Pages}}</span>
+    {{if .Pagination.HasNext}}<a href="/representatives/{{$.Representative.ID}}?page={{.Pagination.NextPage}}">Siguiente &rarr;</a>{{end}}
+  </nav>
+  {{else}}
+  <p class="empty">Sin votos registrados.</p>
+  {{end}}
+</article>
+{{end}}

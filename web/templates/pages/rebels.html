@@ -1,0 +1,43 @@
+{{define "title"}}Rebeldes · Congreso Visible{{end}}
+{{define "content"}}
+<h1>Rebeldes &mdash; lealtad de partido</h1>
+<p class="lede">Representantes ordenados por lealtad ASCENDENTE: los que m&aacute;s
+ veces votaron distinto de la mayor&iacute;a de su partido (en la fecha del voto)
+ primero. Lealtad = votos en que el voto personal coincide con el voto mayoritario
+ del partido &divide; votos emitidos. Se consideran solo votos casteados
+ (s&iacute;/no/abstenci&oacute;n).</p>
+
+<form class="search" method="get" action="/rebels">
+  <label for="from">Desde</label>
+  <input id="from" type="date" name="from" value="{{.From}}">
+  <label for="to">Hasta</label>
+  <input id="to" type="date" name="to" value="{{.To}}">
+  <button type="submit">Aplicar</button>
+  <span class="note">m&iacute;nimo {{.MinVotations}} votaciones con partido</span>
+</form>
+
+<p class="note">Cuidado: <code>IND</code> re&uacute;ne independientes que no comparten
+ bancada; su "mayor&iacute;a" no corresponde a un partido real, as&iacute; que la
+ lealtad de un independiente es poco informativa.</p>
+
+{{if .Rows}}
+<table>
+  <thead>
+    <tr><th>Representante</th><th>Partido</th><th class="num">Lealtad</th><th class="num">Con may.</th><th class="num">Votos</th></tr>
+  </thead>
+  <tbody>
+    {{range .Rows}}
+    <tr>
+      <td><a href="/representatives/{{.RepID}}">{{.Name}}</a></td>
+      <td>{{.PartyShort}}</td>
+      <td class="num">{{pctf .Score}}</td>
+      <td class="num">{{.Majority}}</td>
+      <td class="num">{{.Votations}}</td>
+    </tr>
+    {{end}}
+  </tbody>
+</table>
+{{else}}
+<p class="empty">Sin votos con partido en la ventana seleccionada.</p>
+{{end}}
+{{end}}

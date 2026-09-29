@@ -1,0 +1,1553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diputados xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/">
+  <Diputado>
+    <DIPID>843</DIPID>
+    <Nombre>René Manuel</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>García</Apellido_Paterno>
+    <Apellido_Materno>García</Apellido_Materno>
+    <Fecha_Nacimiento>1950-05-24T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>915</DIPID>
+    <Nombre>Germán</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Verdugo</Apellido_Paterno>
+    <Apellido_Materno>Soto</Apellido_Materno>
+    <Fecha_Nacimiento>1948-10-05T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1009</DIPID>
+    <Nombre>Jorge</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Alessandri</Apellido_Paterno>
+    <Apellido_Materno>Vergara</Apellido_Materno>
+    <Fecha_Nacimiento>1979-06-08T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1012</DIPID>
+    <Nombre>Boris</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Barrera</Apellido_Paterno>
+    <Apellido_Materno>Moreno</Apellido_Materno>
+    <Fecha_Nacimiento>1970-05-03T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1017</DIPID>
+    <Nombre>Álvaro</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Carter</Apellido_Paterno>
+    <Apellido_Materno>Fernández</Apellido_Materno>
+    <Fecha_Nacimiento>1980-10-09T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1025</DIPID>
+    <Nombre>Catalina</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Del Real</Apellido_Paterno>
+    <Apellido_Materno>Mihovilovic</Apellido_Materno>
+    <Fecha_Nacimiento>1968-11-07T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1038</DIPID>
+    <Nombre>Marcos</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Ilabaca</Apellido_Paterno>
+    <Apellido_Materno>Cerda</Apellido_Materno>
+    <Fecha_Nacimiento>1970-10-05T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1044</DIPID>
+    <Nombre>Raúl</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Leiva</Apellido_Paterno>
+    <Apellido_Materno>Carvajal</Apellido_Materno>
+    <Fecha_Nacimiento>1974-03-24T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1056</DIPID>
+    <Nombre>Emilia</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Nuyado</Apellido_Paterno>
+    <Apellido_Materno>Ancapichun</Apellido_Materno>
+    <Fecha_Nacimiento>1968-08-17T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1065</DIPID>
+    <Nombre>Guillermo</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Ramírez</Apellido_Paterno>
+    <Apellido_Materno>Diez</Apellido_Materno>
+    <Fecha_Nacimiento>1979-04-16T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1073</DIPID>
+    <Nombre>Juan</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Santana</Apellido_Paterno>
+    <Apellido_Materno>Castillo</Apellido_Materno>
+    <Fecha_Nacimiento>1989-09-20T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1075</DIPID>
+    <Nombre>Diego</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Schalper</Apellido_Paterno>
+    <Apellido_Materno>Sepúlveda</Apellido_Materno>
+    <Fecha_Nacimiento>1985-03-14T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1086</DIPID>
+    <Nombre>Gonzalo</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Winter</Apellido_Paterno>
+    <Apellido_Materno>Etcheberry</Apellido_Materno>
+    <Fecha_Nacimiento>1987-01-06T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1099</DIPID>
+    <Nombre>Jaime</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Araya</Apellido_Paterno>
+    <Apellido_Materno>Guerrero</Apellido_Materno>
+    <Fecha_Nacimiento>1976-02-04T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1104</DIPID>
+    <Nombre>Chiara</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Barchiesi</Apellido_Paterno>
+    <Apellido_Materno>Chávez</Apellido_Materno>
+    <Fecha_Nacimiento>1996-12-22T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1105</DIPID>
+    <Nombre>Héctor</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Barría</Apellido_Paterno>
+    <Apellido_Materno>Angulo</Apellido_Materno>
+    <Fecha_Nacimiento>1980-04-24T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1110</DIPID>
+    <Nombre>Carlos</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Bianchi</Apellido_Paterno>
+    <Apellido_Materno>Chelech</Apellido_Materno>
+    <Fecha_Nacimiento>1960-11-04T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1131</DIPID>
+    <Nombre>Mauro</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>González</Apellido_Paterno>
+    <Apellido_Materno>Villarroel</Apellido_Materno>
+    <Fecha_Nacimiento>1985-05-25T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1132</DIPID>
+    <Nombre>Jorge</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Guzmán</Apellido_Paterno>
+    <Apellido_Materno>Zepeda</Apellido_Materno>
+    <Fecha_Nacimiento>1985-06-11T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1140</DIPID>
+    <Nombre>Daniel</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Lilayu</Apellido_Paterno>
+    <Apellido_Materno>Vivanco</Apellido_Materno>
+    <Fecha_Nacimiento>1949-03-02T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1141</DIPID>
+    <Nombre>Luis</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Malla</Apellido_Paterno>
+    <Apellido_Materno>Valenzuela</Apellido_Materno>
+    <Fecha_Nacimiento>1992-05-16T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1148</DIPID>
+    <Nombre>Javiera</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Morales</Apellido_Paterno>
+    <Apellido_Materno>Alvarado</Apellido_Materno>
+    <Fecha_Nacimiento>1983-11-16T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1152</DIPID>
+    <Nombre>Gloria</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Naveillan</Apellido_Paterno>
+    <Apellido_Materno>Arriagada</Apellido_Materno>
+    <Fecha_Nacimiento>1960-11-03T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1165</DIPID>
+    <Nombre>Agustín</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Romero</Apellido_Paterno>
+    <Apellido_Materno>Leiva</Apellido_Materno>
+    <Fecha_Nacimiento>1975-01-03T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1119</DIPID>
+    <Nombre>Sara</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Concha</Apellido_Paterno>
+    <Apellido_Materno>Smith</Apellido_Materno>
+    <Fecha_Nacimiento>1995-09-09T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1180</DIPID>
+    <Nombre>Consuelo</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Veloso</Apellido_Paterno>
+    <Apellido_Materno>Ávila</Apellido_Materno>
+    <Fecha_Nacimiento>1994-02-11T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1054</DIPID>
+    <Nombre>Francesca</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Muñoz</Apellido_Paterno>
+    <Apellido_Materno>González</Apellido_Materno>
+    <Fecha_Nacimiento>1980-03-07T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1171</DIPID>
+    <Nombre>Emilia</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Schneider</Apellido_Paterno>
+    <Apellido_Materno>Videla</Apellido_Materno>
+    <Fecha_Nacimiento>1996-10-23T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1172</DIPID>
+    <Nombre>Stephan</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Schubert</Apellido_Paterno>
+    <Apellido_Materno>Rubio</Apellido_Materno>
+    <Fecha_Nacimiento>1977-12-19T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1174</DIPID>
+    <Nombre>Marco Antonio</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Sulantay</Apellido_Paterno>
+    <Apellido_Materno>Olivares</Apellido_Materno>
+    <Fecha_Nacimiento>1973-03-31T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1175</DIPID>
+    <Nombre>Cristián</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Tapia</Apellido_Paterno>
+    <Apellido_Materno>Ramos</Apellido_Materno>
+    <Fecha_Nacimiento>1968-07-14T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1183</DIPID>
+    <Nombre>Flor</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Weisse</Apellido_Paterno>
+    <Apellido_Materno>Novoa</Apellido_Materno>
+    <Fecha_Nacimiento>1960-03-27T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1184</DIPID>
+    <Nombre>Roberto</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Celedón</Apellido_Paterno>
+    <Apellido_Materno>Fernández</Apellido_Materno>
+    <Fecha_Nacimiento>1947-01-31T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1186</DIPID>
+    <Nombre>Ignacio</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Achurra</Apellido_Paterno>
+    <Apellido_Materno>Díaz</Apellido_Materno>
+    <Fecha_Nacimiento>1979-10-17T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1195</DIPID>
+    <Nombre>Carlos</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Carvajal</Apellido_Paterno>
+    <Apellido_Materno>Gallardo</Apellido_Materno>
+    <Fecha_Nacimiento>1984-11-01T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1199</DIPID>
+    <Nombre>Jaime</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Coloma</Apellido_Paterno>
+    <Apellido_Materno>Álamos</Apellido_Materno>
+    <Fecha_Nacimiento>1991-04-15T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1204</DIPID>
+    <Nombre>Francisco</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Crisóstomo</Apellido_Paterno>
+    <Apellido_Materno>Llanos</Apellido_Materno>
+    <Fecha_Nacimiento>1985-03-19T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1203</DIPID>
+    <Nombre>Sebastián</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Cristoffanini</Apellido_Paterno>
+    <Apellido_Materno>Jaraquemada</Apellido_Materno>
+    <Fecha_Nacimiento>1985-04-26T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1208</DIPID>
+    <Nombre>Jorge</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Díaz</Apellido_Paterno>
+    <Apellido_Materno>Ibarra</Apellido_Materno>
+    <Fecha_Nacimiento>1982-09-29T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1212</DIPID>
+    <Nombre>Erich</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Grohs</Apellido_Paterno>
+    <Apellido_Materno>Marín</Apellido_Materno>
+    <Fecha_Nacimiento>1980-08-11T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1217</DIPID>
+    <Nombre>Pier</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Karlezi</Apellido_Paterno>
+    <Apellido_Materno>Hazleby</Apellido_Materno>
+    <Fecha_Nacimiento>1977-02-20T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1220</DIPID>
+    <Nombre>Leandro</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Kunstmann</Apellido_Paterno>
+    <Apellido_Materno>Collado</Apellido_Materno>
+    <Fecha_Nacimiento>1987-06-15T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1222</DIPID>
+    <Nombre>Andrea</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Macías</Apellido_Paterno>
+    <Apellido_Materno>Palma</Apellido_Materno>
+    <Fecha_Nacimiento>1979-08-25T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1223</DIPID>
+    <Nombre>Hans</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Marowski</Apellido_Paterno>
+    <Apellido_Materno>Cuevas</Apellido_Materno>
+    <Fecha_Nacimiento>1981-07-11T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1230</DIPID>
+    <Nombre>Alex</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Nahuelquin</Apellido_Paterno>
+    <Apellido_Materno>Nahuelquin</Apellido_Materno>
+    <Fecha_Nacimiento>1976-08-12T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1236</DIPID>
+    <Nombre>Paula</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Olmos</Apellido_Paterno>
+    <Apellido_Materno>Contreras</Apellido_Materno>
+    <Fecha_Nacimiento>1982-11-06T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1241</DIPID>
+    <Nombre>Patricio</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Pinilla</Apellido_Paterno>
+    <Apellido_Materno>Valencia</Apellido_Materno>
+    <Fecha_Nacimiento>1969-03-03T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1242</DIPID>
+    <Nombre>Rodrigo</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Ramírez</Apellido_Paterno>
+    <Apellido_Materno>Parra</Apellido_Materno>
+    <Fecha_Nacimiento>1969-09-02T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1232</DIPID>
+    <Nombre>Cristian</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Neira</Apellido_Paterno>
+    <Apellido_Materno>Martínez</Apellido_Materno>
+    <Fecha_Nacimiento>1982-05-03T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1243</DIPID>
+    <Nombre>Tamara</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Ramírez</Apellido_Paterno>
+    <Apellido_Materno>Ramírez</Apellido_Materno>
+    <Fecha_Nacimiento>1991-01-04T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1061</DIPID>
+    <Nombre>Andrea</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Parra</Apellido_Paterno>
+    <Apellido_Materno>Sauterel</Apellido_Materno>
+    <Fecha_Nacimiento>1967-09-02T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1213</DIPID>
+    <Nombre>Irací</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Hassler</Apellido_Paterno>
+    <Apellido_Materno>Jacob</Apellido_Materno>
+    <Fecha_Nacimiento>1990-11-06T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1193</DIPID>
+    <Nombre>Patricio</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Briones</Apellido_Paterno>
+    <Apellido_Materno>Moller</Apellido_Materno>
+    <Fecha_Nacimiento>1972-03-10T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1259</DIPID>
+    <Nombre>Juan Marcelo</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Valenzuela</Apellido_Paterno>
+    <Apellido_Materno>Henríquez</Apellido_Materno>
+    <Fecha_Nacimiento>1986-05-19T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>803</DIPID>
+    <Nombre>René</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Alinco</Apellido_Paterno>
+    <Apellido_Materno>Bustos</Apellido_Materno>
+    <Fecha_Nacimiento>1958-06-02T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1021</DIPID>
+    <Nombre>Andrés</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Celis</Apellido_Paterno>
+    <Apellido_Materno>Montt</Apellido_Materno>
+    <Fecha_Nacimiento>1975-04-08T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1059</DIPID>
+    <Nombre>Ximena</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Ossandón</Apellido_Paterno>
+    <Apellido_Materno>Irarrázabal</Apellido_Materno>
+    <Fecha_Nacimiento>1963-12-13T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1087</DIPID>
+    <Nombre>Gael</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Yeomans</Apellido_Paterno>
+    <Apellido_Materno>Araya</Apellido_Materno>
+    <Fecha_Nacimiento>1988-12-04T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1114</DIPID>
+    <Nombre>Félix</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Bugueño</Apellido_Paterno>
+    <Apellido_Materno>Sotelo</Apellido_Materno>
+    <Fecha_Nacimiento>1973-05-18T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1133</DIPID>
+    <Nombre>Juan</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Irarrázaval</Apellido_Paterno>
+    <Apellido_Materno>Rossel</Apellido_Materno>
+    <Fecha_Nacimiento>1983-06-23T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1153</DIPID>
+    <Nombre>Coca Ericka</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Ñanco</Apellido_Paterno>
+    <Apellido_Materno>Vásquez</Apellido_Materno>
+    <Fecha_Nacimiento>1992-03-20T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1177</DIPID>
+    <Nombre>Carolina</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Tello</Apellido_Paterno>
+    <Apellido_Materno>Rojas</Apellido_Materno>
+    <Fecha_Nacimiento>1985-10-01T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1194</DIPID>
+    <Nombre>Daniel</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Bustos</Apellido_Paterno>
+    <Apellido_Materno>Leal</Apellido_Materno>
+    <Fecha_Nacimiento>1981-11-07T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1240</DIPID>
+    <Nombre>Zandra</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Parisi</Apellido_Paterno>
+    <Apellido_Materno>Fernández</Apellido_Materno>
+    <Fecha_Nacimiento>1963-12-01T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1107</DIPID>
+    <Nombre>María Francisca</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Bello</Apellido_Paterno>
+    <Apellido_Materno>Campos</Apellido_Materno>
+    <Fecha_Nacimiento>1987-09-17T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1205</DIPID>
+    <Nombre>Carlos</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Cuadrado</Apellido_Paterno>
+    <Apellido_Materno>Prats</Apellido_Materno>
+    <Fecha_Nacimiento>1965-01-24T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1250</DIPID>
+    <Nombre>Bernardo</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Salinas</Apellido_Paterno>
+    <Apellido_Materno>Maya</Apellido_Materno>
+    <Fecha_Nacimiento>1964-11-20T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1216</DIPID>
+    <Nombre>Stephanie</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Jéldrez</Apellido_Paterno>
+    <Apellido_Materno>Ortiz</Apellido_Materno>
+    <Fecha_Nacimiento>1984-11-12T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1150</DIPID>
+    <Nombre>Benjamín</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Moreno</Apellido_Paterno>
+    <Apellido_Materno>Bascur</Apellido_Materno>
+    <Fecha_Nacimiento>1993-04-02T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1256</DIPID>
+    <Nombre>Tatiana</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Urrutia</Apellido_Paterno>
+    <Apellido_Materno>Herrera</Apellido_Materno>
+    <Fecha_Nacimiento>1982-09-17T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>986</DIPID>
+    <Nombre>Marcela</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Hernando</Apellido_Paterno>
+    <Apellido_Materno>Pérez</Apellido_Materno>
+    <Fecha_Nacimiento>1960-02-12T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1077</DIPID>
+    <Nombre>Raúl</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Soto</Apellido_Paterno>
+    <Apellido_Materno>Mardones</Apellido_Materno>
+    <Fecha_Nacimiento>1987-11-20T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1170</DIPID>
+    <Nombre>Luis</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Sánchez</Apellido_Paterno>
+    <Apellido_Materno>Ossa</Apellido_Materno>
+    <Fecha_Nacimiento>1988-10-04T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1028</DIPID>
+    <Nombre>Eduardo</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Durán</Apellido_Paterno>
+    <Apellido_Materno>Salinas</Apellido_Materno>
+    <Fecha_Nacimiento>1972-01-01T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1117</DIPID>
+    <Nombre>Nathalie</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Castillo</Apellido_Paterno>
+    <Apellido_Materno>Rojas</Apellido_Materno>
+    <Fecha_Nacimiento>1983-07-02T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1181</DIPID>
+    <Nombre>Nelson</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Venegas</Apellido_Paterno>
+    <Apellido_Materno>Salazar</Apellido_Materno>
+    <Fecha_Nacimiento>1974-04-27T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1229</DIPID>
+    <Nombre>Javier</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Muñoz</Apellido_Paterno>
+    <Apellido_Materno>Riquelme</Apellido_Materno>
+    <Fecha_Nacimiento>1967-11-21T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1214</DIPID>
+    <Nombre>Constanza</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Hube</Apellido_Paterno>
+    <Apellido_Materno>Portus</Apellido_Materno>
+    <Fecha_Nacimiento>1986-03-10T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1258</DIPID>
+    <Nombre>Guillermo</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Valdés</Apellido_Paterno>
+    <Apellido_Materno>Carmona</Apellido_Materno>
+    <Fecha_Nacimiento>1972-11-08T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1191</DIPID>
+    <Nombre>Valentina</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Becerra</Apellido_Paterno>
+    <Apellido_Materno>Peña</Apellido_Materno>
+    <Fecha_Nacimiento>1994-10-26T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1211</DIPID>
+    <Nombre>Sofía</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>González</Apellido_Paterno>
+    <Apellido_Materno>Cortés</Apellido_Materno>
+    <Fecha_Nacimiento>1987-09-29T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1225</DIPID>
+    <Nombre>Cristian</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Menchaca</Apellido_Paterno>
+    <Apellido_Materno>Pinochet</Apellido_Materno>
+    <Fecha_Nacimiento>1963-03-13T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1219</DIPID>
+    <Nombre>Tomás</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Kast</Apellido_Paterno>
+    <Apellido_Materno>Sommerhoff</Apellido_Materno>
+    <Fecha_Nacimiento>1979-09-29T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1189</DIPID>
+    <Nombre>Jaime</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Bassa</Apellido_Paterno>
+    <Apellido_Materno>Mercado</Apellido_Materno>
+    <Fecha_Nacimiento>1977-03-31T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1248</DIPID>
+    <Nombre>Felipe</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Ross</Apellido_Paterno>
+    <Apellido_Materno>Correa</Apellido_Materno>
+    <Fecha_Nacimiento>1986-09-18T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1254</DIPID>
+    <Nombre>Ignacio</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Urcullú</Apellido_Paterno>
+    <Apellido_Materno>Clèment-Lund</Apellido_Materno>
+    <Fecha_Nacimiento>1976-03-07T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1263</DIPID>
+    <Nombre>Sebastián</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Zamora</Apellido_Paterno>
+    <Apellido_Materno>Soto</Apellido_Materno>
+    <Fecha_Nacimiento>1997-12-10T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1237</DIPID>
+    <Nombre>Francisco</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Orrego</Apellido_Paterno>
+    <Apellido_Materno>Gutiérrez</Apellido_Materno>
+    <Fecha_Nacimiento>1986-10-06T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1015</DIPID>
+    <Nombre>Jorge</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Brito</Apellido_Paterno>
+    <Apellido_Materno>Hasbún</Apellido_Materno>
+    <Fecha_Nacimiento>1990-01-12T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1074</DIPID>
+    <Nombre>Marisela</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Santibáñez</Apellido_Paterno>
+    <Apellido_Materno>Novoa</Apellido_Materno>
+    <Fecha_Nacimiento>1975-04-24T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1116</DIPID>
+    <Nombre>Felipe</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Camaño</Apellido_Paterno>
+    <Apellido_Materno>Cárdenas</Apellido_Materno>
+    <Fecha_Nacimiento>1991-08-21T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1159</DIPID>
+    <Nombre>Lorena</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Pizarro</Apellido_Paterno>
+    <Apellido_Materno>Sierra</Apellido_Materno>
+    <Fecha_Nacimiento>1966-02-14T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1190</DIPID>
+    <Nombre>Enrique</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Bassaletti</Apellido_Paterno>
+    <Apellido_Materno>Riess</Apellido_Materno>
+    <Fecha_Nacimiento>1968-01-19T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1210</DIPID>
+    <Nombre>Gustavo</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Gatica</Apellido_Paterno>
+    <Apellido_Materno>Villarroel</Apellido_Materno>
+    <Fecha_Nacimiento>1997-11-28T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1182</DIPID>
+    <Nombre>Sebastián</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Videla</Apellido_Paterno>
+    <Apellido_Materno>Castillo</Apellido_Materno>
+    <Fecha_Nacimiento>1986-04-29T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1122</DIPID>
+    <Nombre>Luis Alberto</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Cuello</Apellido_Paterno>
+    <Apellido_Materno>Peña y Lillo</Apellido_Materno>
+    <Fecha_Nacimiento>1977-01-24T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1255</DIPID>
+    <Nombre>Eileen</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Urqueta</Apellido_Paterno>
+    <Apellido_Materno>Rojas</Apellido_Materno>
+    <Fecha_Nacimiento>1980-01-24T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>872</DIPID>
+    <Nombre>Jaime</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Mulet</Apellido_Paterno>
+    <Apellido_Materno>Martínez</Apellido_Materno>
+    <Fecha_Nacimiento>1963-08-03T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1100</DIPID>
+    <Nombre>Cristián</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Araya</Apellido_Paterno>
+    <Apellido_Materno>Lerdo de Tejada</Apellido_Materno>
+    <Fecha_Nacimiento>1988-09-30T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1142</DIPID>
+    <Nombre>Daniel</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Manouchehri</Apellido_Paterno>
+    <Apellido_Materno>Lobos</Apellido_Materno>
+    <Fecha_Nacimiento>1984-05-25T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1178</DIPID>
+    <Nombre>Héctor</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Ulloa</Apellido_Paterno>
+    <Apellido_Materno>Aguilera</Apellido_Materno>
+    <Fecha_Nacimiento>1969-08-06T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1202</DIPID>
+    <Nombre>Eduardo</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Cretton</Apellido_Paterno>
+    <Apellido_Materno>Rebolledo</Apellido_Materno>
+    <Fecha_Nacimiento>1995-11-23T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1233</DIPID>
+    <Nombre>Ricardo</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Neumann</Apellido_Paterno>
+    <Apellido_Materno>Bertín</Apellido_Materno>
+    <Fecha_Nacimiento>1987-12-13T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>815</DIPID>
+    <Nombre>Sergio</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Bobadilla</Apellido_Paterno>
+    <Apellido_Materno>Muñoz</Apellido_Materno>
+    <Fecha_Nacimiento>1958-03-25T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1013</DIPID>
+    <Nombre>Alejandro</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Bernales</Apellido_Paterno>
+    <Apellido_Materno>Maldonado</Apellido_Materno>
+    <Fecha_Nacimiento>1979-02-02T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1039</DIPID>
+    <Nombre>Pamela</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Jiles</Apellido_Paterno>
+    <Apellido_Materno>Moreno</Apellido_Materno>
+    <Fecha_Nacimiento>1960-11-30T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1062</DIPID>
+    <Nombre>Joanna</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Pérez</Apellido_Paterno>
+    <Apellido_Materno>Olea</Apellido_Materno>
+    <Fecha_Nacimiento>1976-04-01T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1082</DIPID>
+    <Nombre>Cristóbal</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Urruticoechea</Apellido_Paterno>
+    <Apellido_Materno>Ríos</Apellido_Materno>
+    <Fecha_Nacimiento>1975-11-21T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1108</DIPID>
+    <Nombre>Juan Carlos</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Beltrán</Apellido_Paterno>
+    <Apellido_Materno>Silva</Apellido_Materno>
+    <Fecha_Nacimiento>1962-12-19T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1128</DIPID>
+    <Nombre>Ana María</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Gazmuri</Apellido_Paterno>
+    <Apellido_Materno>Vieira</Apellido_Materno>
+    <Fecha_Nacimiento>1966-01-22T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1146</DIPID>
+    <Nombre>José Carlos</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Meza</Apellido_Paterno>
+    <Apellido_Materno>Pereira</Apellido_Materno>
+    <Fecha_Nacimiento>1989-03-07T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1166</DIPID>
+    <Nombre>Natalia</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Romero</Apellido_Paterno>
+    <Apellido_Materno>Talguia</Apellido_Materno>
+    <Fecha_Nacimiento>1985-06-29T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1176</DIPID>
+    <Nombre>Hotuiti</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Teao</Apellido_Paterno>
+    <Apellido_Materno>Drago</Apellido_Materno>
+    <Fecha_Nacimiento>1977-08-01T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1188</DIPID>
+    <Nombre>Marcos</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Barraza</Apellido_Paterno>
+    <Apellido_Materno>Gómez</Apellido_Materno>
+    <Fecha_Nacimiento>1973-03-25T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1197</DIPID>
+    <Nombre>Carlos</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Chandía</Apellido_Paterno>
+    <Apellido_Materno>Alarcón</Apellido_Materno>
+    <Fecha_Nacimiento>1964-11-14T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1206</DIPID>
+    <Nombre>Carolina</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Cucumides</Apellido_Paterno>
+    <Apellido_Materno>Calderón</Apellido_Materno>
+    <Fecha_Nacimiento>1976-11-15T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1218</DIPID>
+    <Nombre>José Antonio</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Kast</Apellido_Paterno>
+    <Apellido_Materno>Adriasola</Apellido_Materno>
+    <Fecha_Nacimiento>1993-04-21T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1228</DIPID>
+    <Nombre>Paulina</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Muñoz</Apellido_Paterno>
+    <Apellido_Materno>Minte</Apellido_Materno>
+    <Fecha_Nacimiento>1984-02-28T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1238</DIPID>
+    <Nombre>Álvaro</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Ortiz</Apellido_Paterno>
+    <Apellido_Materno>Vera</Apellido_Materno>
+    <Fecha_Nacimiento>1977-10-24T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1198</DIPID>
+    <Nombre>Paz</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Charpentier</Apellido_Paterno>
+    <Apellido_Materno>Rajcevich</Apellido_Materno>
+    <Fecha_Nacimiento>1989-05-02T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1234</DIPID>
+    <Nombre>Mario</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Olavarría</Apellido_Paterno>
+    <Apellido_Materno>Rodríguez</Apellido_Materno>
+    <Fecha_Nacimiento>1963-02-09T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1127</DIPID>
+    <Nombre>Lorena</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Fries</Apellido_Paterno>
+    <Apellido_Materno>Monleón</Apellido_Materno>
+    <Fecha_Nacimiento>1960-04-01T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1143</DIPID>
+    <Nombre>Cristóbal</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Martínez</Apellido_Paterno>
+    <Apellido_Materno>Ramírez</Apellido_Materno>
+    <Fecha_Nacimiento>1984-04-30T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1157</DIPID>
+    <Nombre>Marlene</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Pérez</Apellido_Paterno>
+    <Apellido_Materno>Cartes</Apellido_Materno>
+    <Fecha_Nacimiento>1973-05-10T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1173</DIPID>
+    <Nombre>Daniela</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Serrano</Apellido_Paterno>
+    <Apellido_Materno>Salazar</Apellido_Materno>
+    <Fecha_Nacimiento>1995-03-17T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1187</DIPID>
+    <Nombre>Carlo</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Arqueros</Apellido_Paterno>
+    <Apellido_Materno>Pizarro</Apellido_Materno>
+    <Fecha_Nacimiento>1972-11-14T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1192</DIPID>
+    <Nombre>Lilian</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Betancurt</Apellido_Paterno>
+    <Apellido_Materno>Delgado</Apellido_Materno>
+    <Fecha_Nacimiento>1990-02-03T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1196</DIPID>
+    <Nombre>Priscilla</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Castillo</Apellido_Paterno>
+    <Apellido_Materno>Gerli</Apellido_Materno>
+    <Fecha_Nacimiento>1970-10-22T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1201</DIPID>
+    <Nombre>Flor</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Contreras</Apellido_Paterno>
+    <Apellido_Materno>Vivallo</Apellido_Materno>
+    <Fecha_Nacimiento>1970-05-30T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1224</DIPID>
+    <Nombre>Cristian</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Mella</Apellido_Paterno>
+    <Apellido_Materno>Andaur</Apellido_Materno>
+    <Fecha_Nacimiento>1988-04-23T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1227</DIPID>
+    <Nombre>Claudia</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Mora</Apellido_Paterno>
+    <Apellido_Materno>Vega</Apellido_Materno>
+    <Fecha_Nacimiento>1981-02-19T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1231</DIPID>
+    <Nombre>Ximena</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Naranjo</Apellido_Paterno>
+    <Apellido_Materno>Pinto</Apellido_Materno>
+    <Fecha_Nacimiento>1974-01-30T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1235</DIPID>
+    <Nombre>Javier</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Olivares</Apellido_Paterno>
+    <Apellido_Materno>Avendaño</Apellido_Materno>
+    <Fecha_Nacimiento>1983-10-11T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1239</DIPID>
+    <Nombre>Fabián</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Ossandón</Apellido_Paterno>
+    <Apellido_Materno>Briceño</Apellido_Materno>
+    <Fecha_Nacimiento>1988-02-02T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1200</DIPID>
+    <Nombre>Cristian</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Contreras</Apellido_Paterno>
+    <Apellido_Materno>Radovic</Apellido_Materno>
+    <Fecha_Nacimiento>1969-12-21T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1244</DIPID>
+    <Nombre>Claudia</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Reyes</Apellido_Paterno>
+    <Apellido_Materno>Larenas</Apellido_Materno>
+    <Fecha_Nacimiento>1980-05-27T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1245</DIPID>
+    <Nombre>Alejandro</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Riquelme</Apellido_Paterno>
+    <Apellido_Materno>Ducci</Apellido_Materno>
+    <Fecha_Nacimiento>1974-01-19T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1246</DIPID>
+    <Nombre>José Antonio</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Rivas</Apellido_Paterno>
+    <Apellido_Materno>Villalobos</Apellido_Materno>
+    <Fecha_Nacimiento>1961-03-07T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1247</DIPID>
+    <Nombre>Javiera</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Rodríguez</Apellido_Paterno>
+    <Apellido_Materno>Pascual</Apellido_Materno>
+    <Fecha_Nacimiento>1995-06-27T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1249</DIPID>
+    <Nombre>Omar</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Sabat</Apellido_Paterno>
+    <Apellido_Materno>Guzmán</Apellido_Materno>
+    <Fecha_Nacimiento>1976-07-12T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1251</DIPID>
+    <Nombre>Macarena</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Santelices</Apellido_Paterno>
+    <Apellido_Materno>Cañas</Apellido_Materno>
+    <Fecha_Nacimiento>1978-08-15T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1252</DIPID>
+    <Nombre>Constanza</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Schonhaut</Apellido_Paterno>
+    <Apellido_Materno>Soto</Apellido_Materno>
+    <Fecha_Nacimiento>1989-01-31T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1253</DIPID>
+    <Nombre>Fernando</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Ugarte</Apellido_Paterno>
+    <Apellido_Materno>Tejeda</Apellido_Materno>
+    <Fecha_Nacimiento>1979-02-11T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1257</DIPID>
+    <Nombre>Alejandra</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Valdebenito</Apellido_Paterno>
+    <Apellido_Materno>Torres</Apellido_Materno>
+    <Fecha_Nacimiento>1975-12-09T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1260</DIPID>
+    <Nombre>César</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Valenzuela</Apellido_Paterno>
+    <Apellido_Materno>Maass</Apellido_Materno>
+    <Fecha_Nacimiento>1989-01-05T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1261</DIPID>
+    <Nombre>Daniel</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Valenzuela</Apellido_Paterno>
+    <Apellido_Materno>Salazar</Apellido_Materno>
+    <Fecha_Nacimiento>1980-03-16T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1262</DIPID>
+    <Nombre>Diego</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Vergara</Apellido_Paterno>
+    <Apellido_Materno>Rodríguez</Apellido_Materno>
+    <Fecha_Nacimiento>1976-03-26T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1264</DIPID>
+    <Nombre>Fernando</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Zamorano</Apellido_Paterno>
+    <Apellido_Materno>Peralta</Apellido_Materno>
+    <Fecha_Nacimiento>1987-10-06T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1209</DIPID>
+    <Nombre>Matías</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Fernández</Apellido_Paterno>
+    <Apellido_Materno>Hartwig</Apellido_Materno>
+    <Fecha_Nacimiento>1987-02-16T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1221</DIPID>
+    <Nombre>Benjamín</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Lorca</Apellido_Paterno>
+    <Apellido_Materno>Inzunza</Apellido_Materno>
+    <Fecha_Nacimiento>1990-07-25T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1226</DIPID>
+    <Nombre>José</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Montalva</Apellido_Paterno>
+    <Apellido_Materno>Feuerhake</Apellido_Materno>
+    <Fecha_Nacimiento>1985-05-28T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1060</DIPID>
+    <Nombre>Luis</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Pardo</Apellido_Paterno>
+    <Apellido_Materno>Sáinz</Apellido_Materno>
+    <Fecha_Nacimiento>1960-12-13T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1207</DIPID>
+    <Nombre>Valentina</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Cáceres</Apellido_Paterno>
+    <Apellido_Materno>Monsálvez</Apellido_Materno>
+    <Fecha_Nacimiento>1999-06-08T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="0">Femenino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1215</DIPID>
+    <Nombre>Álvaro</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Jofré</Apellido_Paterno>
+    <Apellido_Materno>Cáceres</Apellido_Materno>
+    <Fecha_Nacimiento>1971-10-16T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+  <Diputado>
+    <DIPID>1102</DIPID>
+    <Nombre>Roberto</Nombre>
+    <Nombre2> </Nombre2>
+    <Apellido_Paterno>Arroyo</Apellido_Paterno>
+    <Apellido_Materno>Muñoz</Apellido_Materno>
+    <Fecha_Nacimiento>1963-11-29T00:00:00</Fecha_Nacimiento>
+    <Sexo Codigo="1">Masculino</Sexo>
+    <Militancias_Periodos />
+  </Diputado>
+</Diputados>

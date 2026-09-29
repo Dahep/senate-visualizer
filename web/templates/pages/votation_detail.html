@@ -1,0 +1,45 @@
+{{define "title"}}Votaci&oacute;n {{.Votation.ExternalID}} · Congreso Visible{{end}}
+{{define "content"}}
+<article>
+  <h1>Votaci&oacute;n n&deg; {{.Votation.ExternalID}}</h1>
+
+  <dl class="meta">
+    <dt>Fecha</dt><dd>{{day .Votation.Date}}</dd>
+    {{if .Votation.Subject.Valid}}<dt>Materia</dt><dd>{{.Votation.Subject.String}}</dd>{{end}}
+    {{if .Votation.BillID.Valid}}
+    <dt>Bolet&iacute;n</dt>
+    <dd>
+      <a href="/bills/{{.Votation.BillID.String}}">{{.Votation.BillID.String}}</a>
+      {{if .BillTitle}} — {{.BillTitle}}{{end}}
+      {{if .BillProvisional}}<span class="note">(t&iacute;tulo provisional, derivado de la votaci&oacute;n)</span>{{end}}
+    </dd>
+    {{end}}
+    {{if .Votation.Result.Valid}}<dt>Resultado</dt><dd>{{.Votation.Result.String}}</dd>{{end}}
+    {{if .Votation.VoteType.Valid}}<dt>Tipo</dt><dd>{{.Votation.VoteType.String}}</dd>{{end}}
+    {{if .Votation.QuorumType.Valid}}<dt>Qu&oacute;rum</dt><dd>{{.Votation.QuorumType.String}}</dd>{{end}}
+    {{if .Votation.LegislativeStep.Valid}}<dt>Tr&aacute;mite</dt><dd>{{.Votation.LegislativeStep.String}}</dd>{{end}}
+  </dl>
+
+  <p class="totals">
+    <span class="badge yes">S&iacute; {{.Votation.TotalYes}}</span>
+    <span class="badge no">No {{.Votation.TotalNo}}</span>
+    <span class="badge abstain">Abstenci&oacute;n {{.Votation.TotalAbstain}}</span>
+    <span class="badge dispensed">Dispensados {{.Votation.TotalDispensed}}</span>
+  </p>
+
+  <figure class="chart">
+    <img src="/charts/party-breakdown/{{.Votation.ID}}" width="900" height="420"
+         alt="Gr&aacute;fico de votos emitidos por partido" loading="lazy">
+  </figure>
+
+  <h2>Desglose por partido</h2>
+  <div id="breakdown">
+    {{template "vote_breakdown" .Breakdown}}
+  </div>
+  <p>
+    <button type="button"
+            hx-get="/partials/vote-breakdown/{{.Votation.ID}}"
+            hx-target="#breakdown" hx-swap="innerHTML">Actualizar desglose</button>
+  </p>
+</article>
+{{end}}

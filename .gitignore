@@ -1,0 +1,10 @@
+# SQLite database + WAL/SHM sidecars
+data/congress.db
+data/congress.db-shm
+data/congress.db-wal
+
+# native binaries
+/congress-visualizer
+/server
+/sync
+/bin/

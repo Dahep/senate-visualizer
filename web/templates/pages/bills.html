@@ -1,0 +1,37 @@
+{{define "title"}}Boletines · Congreso Visible{{end}}
+{{define "content"}}
+<h1>Boletines</h1>
+
+<form method="get" action="/bills" class="search">
+  <input type="search" name="q" value="{{.Query}}" placeholder="Buscar por n&deg; de bolet&iacute;n">
+  <button type="submit">Buscar</button>
+</form>
+
+{{if .Bills}}
+<table>
+  <thead>
+    <tr><th>Bolet&iacute;n</th><th>T&iacute;tulo</th><th>Fecha t&iacute;tulo</th></tr>
+  </thead>
+  <tbody>
+    {{range .Bills}}
+    <tr>
+      <td><a href="/bills/{{.ID}}">{{.ID}}</a></td>
+      <td>
+        {{.Title}}
+        {{if eq .TitleSource "votation_articulo"}}<span class="note">(provisional)</span>{{end}}
+      </td>
+      <td>{{if .TitleDate.Valid}}{{day .TitleDate.String}}{{end}}</td>
+    </tr>
+    {{end}}
+  </tbody>
+</table>
+
+<nav class="pager">
+  {{if .Pagination.HasPrev}}<a href="/bills?page={{.Pagination.PrevPage}}{{if $.Query}}&q={{$.Query}}{{end}}">&larr; Anterior</a>{{end}}
+  <span>P&aacute;gina {{.Pagination.Page}} de {{.Pagination.Pages}}</span>
+  {{if .Pagination.HasNext}}<a href="/bills?page={{.Pagination.NextPage}}{{if $.Query}}&q={{$.Query}}{{end}}">Siguiente &rarr;</a>{{end}}
+</nav>
+{{else}}
+<p class="empty">No hay boletines para mostrar.</p>
+{{end}}
+{{end}}
