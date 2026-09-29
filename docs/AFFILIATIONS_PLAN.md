@@ -14,7 +14,7 @@ across the full history — not just the current legislature.
 | SERVEL `archivo.servel.cl` + "Centro de datos" | candidate records per election incl. party (elected ⇒ deputy of that period) | ⚠️ file URLs behind a JS-driven portal; needs a discovery spike |
 | BCN biografías parlamentarias (bcn.cl/siit) | per-deputy, per-period party, whole history | ⚠️ site reshuffle; needs scrape probing |
 
-File workflow (`data/affiliations.json`, `curation.Validate/Apply`) is already
+File workflow (`data/affiliations.json` (single source of truth; bot traces live in `data/traces/`), `curation.Validate/Apply`) is already
 built and period-agnostic — the plan only changes the FILE, not the pipeline.
 `data/affiliations.draft.json` remains the current-period draft; the reviewed
 file becomes `data/affiliations.json`.
@@ -104,3 +104,18 @@ error). Party switches within a period are expected to be few dozens.
 Stage-1 discovery spike: locate SERVEL's direct candidate-list file URLs for
 the 2021 and 2017 elections; write `scripts/draft_affiliations --period` ON THE
 EXACTLY-FOUND URLs; run, review, apply.
+
+## Final state (2026-09-16)
+
+- `data/affiliations.json` — the only curated source truth (903 rows: 2002-2026 wiki + 2022-2026 SERVEL roster +/- current ficha).
+- `data/traces/` — the bot trail: per-period review CSVs, draft JSONs, wiki report (zero actionable items remaining).
+- `data/parties.json` — 30-party registry with historical parties (inc[PRI/IC/AMP], current PSC, CS, COM).
+- Status: applied. Party-at-date coverage:
+
+| Band | Coverage |
+|------|----------|
+| 2002-2009 | 94.5-98.1% |
+| 2010-2017 | 96.0-99.1% |
+| 2018-2021 | 78.6-80.7% (mid-period switches, unassigned by design) |
+| 2022-2025 | 98.4-99.5% |
+| 2026 (current) | 100.0% |
