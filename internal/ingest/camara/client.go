@@ -32,9 +32,9 @@ const (
 
 // Client is a rate-limited, retrying HTTP client over the XML API.
 type Client struct {
-	hc     *http.Client
-	base   string
-	delay  time.Duration
+	hc      *http.Client
+	base    string
+	delay   time.Duration
 	lastReq time.Time
 }
 
@@ -45,8 +45,8 @@ func NewClient(base string, delay time.Duration) *Client {
 		base = "https://opendata.camara.cl/wscamaradiputados.asmx"
 	}
 	return &Client{
-		hc: &http.Client{Timeout: reqTimeout},
-		base: base,
+		hc:    &http.Client{Timeout: reqTimeout},
+		base:  base,
 		delay: delay,
 	}
 }
@@ -155,7 +155,8 @@ func (c *Client) get(ctx context.Context, op string, params url.Values) ([]byte,
 			return nil, lastErr
 		}
 		select {
-		case <-ctx.Done(): return nil, ctx.Err()
+		case <-ctx.Done():
+			return nil, ctx.Err()
 		case <-time.After(backoff(attempt)):
 		}
 	}

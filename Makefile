@@ -12,7 +12,8 @@ generate: ## sqlc codegen (validates SQL at build time)
 migrate: ## goose up against $(DB_PATH)
 	goose -dir db/migrations sqlite3 $(DB_PATH) up
 
-test:
+test: ## gofmt gate + unit tests
+	@test -z "$$(gofmt -l cmd internal scripts)" || { echo "gofmt needed:"; gofmt -l cmd internal scripts; exit 1; }
 	go test ./...
 
 build:

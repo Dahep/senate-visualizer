@@ -168,8 +168,8 @@ func ParseVotation(x VotacionXML) (VotationData, error) {
 // ParseDeputies normalizes a getDiputados / getDiputados_Vigentes payload.
 func ParseDeputies(body []byte) ([]DiputadoXML, error) {
 	var wrap struct {
-		XMLName   xml.Name      `xml:"Diputados"`
-		Deputies  []DiputadoXML `xml:"Diputado"`
+		XMLName  xml.Name      `xml:"Diputados"`
+		Deputies []DiputadoXML `xml:"Diputado"`
 	}
 	if err := xmlUnmarshal(body, &wrap); err != nil {
 		return nil, err

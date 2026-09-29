@@ -109,8 +109,8 @@ func main() {
 		Affiliations []Affiliation `json:"affiliations"`
 	}
 	doc := draftDoc{
-		Note: "BOT DRAFT - review before applying: `go run ./cmd/sync -seed traces/affiliations.draft.json`",
-		GeneratedAt: time.Now().Format(time.RFC3339),
+		Note:         "BOT DRAFT - review before applying: `go run ./cmd/sync -seed traces/affiliations.draft.json`",
+		GeneratedAt:  time.Now().Format(time.RFC3339),
 		Affiliations: affiliations,
 	}
 	body, _ := json.MarshalIndent(doc, "", "  ")

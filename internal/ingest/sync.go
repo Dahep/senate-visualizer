@@ -47,9 +47,9 @@ type Outcome struct {
 type ScanReason string
 
 const (
-	ReasonFloor   ScanReason = "floor"
+	ReasonFloor     ScanReason = "floor"
 	ReasonTolerance ScanReason = "tolerance"
-	ReasonCtxDone ScanReason = "context"
+	ReasonCtxDone   ScanReason = "context"
 )
 
 // ScanResult is the sweep outcome — including the depth check:
@@ -60,7 +60,7 @@ type ScanResult struct {
 	Hits        int
 	Misses      int
 	GapRuns     []int // gap runs the sweep crossed (widths)
-	Pending     int // out-of-band candidates still pending (incl. quarantined)
+	Pending     int   // out-of-band candidates still pending (incl. quarantined)
 	MinVoteDate string
 }
 

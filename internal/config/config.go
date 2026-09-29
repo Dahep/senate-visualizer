@@ -8,22 +8,22 @@ import (
 )
 
 type Config struct {
-	Port         string
-	DBPath       string
+	Port          string
+	DBPath        string
 	MigrationsDir string
-	APIBaseURL   string
-	APIDelay     time.Duration
-	SyncInterval time.Duration
+	APIBaseURL    string
+	APIDelay      time.Duration
+	SyncInterval  time.Duration
 }
 
 func Load() Config {
 	return Config{
-		Port:         env("PORT", "8080"),
-		DBPath:       env("DB_PATH", "data/congress.db"),
+		Port:          env("PORT", "8080"),
+		DBPath:        env("DB_PATH", "data/congress.db"),
 		MigrationsDir: env("MIGRATIONS_DIR", "db/migrations"),
-		APIBaseURL:   os.Getenv("API_BASE_URL"), // empty = verified default in camara client
-		APIDelay:     durationEnv("API_DELAY_MS", 150*time.Millisecond),
-		SyncInterval: durationEnv("SYNC_INTERVAL", 6*time.Hour),
+		APIBaseURL:    os.Getenv("API_BASE_URL"), // empty = verified default in camara client
+		APIDelay:      durationEnv("API_DELAY_MS", 150*time.Millisecond),
+		SyncInterval:  durationEnv("SYNC_INTERVAL", 6*time.Hour),
 	}
 }
 

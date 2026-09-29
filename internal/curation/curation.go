@@ -48,9 +48,9 @@ func parseJSON(path string, v any) error {
 }
 
 var (
-	colorRE   = regexp.MustCompile(`^#[0-9A-Fa-f]{6}$`)
-	dateRE    = regexp.MustCompile(`^\d{4}-\d{2}-\d{2}$`)
-	shortRE   = regexp.MustCompile(`^[A-Z0-9][A-Za-z0-9._-]{0,31}$`)
+	colorRE = regexp.MustCompile(`^#[0-9A-Fa-f]{6}$`)
+	dateRE  = regexp.MustCompile(`^\d{4}-\d{2}-\d{2}$`)
+	shortRE = regexp.MustCompile(`^[A-Z0-9][A-Za-z0-9._-]{0,31}$`)
 )
 
 // LoadAffiliations parses both curated files with their own schema checks.
