@@ -299,16 +299,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-def write_draft():
-    with open("data/traces/affiliations.draft.wiki.json", "w") as f:
-        json.dump({
-            "_note": "BOT DRAFT (wikipedia rosters) - human review before `sync -seed`",
-            "_generated_at": os.popen("date -Iseconds").read().strip(),
-            "unmatched": [{"period": p[0], "name": p[1], "party": p[2]} for p in unmatched],
-            "affiliations": draft,
-        }, f, ensure_ascii=False, indent=2)
-    with open("data/traces/affiliations.wiki.report.txt", "w") as f:
-        f.write("\n".join(report) + "\n")
-    print(f"\nmatched={len(draft)} unmatched={len(unmatched)} problems={len(report)}")
