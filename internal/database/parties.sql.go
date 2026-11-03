@@ -13,11 +13,21 @@ import (
 const affiliationGaps = `-- name: AffiliationGaps :many
 SELECT DISTINCT iv.representative_id AS rid
 FROM individual_votes iv
-LEFT JOIN representative_parties rp ON rp.representative_id = iv.representative_id
-WHERE rp.id IS NULL
+JOIN votations v ON v.id = iv.votation_id
+LEFT JOIN rep_party_at_date pad
+       ON pad.votation_id = iv.votation_id
+      AND pad.representative_id = iv.representative_id
+WHERE v.vote_date <> '0000-00-00'
+  AND pad.party_id IS NULL
 `
 
-// Deputies with votes but no party-at-date or party membership at all.
+// Coverage-gap signal the seed workflow reports to the operator (DESIGN.md
+// 5/graft C): deputies WITH at least one vote the party-at-date rule (the
+// rep_party_at_date view) does not cover - an uncovered vote is one gap. The
+// '0000-00-00' unparseable-date sentinel is excluded: those votes render
+// unaffiliated by ingest design, and no file row can ever cover them. True
+// independents vs missing rows are the operator's decision - surfaced,
+// never an ingest failure.
 func (q *Queries) AffiliationGaps(ctx context.Context) ([]int64, error) {
 	rows, err := q.db.QueryContext(ctx, affiliationGaps)
 	if err != nil {

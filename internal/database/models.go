@@ -37,6 +37,12 @@ type Party struct {
 	Color     string `json:"color"`
 }
 
+type RepPartyAtDate struct {
+	VotationID       int64 `json:"votation_id"`
+	RepresentativeID int64 `json:"representative_id"`
+	PartyID          int64 `json:"party_id"`
+}
+
 type Representative struct {
 	ID             int64          `json:"id"`
 	ChamberID      string         `json:"chamber_id"`
