@@ -9,12 +9,12 @@
     <dt>Votos casteados</dt><dd class="num">{{.Cohesion.Cast}}</dd>
     <dt>Votaciones</dt><dd class="num">{{.Cohesion.Votations}}</dd>
   </dl>
-  <p class="note">{{if .Cohesion.From}}Ventana {{.Cohesion.From}}&ndash;{{if .Cohesion.To}}{{.Cohesion.To}}{{else}}(abierto){{end}}.{{else}}Todo el historial ingerido.{{end}}
+  <p class="note">{{if .Cohesion.Window.From}}Ventana {{.Cohesion.Window.From}}&ndash;{{if .Cohesion.Window.To}}{{.Cohesion.Window.To}}{{else}}(abierto){{end}}.{{else}}Todo el historial ingerido.{{end}}
   Fracci&oacute;n de votos que siguen al voto mayoritario del partido en cada
   votaci&oacute;n (s&oacute;lo votos casteados s&iacute;/no/abstenci&oacute;n; excluye ausencias,
   pareos y dispensados).</p>
   <div class="chart">
-    <img src="/charts/party-cohesion/{{.Party.ID}}" alt="Coherencia mensual de {{.Party.Name}}" loading="lazy">
+    <img src="/charts/party-cohesion/{{.Party.ID}}{{.Cohesion.Window.Query}}" alt="Coherencia mensual de {{.Party.Name}}" loading="lazy">
   </div>
 
   <h2>Miembros actuales</h2>

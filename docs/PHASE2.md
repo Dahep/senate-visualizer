@@ -20,8 +20,18 @@ its discovery spike is described at the bottom.
   `/rebels` (loyalty ascending, ≥10 attributed votations), `/alignment`
   (pairwise same-vote rate; ≥10 joint cast votes; capped at 200 rows shown,
   most/least order toggle; 10-minute in-process cache for the ~5s self-join).
-- Window defaults: rebels/alignment default to the 2022-03-11+ legislature;
-  party cohesion defaults to all history.
+- Window defaults: one deep window value (`internal/handlers/window.go`)
+  parses `?from`/`?to` once per request and resolves it under a named
+  policy: rebels/alignment use the `legislature` default
+  (2022-03-11+); party cohesion and rep-profile loyalty declare
+  `all-history` explicitly. The window renders its own URL fragment, so the
+  party page's chart img re-parses exactly the window its summary used,
+  and malformed input (the `0000-00-00`/`9999-99-99` sentinels included)
+  answers one uniform 400 on every page. ISO-date validation is shared
+  with the curation file rule via `internal/isodate` — one date rule for
+  both boundaries. PRODUCT QUESTION: `currentLegisStart` still points at
+  the 2022-03-11 legislature; after the 2026-03 changeover, pointing
+  "current" at the new 2026-2030 legislature is a product decision.
 
 ## Verification snapshot (live DB)
 

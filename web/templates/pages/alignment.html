@@ -15,9 +15,9 @@
     {{end}}
   </select>
   <label for="from">Desde</label>
-  <input id="from" type="date" name="from" value="{{.From}}">
+  <input id="from" type="date" name="from" value="{{.Window.From}}">
   <label for="to">Hasta</label>
-  <input id="to" type="date" name="to" value="{{.To}}">
+  <input id="to" type="date" name="to" value="{{.Window.To}}">
   <button type="submit">Aplicar</button>
 </form>
 
@@ -25,7 +25,7 @@
 <p class="note">
   {{if eq .Order "most"}}M&aacute;s alineados primero.{{else}}Menos alineados primero.{{end}}
   Mostrando {{len .Pairs}} de {{.TotalPairs}} pares &mdash;
-  <a href="/alignment?party={{.PartyID}}&amp;from={{.From}}&amp;to={{.To}}&amp;order={{if eq .Order "most"}}least{{else}}most{{end}}">invertir orden</a>
+  <a href="/alignment?party={{.PartyID}}&amp;from={{.Window.From}}&amp;to={{.Window.To}}&amp;order={{if eq .Order "most"}}least{{else}}most{{end}}">invertir orden</a>
 </p>
 <table>
   <thead>
