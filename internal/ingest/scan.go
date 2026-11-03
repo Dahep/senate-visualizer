@@ -32,20 +32,23 @@ const (
 	ScanDirectionDown ScanDirection = iota
 )
 
-// Scan runs the full historical sweep (acquires the lease itself).
+// Scan runs the full historical sweep, holding the single-writer lease
+// (renewed on interval) for the run's whole duration.
 func (s *Syncer) Scan(ctx context.Context, dir ScanDirection) (ScanResult, error) {
-	if ok, err := s.AcquireSyncLock(ctx, "cmd/sync"); err != nil {
+	l, err := s.holdLease(ctx)
+	if err != nil {
 		return ScanResult{}, err
-	} else if !ok {
-		return ScanResult{}, fmt.Errorf("another sweep holds %s", keySyncLock)
 	}
-	defer s.ReleaseSyncLock(ctx, "cmd/sync")
-	return s.scanLocked(ctx)
+	defer s.release(l)
+	return s.sweep(ctx)
 }
 
-// scanLocked runs the sweep assuming the lease is already held (Tick's
-// cold-start fallthrough shares the lease instead of deadlocking).
-func (s *Syncer) scanLocked(ctx context.Context) (ScanResult, error) {
+// sweep is the scan body. It runs ONLY under a held lease: Scan acquires the
+// lease itself, and Tick's cold-start path shares its already-owned lease by
+// calling this same function — one lock-acquiring body, no second entry point
+// (scanLocked dies here; its only reason to exist was a 2h lease a full scan
+// outlives, which the renewal loop fixed).
+func (s *Syncer) sweep(ctx context.Context) (ScanResult, error) {
 	high, err := s.cursorInt(ctx, keyHighWater)
 	if err != nil {
 		return ScanResult{}, err
@@ -111,7 +114,7 @@ func (s *Syncer) sweepDown(ctx context.Context, from int64) (ScanResult, error) 
 		next, hit := s.probeAheadDown(ctx, id)
 		if !hit {
 			res.EndReason = ReasonFloor
-			return res, s.afterSweep(&res)
+			return res, s.afterSweep(ctx, &res)
 		}
 		res.GapRuns = append(res.GapRuns, int(missRun))
 		s.log.Info("gap run crossed", "from", id, "next", next, "misses", missRun)
@@ -119,7 +122,7 @@ func (s *Syncer) sweepDown(ctx context.Context, from int64) (ScanResult, error) 
 		id = next + 1 // the loop decrement lands on the probed hit
 	}
 	res.EndReason = ReasonFloor
-	return res, s.afterSweep(&res)
+	return res, s.afterSweep(ctx, &res)
 }
 
 // probeAheadDown searches below a tolerance miss run. The space is sparse
@@ -162,9 +165,10 @@ func pow10(k int64) int64 {
 }
 
 // afterSweep records the operator-visible results: the depth criterion
-// (MinVoteDate — a "complete" sweep spanning only recent days is loud).
-func (s *Syncer) afterSweep(res *ScanResult) error {
-	minDate, err := s.q.GetMinVoteDate(context.Background())
+// (MinVoteDate — a "complete" sweep spanning only recent days is loud). It
+// honors the caller's ctx, not context.Background().
+func (s *Syncer) afterSweep(ctx context.Context, res *ScanResult) error {
+	minDate, err := s.q.GetMinVoteDate(ctx)
 	if err != nil {
 		return err
 	}
@@ -173,15 +177,15 @@ func (s *Syncer) afterSweep(res *ScanResult) error {
 }
 
 // Tick is the incremental driver: overlap re-scan (self-heals late
-// corrections), upward walk, queue drain, deputy refresh.
+// corrections), upward walk, queue drain, deputy refresh. It holds the lease
+// under its own driver identity (ingest.DriverScheduler) for the full body —
+// cold start included, which is why sweep needs no separate entry point.
 func (s *Syncer) Tick(ctx context.Context) (ScanResult, error) {
-	const owner = "scheduler"
-	if ok, err := s.AcquireSyncLock(ctx, owner); err != nil {
+	l, err := s.holdLease(ctx)
+	if err != nil {
 		return ScanResult{}, err
-	} else if !ok {
-		return ScanResult{}, fmt.Errorf("another sweep holds %s", keySyncLock)
 	}
-	defer s.ReleaseSyncLock(ctx, owner)
+	defer s.release(l)
 
 	var res ScanResult
 	high, err := s.cursorInt(ctx, keyHighWater)
@@ -189,7 +193,7 @@ func (s *Syncer) Tick(ctx context.Context) (ScanResult, error) {
 		return res, err
 	}
 	if high == 0 {
-		return s.scanLocked(ctx) // cold start shares the already-held lease
+		return s.sweep(ctx) // cold start: the full sweep shares the held lease
 	}
 
 	// Upward walk with a small overlap below the frontier.
@@ -228,7 +232,7 @@ func (s *Syncer) Tick(ctx context.Context) (ScanResult, error) {
 	if _, err := s.SyncDeputies(ctx); err != nil {
 		return res, fmt.Errorf("deputies: %w", err)
 	}
-	if err := s.afterSweep(&res); err != nil {
+	if err := s.afterSweep(ctx, &res); err != nil {
 		return res, err
 	}
 	res.EndReason = ReasonCtxDone

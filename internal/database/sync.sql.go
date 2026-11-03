@@ -12,14 +12,22 @@ import (
 const acquireSyncLock = `-- name: AcquireSyncLock :execrows
 UPDATE sync_metadata SET value = ?, updated_at = datetime('now')
 WHERE key = 'camara.sync_lock'
-  AND (value = ''
-       OR CAST(SUBSTR(value, INSTR(value, '|') + 1) AS INTEGER) < CAST(strftime('%s', 'now') AS INTEGER))
+  AND (SUBSTR(value, 1, INSTR(value, '|') - 1) = ?
+    OR value = ''
+    OR CAST(SUBSTR(value, INSTR(value, '|') + 1) AS INTEGER) < CAST(strftime('%s', 'now') AS INTEGER))
 `
 
-// Single-writer lease: compare-and-swap against an empty/expired value.
-// The caller generates owner+expiry; 0 rows = someone else holds it.
-func (q *Queries) AcquireSyncLock(ctx context.Context, value string) (int64, error) {
-	result, err := q.db.ExecContext(ctx, acquireSyncLock, value)
+type AcquireSyncLockParams struct {
+	Value   string `json:"value"`
+	Value_2 string `json:"value_2"`
+}
+
+// Single-writer lease CAS. Semantics (documented with the Go caller, which
+// is also where the single-writer invariant lives): the CAS succeeds when
+// the lease is unclaimed (empty), expired (any owner may steal only AFTER
+// expiry), or current-owner (renewal while the lease is still live).
+func (q *Queries) AcquireSyncLock(ctx context.Context, arg AcquireSyncLockParams) (int64, error) {
+	result, err := q.db.ExecContext(ctx, acquireSyncLock, arg.Value, arg.Value_2)
 	if err != nil {
 		return 0, err
 	}

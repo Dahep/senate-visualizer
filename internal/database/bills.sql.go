@@ -97,7 +97,7 @@ type ListBillsParams struct {
 	Offset int64  `json:"offset"`
 }
 
-// matches with a caller-supplied pattern ('%term%' built in Go)
+// matches with a caller-supplied pattern (%term% built in Go)
 func (q *Queries) ListBills(ctx context.Context, arg ListBillsParams) ([]Bill, error) {
 	rows, err := q.db.QueryContext(ctx, listBills, arg.ID, arg.Limit, arg.Offset)
 	if err != nil {
@@ -145,10 +145,11 @@ type UpsertBillStubParams struct {
 	TitleDate   sql.NullString `json:"title_date"`
 }
 
-// Title upgrade policy is decided in Go (most-recent-votation Articulo wins);
-// the caller passes the chosen title/source/date. Placeholder rows are always
-// upgradeable; 'manual'/'enriched' rows must be protected in Go by re-reading
-// the existing row inside the ingest transaction when in doubt.
+// Writes the caller-chosen title block, nothing else. The upgrade policy -
+// recency rule, manual/enriched protection - is enforced in Go at the only
+// ingest caller (internal/ingest/sync.go applyBillTitle), which re-reads the
+// existing row inside the ingest transaction before choosing the slots this
+// statement receives. This one is a plain write.
 func (q *Queries) UpsertBillStub(ctx context.Context, arg UpsertBillStubParams) error {
 	_, err := q.db.ExecContext(ctx, upsertBillStub,
 		arg.ID,

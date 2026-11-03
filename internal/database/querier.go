@@ -10,9 +10,11 @@ import (
 )
 
 type Querier interface {
-	// Single-writer lease: compare-and-swap against an empty/expired value.
-	// The caller generates owner+expiry; 0 rows = someone else holds it.
-	AcquireSyncLock(ctx context.Context, value string) (int64, error)
+	// Single-writer lease CAS. Semantics (documented with the Go caller, which
+	// is also where the single-writer invariant lives): the CAS succeeds when
+	// the lease is unclaimed (empty), expired (any owner may steal only AFTER
+	// expiry), or current-owner (renewal while the lease is still live).
+	AcquireSyncLock(ctx context.Context, arg AcquireSyncLockParams) (int64, error)
 	// Deputies with votes but no party-at-date or party membership at all.
 	AffiliationGaps(ctx context.Context) ([]int64, error)
 	CountBills(ctx context.Context, id string) (int64, error)
@@ -67,7 +69,7 @@ type Querier interface {
 	GetVotesByVotation(ctx context.Context, votationID int64) ([]GetVotesByVotationRow, error)
 	InsertAffiliation(ctx context.Context, arg InsertAffiliationParams) error
 	InsertVote(ctx context.Context, arg InsertVoteParams) error
-	// matches with a caller-supplied pattern ('%term%' built in Go)
+	// matches with a caller-supplied pattern (%term% built in Go)
 	ListBills(ctx context.Context, arg ListBillsParams) ([]Bill, error)
 	ListParties(ctx context.Context) ([]Party, error)
 	ListRepresentatives(ctx context.Context, arg ListRepresentativesParams) ([]ListRepresentativesRow, error)
@@ -80,10 +82,11 @@ type Querier interface {
 	SetRepresentativeActive(ctx context.Context, arg SetRepresentativeActiveParams) error
 	// Called by SyncDeputies before granting active via the vigentes set.
 	SetRepresentativesInactive(ctx context.Context, chamberID string) error
-	// Title upgrade policy is decided in Go (most-recent-votation Articulo wins);
-	// the caller passes the chosen title/source/date. Placeholder rows are always
-	// upgradeable; 'manual'/'enriched' rows must be protected in Go by re-reading
-	// the existing row inside the ingest transaction when in doubt.
+	// Writes the caller-chosen title block, nothing else. The upgrade policy -
+	// recency rule, manual/enriched protection - is enforced in Go at the only
+	// ingest caller (internal/ingest/sync.go applyBillTitle), which re-reads the
+	// existing row inside the ingest transaction before choosing the slots this
+	// statement receives. This one is a plain write.
 	UpsertBillStub(ctx context.Context, arg UpsertBillStubParams) error
 	// Override pass: Pareos membership beats an explicit `No Vota` row. Keeping
 	// the existing row's vote_raw preserves the original explicit text; rows

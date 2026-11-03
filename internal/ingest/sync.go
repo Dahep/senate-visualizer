@@ -25,12 +25,28 @@ const (
 	keyFloor      = "camara.floor"       // bisected lower bound of the ID space
 	keyScanCursor = "camara.scan_cursor" // durable sweep resume point
 	keySyncLock   = "camara.sync_lock"   // lease "<owner>|<unix expiry>"
-	keyDeputiesAt = "camara.deputies.synced_at"
 )
 
 const (
 	gapTolerance = 50    // consecutive misses ending a sweep leg before probe-ahead widens
 	seedID       = 87460 // live-verified current-window ID; sweeps grow from here
+)
+
+// Driver identities (docs/DESIGN.md gap 6): the two drivers pass theirs to
+// NewSyncer and it becomes the lease owner — no owner strings at call sites.
+const (
+	DriverCmdSync   = "cmd/sync"
+	DriverScheduler = "scheduler"
+)
+
+// Lease pacing. The lease is short-TTL and RENEWED while the run is alive, so
+// a run holds it for its real duration: docs/DESIGN.md budgets the historical
+// scan at ~3.6h (~87k requests), longer than any fixed expiry could honor.
+// The SQL CAS steals only after the expiry passes, so three skipped renewals
+// still cost nothing before a third party can take over.
+const (
+	leaseTTL     = 15 * time.Minute
+	leaseRenewIn = 5 * time.Minute // renewal cadence, well inside the CAS steal window
 )
 
 // Outcome reports what one SyncVotationID did.
@@ -76,15 +92,44 @@ type Syncer struct {
 	db     *sql.DB // transaction boundary for the per-votation unit of work
 	q      *database.Queries
 	cands  candidateQueue // votation_candidates lifecycle owner
-	client *camara.Client
+	client camaraAPI
 	log    *slog.Logger
+
+	driver       string        // lease owner identity, set by the driver at construction
+	leaseTTL     time.Duration // NewSyncer pins the prod values; tests override
+	leaseRenewIn time.Duration
+
+	// rosterQueries scopes the roster transaction's statements. Production:
+	// q.WithTx(tx) — statements bind to the pass transaction. Tests
+	// substitute a statement-failing wrapper to prove the rollback keeps the
+	// previous roster (the mid-pass failure runs through SyncDeputies' real
+	// tx wiring, not past it).
+	rosterQueries func(tx *sql.Tx) *database.Queries
 }
 
-func NewSyncer(db *sql.DB, q *database.Queries, c *camara.Client, l *slog.Logger) *Syncer {
+// camaraAPI is the slice of the Camara client the Syncer consumes. The
+// production *camara.Client satisfies it; tests stub it.
+type camaraAPI interface {
+	VotacionDetalle(ctx context.Context, id int) (camara.VotacionXML, error)
+	BoletinVotaciones(ctx context.Context, boletin string) ([]camara.VotacionXML, error)
+	DiputadosVigentes(ctx context.Context) ([]camara.DiputadoXML, error)
+	Diputados(ctx context.Context) ([]camara.DiputadoXML, error)
+}
+
+func NewSyncer(db *sql.DB, q *database.Queries, c *camara.Client, l *slog.Logger, driver string) *Syncer {
 	if l == nil {
 		l = slog.Default()
 	}
-	return &Syncer{db: db, q: q, cands: candidateQueue{q: q, log: l}, client: c, log: l}
+	if strings.TrimSpace(driver) == "" {
+		panic("ingest: driver identity required (DriverCmdSync | DriverScheduler)")
+	}
+	return &Syncer{
+		db: db, q: q, cands: candidateQueue{q: q, log: l}, client: c, log: l,
+		driver:        driver,
+		leaseTTL:      leaseTTL,
+		leaseRenewIn:  leaseRenewIn,
+		rosterQueries: func(tx *sql.Tx) *database.Queries { return q.WithTx(tx) },
+	}
 }
 
 // --- Cursor helpers ----------------------------------------------------------
@@ -106,26 +151,17 @@ func (s *Syncer) setCursorInt(ctx context.Context, key string, v int64) error {
 
 // --- Single-writer lease ------------------------------------------------------
 
-// AcquireSyncLock claims a 2h lease; false = another sweep holds it.
+// ErrLeaseHeld is returned (wrapped) by Scan/Tick when another sweep owns
+// sync_lock: the drivers treat it as a skip, not a failure.
+var ErrLeaseHeld = errors.New("another sweep holds " + keySyncLock)
+
+// AcquireSyncLock claims the lease (owner + time.Now()+leaseTTL). The SQL CAS
+// succeeds when the lease is unclaimed, expired, or ours (same-owner CAS =
+// renewal while still live); false = someone else's live lease holds it.
 func (s *Syncer) AcquireSyncLock(ctx context.Context, owner string) (bool, error) {
-	value := fmt.Sprintf("%s|%d", owner, time.Now().Add(2*time.Hour).Unix())
-	n, err := s.q.AcquireSyncLock(ctx, value)
-	if n > 0 || err != nil {
-		return n > 0, err
-	}
-	// The CAS buys it if we own the current lease (same-owner refresh).
-	var cur string
-	cur, err = s.q.GetSyncValue(ctx, keySyncLock)
-	if errors.Is(err, sql.ErrNoRows) {
-		cur = "" // never leased: the empty row means free
-	} else if err != nil {
-		return false, err
-	}
-	if ownerIsh(cur, owner) {
-		n, err = s.q.AcquireSyncLock(ctx, value)
-		return n > 0, err
-	}
-	return false, nil // someone else's lease
+	value := fmt.Sprintf("%s|%d", owner, time.Now().Add(s.leaseTTL).Unix())
+	n, err := s.q.AcquireSyncLock(ctx, database.AcquireSyncLockParams{Value: value, Value_2: owner})
+	return n > 0, err
 }
 
 func ownerIsh(current, owner string) bool {
@@ -142,6 +178,58 @@ func (s *Syncer) ReleaseSyncLock(ctx context.Context, owner string) error {
 		return s.q.ReleaseSyncLock(ctx)
 	}
 	return err
+}
+
+// syncLease is a held lease: the renewal loop's handles.
+type syncLease struct {
+	stop context.CancelFunc
+	done chan struct{}
+}
+
+// holdLease acquires the single-writer lease for this Syncer's driver and
+// keeps it renewed every leaseRenewIn until release: a run holds the lock for
+// its REAL duration, and a third party can steal it only after the run stops
+// renewing (the SQL CAS fires only on an expired lease).
+func (s *Syncer) holdLease(ctx context.Context) (*syncLease, error) {
+	ok, err := s.AcquireSyncLock(ctx, s.driver)
+	if err != nil {
+		return nil, err
+	}
+	if !ok {
+		return nil, ErrLeaseHeld
+	}
+	// The renewal loop outlives caller cancellation: releasing must not
+	// depend on a context that may already be done.
+	lctx, cancel := context.WithCancel(context.Background())
+	l := &syncLease{stop: cancel, done: make(chan struct{})}
+	go func() {
+		defer close(l.done)
+		t := time.NewTicker(s.leaseRenewIn)
+		defer t.Stop()
+		for {
+			select {
+			case <-lctx.Done():
+				return
+			case <-t.C:
+				if _, err := s.AcquireSyncLock(lctx, s.driver); err != nil {
+					// Not fatal: the next tick retries, and the CAS steals
+					// only after leaseTTL of uninterrupted failure.
+					s.log.Error("lease renewal failed", "driver", s.driver, "err", err)
+				}
+			}
+		}
+	}()
+	return l, nil
+}
+
+// release stops the renewal loop and drops the lease (no-op if it was lost).
+func (s *Syncer) release(l *syncLease) {
+	if l == nil {
+		return
+	}
+	l.stop()
+	<-l.done
+	_ = s.ReleaseSyncLock(context.Background(), s.driver)
 }
 
 // --- The unit of work ---------------------------------------------------------
@@ -201,14 +289,19 @@ func (s *Syncer) upsertVotation(ctx context.Context, d camara.VotationData) (out
 	var billID sql.NullString
 	if d.Boletin != "" {
 		title := d.Subject
-		if strings.TrimSpace(title) == "" {
-			title = "Boletín " + d.Boletin
+		nameplate := strings.TrimSpace(title) == "" // no Articulo: stand-in nameplate
+		if nameplate {
+			title = billNameplate(d.Boletin)
 		}
-		if err := q.UpsertBillStub(ctx, database.UpsertBillStubParams{
-			ID: d.Boletin, Title: title,
-			TitleSource: "votation_articulo", TitleDate: nullIfEmpty(d.VoteDate),
+		// Title upgrade is decided INSIDE the ingest tx by re-reading the
+		// existing row (recency rule + manual/enriched protection; see
+		// applyBillTitle) — never buried in the SQL's ON CONFLICT.
+		if err := applyBillTitle(ctx, q, d.Boletin, billTitle{
+			title:     title,
+			titleDate: nullIfEmpty(d.VoteDate),
+			nameplate: nameplate,
 		}); err != nil {
-			s.fail("bill", d.ExternalID, err)
+			s.fail("bill title", d.ExternalID, err)
 			return outcome
 		}
 		billID = sql.NullString{String: d.Boletin, Valid: true}
@@ -304,6 +397,81 @@ func votesOf(counts []database.GetVoteCountsRow) map[string]int64 {
 	return m
 }
 
+// --- Bill title invariant (docs/DESIGN.md gap 2) ------------------------------
+
+const (
+	titleSourceIngest   = "votation_articulo"
+	titleSourceManual   = "manual"
+	titleSourceEnriched = "enriched"
+)
+
+// billNameplate is the stand-in title for a bill whose votations so far carry
+// no Articulo; it only names the row until a real title arrives.
+func billNameplate(boletin string) string { return "Boletín " + boletin }
+
+// BillTitle is the title block one votation proposes for its bill.
+type billTitle struct {
+	title     string         // Articulo, or the nameplate when the subject is empty
+	titleDate sql.NullString // the proposal's date
+	nameplate bool           // no Articulo: the title is the stand-in
+}
+
+// applyBillTitle runs inside the ingest tx (the ONLY place the title
+// upgrade policy is decided): it re-reads the existing bill row and writes
+// the proposal only when the recency rule wins.
+func applyBillTitle(ctx context.Context, q *database.Queries, boletin string, in billTitle) error {
+	existing, err := q.GetBill(ctx, boletin)
+	if err != nil && !errors.Is(err, sql.ErrNoRows) {
+		return err
+	}
+	// Row keeps its values on every not-wins branch; UpsertBillStub carries
+	// no policy — the caller's slots are the chosen ones.
+	if err == nil && !billTitleWins(existing, in) {
+		return nil
+	}
+	return q.UpsertBillStub(ctx, database.UpsertBillStubParams{
+		ID: boletin, Title: in.title,
+		TitleSource: titleSourceIngest, TitleDate: in.titleDate,
+	})
+}
+
+// billTitleWins is the recency rule, pure and order-independent (docs
+// DESIGN.md gap 2: "the non-empty Articulo of the MOST RECENT votation;
+// deterministic across ingest orders"):
+//   - manual/enriched provenance is protected: never overwritten;
+//   - a nameplate never replaces a recorded title;
+//   - conversely, any Articulo beats a nameplate-only row (the nameplate was
+//     never the "latest non-empty Articulo", there has been none yet);
+//   - otherwise newer title_date wins; exact tie = greater title wins
+//     (max(date,title) is order-independent);
+//   - a dateless proposal never replaces a dated title.
+func billTitleWins(existing database.Bill, in billTitle) bool {
+	switch existing.TitleSource {
+	case titleSourceManual, titleSourceEnriched:
+		return false
+	}
+	if in.nameplate {
+		return false
+	}
+	if existing.Title == billNameplate(existing.ID) {
+		return true
+	}
+	if !existing.TitleDate.Valid {
+		return true
+	}
+	if !in.titleDate.Valid {
+		return false
+	}
+	switch {
+	case in.titleDate.String > existing.TitleDate.String:
+		return true
+	case in.titleDate.String == existing.TitleDate.String:
+		return in.title > existing.Title
+	default:
+		return false
+	}
+}
+
 func (s *Syncer) resolveRep(ctx context.Context, q *database.Queries, d camara.DiputadoRef) (int64, error) {
 	return q.UpsertRepresentativeFull(ctx, database.UpsertRepresentativeFullParams{
 		ChamberID: "camara", ExternalID: strconv.Itoa(d.DIPID),
@@ -320,33 +488,29 @@ func (s *Syncer) fail(op string, id int, err error) {
 //   - getDiputados_Vigentes membership is the ONLY source of active
 //     (the API has no per-record active marker): set everyone inactive,
 //     then grant active to the vigentes set
-//   - every vigentes DIPID is upserted, then the all-history list enriches
-//     stubs (gender/birthdate; Fecha_Nacimiento can be absent e.g. DIPID 485)
+//   - the deactivate-all + per-deputy activate pass is ONE transaction
+//     (bounded: one UPDATE + two statements per vigente): a mid-pass failure
+//     rolls the roster back instead of leaving every remaining deputy
+//     inactive — pages rendering mass "Histórico" is the failure this kills
+//   - the all-history enrichment pass upserts only (never the active flag)
+//     and stays outside the transaction to keep it short
 func (s *Syncer) SyncDeputies(ctx context.Context) (int, error) {
 	vig, err := s.client.DiputadosVigentes(ctx)
 	if err != nil {
 		return 0, fmt.Errorf("vigentes: %w", err)
 	}
-	if err := s.q.SetRepresentativesInactive(ctx, "camara"); err != nil {
-		return 0, fmt.Errorf("deactivate: %w", err)
+	tx, err := s.db.BeginTx(ctx, nil)
+	if err != nil {
+		return 0, fmt.Errorf("begin roster pass: %w", err)
 	}
-	grantActive := func(d camara.DiputadoXML) error {
-		if _, err := s.q.UpsertRepresentativeFull(ctx, database.UpsertRepresentativeFullParams{
-			ChamberID: "camara", ExternalID: strconv.Itoa(d.DIPID),
-			FirstName: d.Nombre, LastName: d.ApellidoPaterno, SecondLastName: d.ApellidoMaterno,
-			Gender: nullIfEmpty(strings.TrimSpace(d.Sexo.Value)), BirthDate: nullIfEmpty(birthOnly(d.FechaNacimiento)),
-		}); err != nil {
-			return err
-		}
-		return s.q.SetRepresentativeActive(ctx, database.SetRepresentativeActiveParams{
-			ChamberID: "camara", ExternalID: strconv.Itoa(d.DIPID),
-		})
+	defer tx.Rollback()
+	if err := applyVigentes(ctx, s.rosterQueries(tx), vig); err != nil {
+		return 0, fmt.Errorf("apply vigentes: %w", err) // rollback keeps the previous roster
 	}
-	for _, d := range vig {
-		if err := grantActive(d); err != nil {
-			return 0, err
-		}
+	if err := tx.Commit(); err != nil {
+		return 0, fmt.Errorf("commit roster pass: %w", err)
 	}
+
 	all, err := s.client.Diputados(ctx)
 	if err != nil {
 		return 0, fmt.Errorf("all deputies: %w", err)
@@ -365,5 +529,30 @@ func (s *Syncer) SyncDeputies(ctx context.Context) (int, error) {
 			return 0, err
 		}
 	}
-	return len(all), s.q.UpsertSyncValue(ctx, database.UpsertSyncValueParams{Key: keyDeputiesAt, Value: "done"})
+	return len(all), nil
+}
+
+// applyVigentes is the ROSTER TRANSACTION's body, written on the tx-scoped
+// handle the caller passes. Errors roll the whole pass — the deactivate and
+// every grant — back to the pre-pass roster.
+func applyVigentes(ctx context.Context, q *database.Queries, vig []camara.DiputadoXML) error {
+	if err := q.SetRepresentativesInactive(ctx, "camara"); err != nil {
+		return fmt.Errorf("deactivate: %w", err)
+	}
+	for _, d := range vig {
+		if _, err := q.UpsertRepresentativeFull(ctx, database.UpsertRepresentativeFullParams{
+			ChamberID: "camara", ExternalID: strconv.Itoa(d.DIPID),
+			FirstName: d.Nombre, LastName: d.ApellidoPaterno, SecondLastName: d.ApellidoMaterno,
+			Gender:    nullIfEmpty(strings.TrimSpace(d.Sexo.Value)),
+			BirthDate: nullIfEmpty(birthOnly(d.FechaNacimiento)),
+		}); err != nil {
+			return fmt.Errorf("upsert %d: %w", d.DIPID, err)
+		}
+		if err := q.SetRepresentativeActive(ctx, database.SetRepresentativeActiveParams{
+			ChamberID: "camara", ExternalID: strconv.Itoa(d.DIPID),
+		}); err != nil {
+			return fmt.Errorf("activate %d: %w", d.DIPID, err)
+		}
+	}
+	return nil
 }
