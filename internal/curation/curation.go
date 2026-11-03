@@ -15,6 +15,7 @@ import (
 	"strings"
 
 	"congress-visualizer/internal/database"
+	"congress-visualizer/internal/isodate"
 )
 
 // PartyFile: short_name is the stable join key used by affiliations.json.
@@ -49,7 +50,6 @@ func parseJSON(path string, v any) error {
 
 var (
 	colorRE = regexp.MustCompile(`^#[0-9A-Fa-f]{6}$`)
-	dateRE  = regexp.MustCompile(`^\d{4}-\d{2}-\d{2}$`)
 	shortRE = regexp.MustCompile(`^[A-Z0-9][A-Za-z0-9._-]{0,31}$`)
 )
 
@@ -134,11 +134,13 @@ func checkAffiliation(byShort map[string]Party, a Affiliation) error {
 	if _, ok := byShort[a.Party]; !ok {
 		return fmt.Errorf("unknown party short_name: %q", a.Party)
 	}
-	if !dateRE.MatchString(a.Start) {
+	// Dates go through the shared isodate rule (internal/isodate): one
+	// ISO-date validation for curated files and page windows alike.
+	if !isodate.Valid(a.Start) {
 		return fmt.Errorf("start not YYYY-MM-DD: %q", a.Start)
 	}
 	if a.End != nil {
-		if !dateRE.MatchString(*a.End) {
+		if !isodate.Valid(*a.End) {
 			return fmt.Errorf("end not YYYY-MM-DD: %q", *a.End)
 		}
 		if *a.End <= a.Start {

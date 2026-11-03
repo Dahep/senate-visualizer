@@ -9,9 +9,9 @@
 
 <form class="search" method="get" action="/rebels">
   <label for="from">Desde</label>
-  <input id="from" type="date" name="from" value="{{.From}}">
+  <input id="from" type="date" name="from" value="{{.Window.From}}">
   <label for="to">Hasta</label>
-  <input id="to" type="date" name="to" value="{{.To}}">
+  <input id="to" type="date" name="to" value="{{.Window.To}}">
   <button type="submit">Aplicar</button>
   <span class="note">m&iacute;nimo {{.MinVotations}} votaciones con partido</span>
 </form>

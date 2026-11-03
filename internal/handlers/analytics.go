@@ -14,14 +14,10 @@ import (
 
 // Phase-2 analytics handlers (cohesion, loyalty/rebels, alignment). All are
 // read-only; the arithmetic lives in internal/analytics (DESIGN.md gap 8).
-
-// chamberDeputies is the chamber_id of the Cámara de Diputados in every
-// analytics query (Senate views pending the Phase-2 Senate spike).
-const chamberDeputies = "camara"
-
-// currentLegisStart keeps pairwise/loyalty windows bounded and useful by
-// default (2022-2026 legislature per docs/AFFILIATIONS_PLAN.md boundaries).
-const currentLegisStart = "2022-03-11"
+// Every windowed handler resolves one handlers.voteWindow per request
+// (window.go): loading is by ?from/?to under the page's named policy, and
+// a malformed value is one uniform 400 on every page — never a silently
+// divergent per-page default.
 
 // minRebelsVotes / minPairJoint filter noise: one dissent in 2 votations is
 // not data.
@@ -29,52 +25,6 @@ const (
 	minRebelsVotes = 10
 	minPairJoint   = 10
 )
-
-// voteWindow is the [From, To] vote-date range parsed from ?from/?to query
-// params (ISO dates; empty string = open bound). This is the single
-// parse/coerce point so a hand-typed value cannot poison the lexicographic
-// date comparison in any analytics query.
-type voteWindow struct {
-	From, To string
-}
-
-func voteWindowFrom(req *http.Request) voteWindow {
-	q := req.URL.Query()
-	return voteWindow{
-		From: coerceDate(q.Get("from")),
-		To:   coerceDate(q.Get("to")),
-	}
-}
-
-// defaultLegislature fills an open lower bound with the current legislature
-// start — the rebels/alignment page policy (party cohesion defaults to all
-// history instead).
-func (w voteWindow) defaultLegislature() voteWindow {
-	if w.From == "" {
-		w.From = currentLegisStart
-	}
-	return w
-}
-
-// coerceDate rejects non-ISO-date input (8 digits, '-' at positions 4 and
-// 7) so a hand-typed window cannot poison a lexicographic date comparison.
-func coerceDate(s string) string {
-	if len(s) != 10 || s[4] != '-' || s[7] != '-' {
-		return ""
-	}
-	for i := 0; i < 10; i++ {
-		if i == 4 || i == 7 {
-			if s[i] != '-' {
-				return ""
-			}
-			continue
-		}
-		if s[i] < '0' || s[i] > '9' {
-			return ""
-		}
-	}
-	return s
-}
 
 // --- Party cohesion ----------------------------------------------------------
 
@@ -91,7 +41,11 @@ func (s *Server) PartyCohesionChart(w http.ResponseWriter, req *http.Request) {
 		s.dbErr(w, req, err)
 		return
 	}
-	wv := voteWindowFrom(req)
+	wv, err := newWindow(req, chamberDeputies, windowAllHistory)
+	if err != nil {
+		s.windowErr(w, req, err)
+		return
+	}
 	rows, err := s.Q.GetCohesionRows(req.Context(), database.GetCohesionRowsParams{
 		Chamber: chamberDeputies, FromDate: wv.From, ToDate: wv.To, PartyID: id,
 	})
@@ -111,12 +65,15 @@ func (s *Server) PartyCohesionChart(w http.ResponseWriter, req *http.Request) {
 // PartyCohesionData is the summary block on the party detail page.
 type PartyCohesionData struct {
 	analytics.Aggregate
-	From, To string
+	Window voteWindow // the window this summary AND the chart below it queried
 }
 
 // PartyCohesion computes the party-summary numbers for the party page.
 func (s *Server) PartyCohesion(req *http.Request, partyID int64) (PartyCohesionData, error) {
-	wv := voteWindowFrom(req)
+	wv, err := newWindow(req, chamberDeputies, windowAllHistory)
+	if err != nil {
+		return PartyCohesionData{}, err
+	}
 	rows, err := s.Q.GetCohesionRows(req.Context(), database.GetCohesionRowsParams{
 		Chamber: chamberDeputies, FromDate: wv.From, ToDate: wv.To, PartyID: partyID,
 	})
@@ -124,23 +81,26 @@ func (s *Server) PartyCohesion(req *http.Request, partyID int64) (PartyCohesionD
 		return PartyCohesionData{}, err
 	}
 	agg := analytics.Cohesion(toCohesionRows(rows))
-	return PartyCohesionData{Aggregate: agg, From: wv.From, To: wv.To}, nil
+	return PartyCohesionData{Aggregate: agg, Window: wv}, nil
 }
 
 // --- Loyalty / rebels ---------------------------------------------------------
 
 // RebelsData is the /rebels page: representatives ordered by party loyalty
-// ascending (the dissidents first), default window = current legislature.
+// ascending (the dissidents first), window = the legislature policy.
 type RebelsData struct {
-	From         string
-	To           string
+	Window       voteWindow
 	MinVotations int64
 	Rows         []analytics.RepLoyalty
 }
 
 // Rebels renders the loyalty-ascending ranking over the window.
 func (s *Server) Rebels(w http.ResponseWriter, req *http.Request) {
-	wv := voteWindowFrom(req).defaultLegislature()
+	wv, err := newWindow(req, chamberDeputies, windowLegislature)
+	if err != nil {
+		s.windowErr(w, req, err)
+		return
+	}
 	all, err := s.rebelsRanking(req.Context(), wv)
 	if err != nil {
 		s.dbErr(w, req, err)
@@ -153,8 +113,7 @@ func (s *Server) Rebels(w http.ResponseWriter, req *http.Request) {
 		}
 	}
 	s.page(w, render.PageRebels, RebelsData{
-		From:         wv.From,
-		To:           wv.To,
+		Window:       wv,
 		MinVotations: minRebelsVotes,
 		Rows:         shown,
 	})
@@ -183,13 +142,12 @@ func (s *Server) rebelsRanking(ctx context.Context, wv voteWindow) ([]analytics.
 // --- Alignment matrix ----------------------------------------------------------
 
 // AlignmentData is the /alignment page: pairwise same-cast-vote agreement.
-// Party filter (optional) applies party-at-date to both pair members; empty
-// window defaults to the current legislature. The computed pair set is huge
+// Party filter (optional) applies party-at-date to both pair members; the
+// window uses the legislature policy. The computed pair set is huge
 // (~12k pairs for the full chamber), so the page renders only the top
 // maxPairsShown of the requested order (most/least aligned).
 type AlignmentData struct {
-	From       string
-	To         string
+	Window     voteWindow
 	PartyID    int64
 	Parties    []database.Party
 	MinJoint   int64
@@ -214,7 +172,11 @@ const maxPairsShown = 200
 // Alignment renders the pairwise agreement list over the window; the heavy
 // GROUP BY runs in SQL and the handler only formats rows.
 func (s *Server) Alignment(w http.ResponseWriter, req *http.Request) {
-	wv := voteWindowFrom(req).defaultLegislature()
+	wv, err := newWindow(req, chamberDeputies, windowLegislature)
+	if err != nil {
+		s.windowErr(w, req, err)
+		return
+	}
 	q := req.URL.Query()
 	partyID, _ := strconv.ParseInt(q.Get("party"), 10, 64)
 	order := q.Get("order")
@@ -273,7 +235,7 @@ func (s *Server) Alignment(w http.ResponseWriter, req *http.Request) {
 		}
 	}
 	s.page(w, render.PageAlignment, AlignmentData{
-		From: wv.From, To: wv.To,
+		Window:  wv,
 		PartyID: partyID, Parties: parties, Order: order,
 		MinJoint: minPairJoint, Pairs: out,
 		Capped: capped, TotalPairs: total,
@@ -370,12 +332,13 @@ type RepresentativeLoyaltyData struct {
 }
 
 // RepresentativeLoyalty computes the rep-profile loyalty summary: the
-// rep's entry in the full-chamber loyalty ranking (open window = full
-// history). The party modal must come from ALL party members, so the
-// rep-filtered rows cannot answer it; reusing the shared cached ranking
-// keeps rep pages cheap after the first one.
+// rep's entry in the full-chamber loyalty ranking over ALL history
+// (windowAllHistory — an explicit named policy, distinct from the
+// /rebels legislature window on purpose). The party modal must come from
+// ALL party members, so the rep-filtered rows cannot answer it; reusing
+// the shared cached ranking keeps rep pages cheap after the first one.
 func (s *Server) RepresentativeLoyalty(req *http.Request, repID int64) (RepresentativeLoyaltyData, error) {
-	loyalty, err := s.rebelsRanking(req.Context(), voteWindow{})
+	loyalty, err := s.rebelsRanking(req.Context(), allHistoryWindow())
 	if err != nil {
 		return RepresentativeLoyaltyData{}, err
 	}

@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"errors"
 	"net/http"
 
 	"congress-visualizer/internal/database"
@@ -31,7 +32,8 @@ type PartyData struct {
 }
 
 // PartyDetail shows one party and its current members, with the Phase-2
-// Rice-cohesion summary (full history unless ?from/?to given).
+// Rice-cohesion summary (all history unless ?from/?to given — the window
+// value is shared with the chart img on the page).
 func (s *Server) PartyDetail(w http.ResponseWriter, req *http.Request) {
 	id, ok := idParam(req)
 	if !ok {
@@ -50,6 +52,13 @@ func (s *Server) PartyDetail(w http.ResponseWriter, req *http.Request) {
 	}
 	coh, err := s.PartyCohesion(req, id)
 	if err != nil {
+		// A malformed window is a 400 uniform across pages, not the 500
+		// path of a query failure.
+		var we windowError
+		if errors.As(err, &we) {
+			s.windowErr(w, req, err)
+			return
+		}
 		s.dbErr(w, req, err)
 		return
 	}
