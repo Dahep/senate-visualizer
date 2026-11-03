@@ -10,6 +10,18 @@ import (
 	"database/sql"
 )
 
+const countPendingCandidates = `-- name: CountPendingCandidates :one
+SELECT count(*) FROM votation_candidates
+WHERE fetched_at IS NULL AND attempts < CAST(?1 AS INTEGER)
+`
+
+func (q *Queries) CountPendingCandidates(ctx context.Context, maxAttempts int64) (int64, error) {
+	row := q.db.QueryRowContext(ctx, countPendingCandidates, maxAttempts)
+	var count int64
+	err := row.Scan(&count)
+	return count, err
+}
+
 const enqueueCandidate = `-- name: EnqueueCandidate :exec
 INSERT INTO votation_candidates (chamber_id, external_id, source)
 VALUES (?, ?, ?)
@@ -22,15 +34,23 @@ type EnqueueCandidateParams struct {
 	Source     string `json:"source"`
 }
 
+// votation_candidates lifecycle (docs/DESIGN.md): the Go constant
+// ingest.candidateQueue's maxAttempts is the SINGLE source of truth - the
+// pending queries receive it as sqlc.arg(max_attempts) (pattern:
+// CAST(sqlc.arg(...) ...) in analytics.sql). Pending -> fetched on hit OR
+// miss, stamped BY IDENTITY - one row, never a batch-wide stamp; error ->
+// attempts++/last_error; attempts >= max_attempts quarantines the row
+// (excluded here, surfaced in the sync result).
 func (q *Queries) EnqueueCandidate(ctx context.Context, arg EnqueueCandidateParams) error {
 	_, err := q.db.ExecContext(ctx, enqueueCandidate, arg.ChamberID, arg.ExternalID, arg.Source)
 	return err
 }
 
-const failCandidate = `-- name: FailCandidate :exec
+const failCandidate = `-- name: FailCandidate :one
 UPDATE votation_candidates SET
     attempts = attempts + 1, last_error = ?
 WHERE chamber_id = ? AND external_id = ?
+RETURNING attempts
 `
 
 type FailCandidateParams struct {
@@ -39,29 +59,42 @@ type FailCandidateParams struct {
 	ExternalID string         `json:"external_id"`
 }
 
-func (q *Queries) FailCandidate(ctx context.Context, arg FailCandidateParams) error {
-	_, err := q.db.ExecContext(ctx, failCandidate, arg.LastError, arg.ChamberID, arg.ExternalID)
-	return err
+func (q *Queries) FailCandidate(ctx context.Context, arg FailCandidateParams) (int64, error) {
+	row := q.db.QueryRowContext(ctx, failCandidate, arg.LastError, arg.ChamberID, arg.ExternalID)
+	var attempts int64
+	err := row.Scan(&attempts)
+	return attempts, err
 }
 
 const markCandidateFetched = `-- name: MarkCandidateFetched :exec
-UPDATE votation_candidates SET fetched_at = datetime('now') WHERE fetched_at IS NULL
+UPDATE votation_candidates SET fetched_at = datetime('now')
+WHERE fetched_at IS NULL AND chamber_id = ? AND external_id = ?
 `
 
-func (q *Queries) MarkCandidateFetched(ctx context.Context) error {
-	_, err := q.db.ExecContext(ctx, markCandidateFetched)
+type MarkCandidateFetchedParams struct {
+	ChamberID  string `json:"chamber_id"`
+	ExternalID string `json:"external_id"`
+}
+
+func (q *Queries) MarkCandidateFetched(ctx context.Context, arg MarkCandidateFetchedParams) error {
+	_, err := q.db.ExecContext(ctx, markCandidateFetched, arg.ChamberID, arg.ExternalID)
 	return err
 }
 
 const pendingCandidates = `-- name: PendingCandidates :many
 SELECT chamber_id, external_id, source, discovered_at, fetched_at, attempts, last_error FROM votation_candidates
-WHERE fetched_at IS NULL AND attempts < 5
+WHERE fetched_at IS NULL AND attempts < CAST(?1 AS INTEGER)
 ORDER BY discovered_at
-LIMIT ?
+LIMIT ?2
 `
 
-func (q *Queries) PendingCandidates(ctx context.Context, limit int64) ([]VotationCandidate, error) {
-	rows, err := q.db.QueryContext(ctx, pendingCandidates, limit)
+type PendingCandidatesParams struct {
+	MaxAttempts int64 `json:"max_attempts"`
+	RowLimit    int64 `json:"row_limit"`
+}
+
+func (q *Queries) PendingCandidates(ctx context.Context, arg PendingCandidatesParams) ([]VotationCandidate, error) {
+	rows, err := q.db.QueryContext(ctx, pendingCandidates, arg.MaxAttempts, arg.RowLimit)
 	if err != nil {
 		return nil, err
 	}

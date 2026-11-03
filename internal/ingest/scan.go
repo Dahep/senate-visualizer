@@ -216,9 +216,15 @@ func (s *Syncer) Tick(ctx context.Context) (ScanResult, error) {
 		}
 	}
 
-	if err := s.Drain(ctx, drainBatch); err != nil {
+	dr, err := s.Drain(ctx, drainBatch)
+	if err != nil {
 		return res, err
 	}
+	// The drain's counts are part of the operator-visible result (the old
+	// Tick discarded them entirely).
+	res.Pending = dr.Pending
+	res.Quarantined = len(dr.Quarantined)
+	dr.Log(s.log)
 	if _, err := s.SyncDeputies(ctx); err != nil {
 		return res, fmt.Errorf("deputies: %w", err)
 	}
@@ -230,28 +236,12 @@ func (s *Syncer) Tick(ctx context.Context) (ScanResult, error) {
 }
 
 // Drain consumes out-of-band candidates (boletín completeness checks, manual
-// adds, future Senate sources) through the same unit of work with the
-// documented lifecycle: miss stamps fetched_at; errors bump attempts and ≥
-// maxAttempts quarantines (excluded from PendingCandidates, surfaced here).
-func (s *Syncer) Drain(ctx context.Context, limit int) error {
-	cands, err := s.q.PendingCandidates(ctx, int64(limit))
-	if err != nil {
-		return err
-	}
-	for _, c := range cands {
-		var id int64
-		fmt.Sscan(c.ExternalID, &id)
-		if id == 0 {
-			continue
-		}
-		o := s.SyncVotationID(ctx, id)
-		if o.Miss {
-			if err := s.q.MarkCandidateFetched(ctx); err != nil {
-				return err
-			}
-		}
-	}
-	return nil
+// adds, future Senate sources) through the same unit of work, with
+// candidateQueue owning the documented lifecycle: hit/miss stamps fetched_at
+// by (chamber_id, external_id); errors bump attempts and >= maxAttempts
+// quarantines (excluded from the pending query, surfaced in the result).
+func (s *Syncer) Drain(ctx context.Context, limit int) (DrainResult, error) {
+	return s.cands.drain(ctx, s, limit)
 }
 
 // EnqueueBoletinCheck feeds the completeness check: for one bill, harvest

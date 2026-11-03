@@ -16,14 +16,22 @@ type Querier interface {
 	// Deputies with votes but no party-at-date or party membership at all.
 	AffiliationGaps(ctx context.Context) ([]int64, error)
 	CountBills(ctx context.Context, id string) (int64, error)
+	CountPendingCandidates(ctx context.Context, maxAttempts int64) (int64, error)
 	CountRepresentativeVotes(ctx context.Context, representativeID int64) (int64, error)
 	CountRepresentatives(ctx context.Context, arg CountRepresentativesParams) (int64, error)
 	CountVotations(ctx context.Context, arg CountVotationsParams) (int64, error)
 	DeleteCuratedAffiliations(ctx context.Context) error
 	DeleteVotesByVotation(ctx context.Context, votationID int64) error
+	// votation_candidates lifecycle (docs/DESIGN.md): the Go constant
+	// ingest.candidateQueue's maxAttempts is the SINGLE source of truth - the
+	// pending queries receive it as sqlc.arg(max_attempts) (pattern:
+	// CAST(sqlc.arg(...) ...) in analytics.sql). Pending -> fetched on hit OR
+	// miss, stamped BY IDENTITY - one row, never a batch-wide stamp; error ->
+	// attempts++/last_error; attempts >= max_attempts quarantines the row
+	// (excluded here, surfaced in the sync result).
 	EnqueueCandidate(ctx context.Context, arg EnqueueCandidateParams) error
 	EnrichRepresentative(ctx context.Context, arg EnrichRepresentativeParams) error
-	FailCandidate(ctx context.Context, arg FailCandidateParams) error
+	FailCandidate(ctx context.Context, arg FailCandidateParams) (int64, error)
 	GetBill(ctx context.Context, id string) (Bill, error)
 	// Per-(party, votation) CAST-vote counts in a chamber + [from,to] vote_date
 	// window (empty string = open bound), optional party filter (0 = all).
@@ -64,10 +72,10 @@ type Querier interface {
 	ListParties(ctx context.Context) ([]Party, error)
 	ListRepresentatives(ctx context.Context, arg ListRepresentativesParams) ([]ListRepresentativesRow, error)
 	ListVotations(ctx context.Context, arg ListVotationsParams) ([]ListVotationsRow, error)
-	MarkCandidateFetched(ctx context.Context) error
+	MarkCandidateFetched(ctx context.Context, arg MarkCandidateFetchedParams) error
 	// Current members of one party (membership with end_date IS NULL).
 	PartyMembers(ctx context.Context, partyID int64) ([]PartyMembersRow, error)
-	PendingCandidates(ctx context.Context, limit int64) ([]VotationCandidate, error)
+	PendingCandidates(ctx context.Context, arg PendingCandidatesParams) ([]VotationCandidate, error)
 	ReleaseSyncLock(ctx context.Context) error
 	SetRepresentativeActive(ctx context.Context, arg SetRepresentativeActiveParams) error
 	// Called by SyncDeputies before granting active via the vigentes set.
