@@ -4,6 +4,7 @@
 //	sync -once                     one incremental Tick (also the default)
 //	sync -seed-parties parties.json -seed affiliations.json
 //	                               SeedParties + SyncDeputies + validated Apply
+//	sync -seed-check              validate everything, Apply nothing (CI)
 //	sync -boletin-check 15351-07   enqueue a bill's votation IDs as candidates
 //
 // Every mode shares the same unit of work and cursors; the Syncer holds the
@@ -31,6 +32,7 @@ func main() {
 	once := flag.Bool("once", false, "one incremental tick (default when no other mode is given)")
 	seedParties := flag.String("seed-parties", "", "parties registry JSON (short_name/name/color)")
 	seed := flag.String("seed", "", "affiliations JSON: SyncDeputies + validated apply")
+	seedCheck := flag.Bool("seed-check", false, "resolve affiliations JSON: validate (pure + DB checks) and stop before Apply")
 	boletinCheck := flag.String("boletin-check", "", "enqueue votation candidates for one boletín")
 	flag.Parse()
 
@@ -58,8 +60,8 @@ func main() {
 	ctx := context.Background()
 
 	switch {
-	case *seedParties != "" || *seed != "":
-		if err := runSeed(ctx, db, q, syncer, log, *seedParties, *seed); err != nil {
+	case *seedParties != "" || *seed != "" || *seedCheck:
+		if err := runSeed(ctx, db, q, syncer, log, *seedParties, *seed, *seedCheck); err != nil {
 			log.Error("seed", "err", err)
 			os.Exit(1)
 		}
@@ -90,8 +92,10 @@ func main() {
 }
 
 // runSeed loads the parties registry, refreshes deputies, and applies the
-// affiliations file — all validated at the boundary (docs gap 5).
-func runSeed(ctx context.Context, db *database.OpenDB, q *database.Queries, syncer *ingest.Syncer, log *slog.Logger, partiesPath, affiliationsPath string) error {
+// affiliations file - all validated at the boundary (docs gap 5). With
+// checkOnly (sync -seed-check / make seed-check) it stops before Apply:
+// verification only, for CI.
+func runSeed(ctx context.Context, db *database.OpenDB, q *database.Queries, syncer *ingest.Syncer, log *slog.Logger, partiesPath, affiliationsPath string, checkOnly bool) error {
 	if partiesPath == "" {
 		partiesPath = "data/parties.json"
 	}
@@ -121,15 +125,29 @@ func runSeed(ctx context.Context, db *database.OpenDB, q *database.Queries, sync
 	if err != nil {
 		return err
 	}
-	if problems := curation.Validate(file); len(problems) > 0 {
-		return &curation.ValidationError{Problems: problems}
-	}
+	problems := curation.Validate(file)
 
 	n, err := syncer.SyncDeputies(ctx)
 	if err != nil {
 		return fmt.Errorf("sync deputies: %w", err)
 	}
 	log.Info("deputies synced", "count", n)
+
+	// DB half of the boundary (docs gap 5): missing reps (ALL of them,
+	// unlike Apply's first hard fail) and fully-uncovered deputies land in
+	// the SAME ValidationError the pure problems go into.
+	dbProblems, err := curation.ValidateAgainstDB(ctx, db.Raw(), q, file)
+	if err != nil {
+		return err
+	}
+	problems = append(problems, dbProblems...)
+	if len(problems) > 0 {
+		return &curation.ValidationError{Problems: problems}
+	}
+	if checkOnly {
+		log.Info("seed validation ok")
+		return nil
+	}
 
 	if err := curation.Apply(ctx, db.Raw(), q, file); err != nil {
 		return fmt.Errorf("apply affiliations: %w", err)
