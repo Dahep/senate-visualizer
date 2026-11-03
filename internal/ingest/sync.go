@@ -79,12 +79,18 @@ type ScanResult struct {
 	Pending     int   // out-of-band candidates still pending (quarantined excluded)
 	Quarantined int   // rows that crossed the maxAttempts threshold in the last drain
 	MinVoteDate string
+	// AffiliationGaps counts deputies WITH at least one vote the
+	// party-at-date rule (rep_party_at_date) does not cover - the operator
+	// signal DESIGN.md 5/graft C promises the sync result. Surfaced, never
+	// an ingest failure: the human extends data/affiliations.json.
+	AffiliationGaps int
 }
 
 func (r ScanResult) Log(l *slog.Logger, dir string) {
 	l.Info("scan done", "dir", dir, "end_reason", r.EndReason,
 		"hits", r.Hits, "misses", r.Misses, "min_vote_date", r.MinVoteDate,
-		"candidates_pending", r.Pending, "candidates_quarantined", r.Quarantined)
+		"candidates_pending", r.Pending, "candidates_quarantined", r.Quarantined,
+		"affiliation_gaps", r.AffiliationGaps)
 }
 
 // Syncer is the one write path into ingested tables.
