@@ -42,7 +42,7 @@ func main() {
 	q := database.New(db.Raw())
 
 	client := camara.NewClient(cfg.APIBaseURL, cfg.APIDelay)
-	syncer := ingest.NewSyncer(db.Raw(), q, client, log)
+	syncer := ingest.NewSyncer(db.Raw(), q, client, log, ingest.DriverScheduler)
 
 	// Templates walk web/templates from disk on every boot (dev-friendly).
 	r, err := render.New(os.DirFS("web"), handlers.FuncMap())

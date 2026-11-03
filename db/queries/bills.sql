@@ -1,8 +1,9 @@
 -- name: UpsertBillStub :exec
--- Title upgrade policy is decided in Go (most-recent-votation Articulo wins);
--- the caller passes the chosen title/source/date. Placeholder rows are always
--- upgradeable; 'manual'/'enriched' rows must be protected in Go by re-reading
--- the existing row inside the ingest transaction when in doubt.
+-- Writes the caller-chosen title block, nothing else. The upgrade policy -
+-- recency rule, manual/enriched protection - is enforced in Go at the only
+-- ingest caller (internal/ingest/sync.go applyBillTitle), which re-reads the
+-- existing row inside the ingest transaction before choosing the slots this
+-- statement receives. This one is a plain write.
 INSERT INTO bills (id, title, title_source, title_date)
 VALUES (?, ?, ?, ?)
 ON CONFLICT (id) DO UPDATE SET
@@ -14,7 +15,7 @@ ON CONFLICT (id) DO UPDATE SET
 SELECT * FROM bills WHERE id = ?;
 
 -- name: ListBills :many
--- matches with a caller-supplied pattern ('%term%' built in Go)
+-- matches with a caller-supplied pattern (%term% built in Go)
 SELECT * FROM bills
 WHERE id LIKE ?
 ORDER BY title_date DESC

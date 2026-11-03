@@ -54,7 +54,7 @@ func main() {
 	q := database.New(db.Raw())
 
 	client := camara.NewClient(cfg.APIBaseURL, cfg.APIDelay)
-	syncer := ingest.NewSyncer(db.Raw(), q, client, log)
+	syncer := ingest.NewSyncer(db.Raw(), q, client, log, ingest.DriverCmdSync)
 	ctx := context.Background()
 
 	switch {

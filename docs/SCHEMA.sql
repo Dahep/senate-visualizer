@@ -166,10 +166,10 @@ CREATE INDEX idx_candidates_pending ON votation_candidates (fetched_at, attempts
 -- Cursors and high-water marks shared by full ingest and incremental sync.
 -- Keys: 'camara.high_water', 'camara.floor', 'camara.scan_cursor' (durable
 --       downward-scan resume point, updated per batch inside the votation
---       transaction), 'camara.deputies.synced_at', 'camara.sync.last_run_at',
---       'camara.sync_lock' (single-writer lease: owner + expiry; the server
---       scheduler skips its tick while a CLI scan holds it — one shared
---       150ms rate limiter per lock owner)
+--       transaction), 'camara.sync_lock' (single-writer lease: owner + expiry,
+--       renewed on interval while a run is alive; the server scheduler skips
+--       its tick while a CLI scan holds it — one shared 150ms rate limiter
+--       per lock owner)
 CREATE TABLE sync_metadata (
     key        TEXT PRIMARY KEY,
     value      TEXT NOT NULL,
