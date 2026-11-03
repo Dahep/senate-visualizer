@@ -231,11 +231,16 @@ func (s *Syncer) Tick(ctx context.Context) (ScanResult, error) { panic("not impl
 // Tick: requires initialized cursors (bootstrapped by the first Scan); walks
 // up from high_water, overlapping -(overlap window) to self-heal, DRAINS the
 // candidates queue, then SyncDeputies.
-func (s *Syncer) Drain(ctx context.Context, limit int) (ScanResult, error)  { panic("not implemented") }
-// Drain: SyncVotationID for each pending votation_candidates row; on miss the
-// candidate is stamped fetched_at; on error attempts++/last_error, and
-// attempts >= 5 quarantines the row (excluded from the pending query,
-// reported in the sync result) — no infinite retry.
+func (s *Syncer) Drain(ctx context.Context, limit int) (DrainResult, error)  { /* implemented */ }
+// Drain: SyncVotationID for each pending votation_candidates row (owned by
+// candidateQueue, internal/ingest/candidates.go); on miss or hit the
+// candidate is stamped fetched_at BY ITS (chamber_id, external_id) identity —
+// one drained row must never resolve its queue-mates; on error
+// attempts++/last_error, and attempts >= 5 quarantines the row (excluded
+// from the pending query, reported in the sync result) — no infinite retry.
+// A non-numeric external_id counts as a failure toward quarantine; Drain
+// reports pending/quarantine counts in DrainResult, surfaced in
+// ScanResult.Pending/Quarantined by Tick.
 // Drain NEVER advances high_water (see SyncVotationID step 4).
 func (s *Syncer) SyncDeputies(ctx context.Context) (int, error) { panic("not implemented") }
 // SyncDeputies: fetches getDiputados_Vigentes AND getDiputados. ACTIVE is

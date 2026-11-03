@@ -30,7 +30,6 @@ const (
 
 const (
 	gapTolerance = 50    // consecutive misses ending a sweep leg before probe-ahead widens
-	maxAttempts  = 5     // votation_candidates quarantine threshold (docs: candidates.sql)
 	seedID       = 87460 // live-verified current-window ID; sweeps grow from here
 )
 
@@ -54,25 +53,29 @@ const (
 
 // ScanResult is the sweep outcome — including the depth check:
 // MinVoteDate lets the operator see at a glance whether the scan actually
-// reached history rather than stopping a week back.
+// reached history rather than stopping a week back. Pending and Quarantined
+// summarize the last queue drain (Tick): pending EXCLUDES quarantined rows.
 type ScanResult struct {
 	EndReason   ScanReason
 	Hits        int
 	Misses      int
 	GapRuns     []int // gap runs the sweep crossed (widths)
-	Pending     int   // out-of-band candidates still pending (incl. quarantined)
+	Pending     int   // out-of-band candidates still pending (quarantined excluded)
+	Quarantined int   // rows that crossed the maxAttempts threshold in the last drain
 	MinVoteDate string
 }
 
 func (r ScanResult) Log(l *slog.Logger, dir string) {
 	l.Info("scan done", "dir", dir, "end_reason", r.EndReason,
-		"hits", r.Hits, "misses", r.Misses, "min_vote_date", r.MinVoteDate)
+		"hits", r.Hits, "misses", r.Misses, "min_vote_date", r.MinVoteDate,
+		"candidates_pending", r.Pending, "candidates_quarantined", r.Quarantined)
 }
 
 // Syncer is the one write path into ingested tables.
 type Syncer struct {
 	db     *sql.DB // transaction boundary for the per-votation unit of work
 	q      *database.Queries
+	cands  candidateQueue // votation_candidates lifecycle owner
 	client *camara.Client
 	log    *slog.Logger
 }
@@ -81,7 +84,7 @@ func NewSyncer(db *sql.DB, q *database.Queries, c *camara.Client, l *slog.Logger
 	if l == nil {
 		l = slog.Default()
 	}
-	return &Syncer{db: db, q: q, client: c, log: l}
+	return &Syncer{db: db, q: q, cands: candidateQueue{q: q, log: l}, client: c, log: l}
 }
 
 // --- Cursor helpers ----------------------------------------------------------

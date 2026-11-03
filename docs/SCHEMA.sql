@@ -147,9 +147,9 @@ CREATE TABLE individual_votes (
 -- use this table — it advances sync_metadata cursors per batch instead.
 -- Drain NEVER advances high_water (a queue candidate may sit far above the
 -- unswept frontier): high_water advances only from the sequential scanner.
--- Lifecycle: miss -> fetched_at stamped; error -> attempts++/last_error;
--- attempts >= 5 quarantines the row (excluded from pending, surfaced in
--- the sync result) — never an unbounded poison retry.
+-- Lifecycle: miss or hit -> fetched_at stamped by row identity; error ->
+-- attempts++/last_error; attempts >= 5 quarantines the row (excluded from
+-- pending, surfaced in the sync result) — never an unbounded poison retry.
 CREATE TABLE votation_candidates (
     chamber_id     TEXT NOT NULL REFERENCES chambers(id),
     external_id    TEXT NOT NULL CHECK (external_id <> ''),
