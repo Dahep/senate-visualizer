@@ -349,7 +349,7 @@ func (s *Syncer) upsertVotation(ctx context.Context, d camara.VotationData) (out
 			s.fail("vote", d.ExternalID, err)
 			return outcome
 		}
-		if v.Vote == camara.VoteYes || v.Vote == camara.VoteNo || v.Vote == camara.VoteAbstain {
+		if v.Vote.Cast() {
 			cast++
 		}
 	}
@@ -380,8 +380,8 @@ func (s *Syncer) upsertVotation(ctx context.Context, d camara.VotationData) (out
 		counts, err := q.GetVoteCounts(ctx, vID)
 		if err == nil {
 			c := votesOf(counts)
-			if c["yes"] != int64(d.Totals.Yes) || c["no"] != int64(d.Totals.No) ||
-				c["abstain"] != int64(d.Totals.Abstain) || c["dispensed"] != int64(d.Totals.Dispensed) {
+			if c[camara.VoteYes] != int64(d.Totals.Yes) || c[camara.VoteNo] != int64(d.Totals.No) ||
+				c[camara.VoteAbstain] != int64(d.Totals.Abstain) || c[camara.VoteDispensed] != int64(d.Totals.Dispensed) {
 				s.log.Warn("totals mismatch", "id", d.ExternalID,
 					"src", d.Totals, "decoded", c, "cast", cast)
 			}
@@ -395,10 +395,11 @@ func (s *Syncer) upsertVotation(ctx context.Context, d camara.VotationData) (out
 	return Outcome{Hit: true, VotationID: vID}
 }
 
-func votesOf(counts []database.GetVoteCountsRow) map[string]int64 {
-	m := map[string]int64{}
+// votesOf keys the per-value audit counts by the vote vocabulary.
+func votesOf(counts []database.GetVoteCountsRow) map[camara.Vote]int64 {
+	m := map[camara.Vote]int64{}
 	for _, c := range counts {
-		m[c.Vote] = c.N
+		m[camara.Vote(c.Vote)] = c.N
 	}
 	return m
 }

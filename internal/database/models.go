@@ -18,6 +18,12 @@ type Bill struct {
 	FiledDate   sql.NullString `json:"filed_date"`
 }
 
+type CastVote struct {
+	VotationID       int64  `json:"votation_id"`
+	RepresentativeID int64  `json:"representative_id"`
+	Vote             string `json:"vote"`
+}
+
 type Chamber struct {
 	ID   string `json:"id"`
 	Name string `json:"name"`

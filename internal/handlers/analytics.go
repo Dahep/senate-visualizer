@@ -203,8 +203,8 @@ func (s *Server) Alignment(w http.ResponseWriter, req *http.Request) {
 	total := len(kept)
 	asc := order == "least"
 	sort.SliceStable(kept, func(i, j int) bool {
-		ai := kept[i].Same.Float64 / float64(kept[i].Joint)
-		aj := kept[j].Same.Float64 / float64(kept[j].Joint)
+		ai := kept[i].Same / float64(kept[i].Joint)
+		aj := kept[j].Same / float64(kept[j].Joint)
 		if ai != aj {
 			if asc {
 				return ai < aj
@@ -230,8 +230,8 @@ func (s *Server) Alignment(w http.ResponseWriter, req *http.Request) {
 			AN:        names[p.AID],
 			BN:        names[p.BID],
 			Joint:     p.Joint,
-			Same:      int64(p.Same.Float64),
-			Agreement: p.Same.Float64 / float64(p.Joint),
+			Same:      int64(p.Same),
+			Agreement: p.Same / float64(p.Joint),
 		}
 	}
 	s.page(w, render.PageAlignment, AlignmentData{

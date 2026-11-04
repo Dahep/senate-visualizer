@@ -129,7 +129,12 @@ func assertGolden(t *testing.T, name string, rows any, want []string) {
 	}
 }
 
-// goldens captured by the pre-view baseline dump (deleted; values verbatim).
+// goldens captured by the pre-view baseline dump (deleted; values verbatim
+// through the rep_party_at_date view, migration 003). Re-pinned when
+// cast_votes (migration 004) replaced the four hand-written IN-lists:
+// values unchanged; three shape edits only (cohesion rows lost the never-
+// read short_name, loyalty rows lost the never-read vote_date, and the
+// provably non-null same re-typed from sql.NullFloat64 to float64).
 var goldens = map[string][]string{
 	// V1: R1 yes (PAAA covers 2019-12-31), R2 no (start 2019-05-05 covers),
 	// R3 abstain (unaffiliated - not rendered here).
@@ -139,41 +144,41 @@ var goldens = map[string][]string{
 	},
 	// V3: R1's vote is IN the R1 coverage gap -> no PAAA row for its 'no'.
 	"GetCohesionRows.all": {
-		`{"party_id":1,"short_name":"PAAA","votation_id":1,"vote_date":"2019-12-31","vote":"no","n":1}`,
-		`{"party_id":1,"short_name":"PAAA","votation_id":1,"vote_date":"2019-12-31","vote":"yes","n":1}`,
-		`{"party_id":1,"short_name":"PAAA","votation_id":2,"vote_date":"2020-06-30","vote":"abstain","n":1}`,
-		`{"party_id":1,"short_name":"PAAA","votation_id":2,"vote_date":"2020-06-30","vote":"yes","n":1}`,
-		`{"party_id":1,"short_name":"PAAA","votation_id":3,"vote_date":"2020-07-01","vote":"yes","n":1}`,
-		`{"party_id":1,"short_name":"PAAA","votation_id":4,"vote_date":"2019-05-05","vote":"yes","n":1}`,
+		`{"party_id":1,"votation_id":1,"vote_date":"2019-12-31","vote":"no","n":1}`,
+		`{"party_id":1,"votation_id":1,"vote_date":"2019-12-31","vote":"yes","n":1}`,
+		`{"party_id":1,"votation_id":2,"vote_date":"2020-06-30","vote":"abstain","n":1}`,
+		`{"party_id":1,"votation_id":2,"vote_date":"2020-06-30","vote":"yes","n":1}`,
+		`{"party_id":1,"votation_id":3,"vote_date":"2020-07-01","vote":"yes","n":1}`,
+		`{"party_id":1,"votation_id":4,"vote_date":"2019-05-05","vote":"yes","n":1}`,
 	},
 	"GetCohesionRows.from2020": {
-		`{"party_id":1,"short_name":"PAAA","votation_id":2,"vote_date":"2020-06-30","vote":"abstain","n":1}`,
-		`{"party_id":1,"short_name":"PAAA","votation_id":2,"vote_date":"2020-06-30","vote":"yes","n":1}`,
-		`{"party_id":1,"short_name":"PAAA","votation_id":3,"vote_date":"2020-07-01","vote":"yes","n":1}`,
+		`{"party_id":1,"votation_id":2,"vote_date":"2020-06-30","vote":"abstain","n":1}`,
+		`{"party_id":1,"votation_id":2,"vote_date":"2020-06-30","vote":"yes","n":1}`,
+		`{"party_id":1,"votation_id":3,"vote_date":"2020-07-01","vote":"yes","n":1}`,
 	},
 	"GetLoyaltyRows.all": {
-		`{"rep_id":1,"first_name":"Ana","last_name":"Fuentes","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":1,"vote_date":"2019-12-31","vote":"yes"}`,
-		`{"rep_id":1,"first_name":"Ana","last_name":"Fuentes","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":2,"vote_date":"2020-06-30","vote":"yes"}`,
-		`{"rep_id":2,"first_name":"Beto","last_name":"Garces","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":1,"vote_date":"2019-12-31","vote":"no"}`,
-		`{"rep_id":2,"first_name":"Beto","last_name":"Garces","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":2,"vote_date":"2020-06-30","vote":"abstain"}`,
-		`{"rep_id":2,"first_name":"Beto","last_name":"Garces","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":3,"vote_date":"2020-07-01","vote":"yes"}`,
-		`{"rep_id":2,"first_name":"Beto","last_name":"Garces","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":4,"vote_date":"2019-05-05","vote":"yes"}`,
+		`{"rep_id":1,"first_name":"Ana","last_name":"Fuentes","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":1,"vote":"yes"}`,
+		`{"rep_id":1,"first_name":"Ana","last_name":"Fuentes","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":2,"vote":"yes"}`,
+		`{"rep_id":2,"first_name":"Beto","last_name":"Garces","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":1,"vote":"no"}`,
+		`{"rep_id":2,"first_name":"Beto","last_name":"Garces","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":2,"vote":"abstain"}`,
+		`{"rep_id":2,"first_name":"Beto","last_name":"Garces","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":3,"vote":"yes"}`,
+		`{"rep_id":2,"first_name":"Beto","last_name":"Garces","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":4,"vote":"yes"}`,
 	},
 	"GetLoyaltyRows.2020_2021": {
-		`{"rep_id":1,"first_name":"Ana","last_name":"Fuentes","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":2,"vote_date":"2020-06-30","vote":"yes"}`,
-		`{"rep_id":2,"first_name":"Beto","last_name":"Garces","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":2,"vote_date":"2020-06-30","vote":"abstain"}`,
-		`{"rep_id":2,"first_name":"Beto","last_name":"Garces","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":3,"vote_date":"2020-07-01","vote":"yes"}`,
+		`{"rep_id":1,"first_name":"Ana","last_name":"Fuentes","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":2,"vote":"yes"}`,
+		`{"rep_id":2,"first_name":"Beto","last_name":"Garces","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":2,"vote":"abstain"}`,
+		`{"rep_id":2,"first_name":"Beto","last_name":"Garces","second_last_name":"","party_id":1,"party_short":"PAAA","votation_id":3,"vote":"yes"}`,
 	},
 	// V1: joint+abstain rows -> R1xR2 joint 3 (V1,V2,R3-vote? no: joint counts
 	// shared CAST votations... V1 yes/no, V2 yes(no cast for R3) - see
 	// baseline capture for the verbatim pre-view values).
 	"GetPairAgreementRows.all": {
-		`{"a_id":1,"b_id":2,"joint":3,"same":{"Float64":0,"Valid":true}}`,
-		`{"a_id":1,"b_id":3,"joint":1,"same":{"Float64":0,"Valid":true}}`,
-		`{"a_id":2,"b_id":3,"joint":2,"same":{"Float64":0,"Valid":true}}`,
+		`{"a_id":1,"b_id":2,"joint":3,"same":0}`,
+		`{"a_id":1,"b_id":3,"joint":1,"same":0}`,
+		`{"a_id":2,"b_id":3,"joint":2,"same":0}`,
 	},
 	"GetPairAgreementRows.party1": {
-		`{"a_id":1,"b_id":2,"joint":2,"same":{"Float64":0,"Valid":true}}`,
+		`{"a_id":1,"b_id":2,"joint":2,"same":0}`,
 	},
 	"GetPairAgreementRows.party2": {},
 	"GetVotesByVotation.v1": {
