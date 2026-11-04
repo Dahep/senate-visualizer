@@ -27,17 +27,18 @@ FROM representatives
 WHERE id IN (sqlc.slice('rep_ids'));
 
 -- name: ListRepresentatives :many
+-- Optional chamber filter (analytics.sql spelling): empty string = no filter.
 SELECT r.*, p.short_name AS party_short, p.name AS party_name
 FROM representatives r
 LEFT JOIN representative_parties rp ON rp.representative_id = r.id AND rp.end_date IS NULL
 LEFT JOIN parties p ON p.id = rp.party_id
-WHERE (? = '' OR r.chamber_id = ?)
+WHERE (CAST(sqlc.arg(chamber) AS TEXT) = '' OR r.chamber_id = sqlc.arg(chamber))
 ORDER BY r.active DESC, r.last_name
-LIMIT ? OFFSET ?;
+LIMIT CAST(sqlc.arg(limit) AS INTEGER) OFFSET CAST(sqlc.arg(offset) AS INTEGER);
 
 -- name: CountRepresentatives :one
 SELECT COUNT(*) FROM representatives
-WHERE (? = '' OR chamber_id = ?);
+WHERE (CAST(sqlc.arg(chamber) AS TEXT) = '' OR chamber_id = sqlc.arg(chamber));
 
 -- name: EnrichRepresentative :exec
 UPDATE representatives SET

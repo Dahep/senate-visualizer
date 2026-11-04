@@ -12,29 +12,19 @@ import (
 
 const countVotations = `-- name: CountVotations :one
 SELECT COUNT(*) FROM votations
-WHERE (? = '' OR chamber_id = ?)
-  AND (? = '' OR result = ?)
-  AND (? = '' OR bill_id = ?)
+WHERE (CAST(?1 AS TEXT) = '' OR chamber_id = ?1)
+  AND (CAST(?2 AS TEXT) = '' OR result = ?2)
+  AND (CAST(?3 AS TEXT) = '' OR bill_id = ?3)
 `
 
 type CountVotationsParams struct {
-	Column1   interface{}    `json:"column_1"`
-	ChamberID string         `json:"chamber_id"`
-	Column3   interface{}    `json:"column_3"`
-	Result    sql.NullString `json:"result"`
-	Column5   interface{}    `json:"column_5"`
-	BillID    sql.NullString `json:"bill_id"`
+	Chamber string `json:"chamber"`
+	Result  string `json:"result"`
+	Bill    string `json:"bill"`
 }
 
 func (q *Queries) CountVotations(ctx context.Context, arg CountVotationsParams) (int64, error) {
-	row := q.db.QueryRowContext(ctx, countVotations,
-		arg.Column1,
-		arg.ChamberID,
-		arg.Column3,
-		arg.Result,
-		arg.Column5,
-		arg.BillID,
-	)
+	row := q.db.QueryRowContext(ctx, countVotations, arg.Chamber, arg.Result, arg.Bill)
 	var count int64
 	err := row.Scan(&count)
 	return count, err
@@ -105,22 +95,19 @@ const listVotations = `-- name: ListVotations :many
 SELECT v.id, v.chamber_id, v.external_id, v.session_id, v.bill_id, v.date, v.vote_date, v.subject, v.vote_type, v.result, v.quorum_type, v.legislative_step, v.total_yes, v.total_no, v.total_abstain, v.total_dispensed, b.title AS bill_title
 FROM votations v
 LEFT JOIN bills b ON b.id = v.bill_id
-WHERE (? = '' OR v.chamber_id = ?)
-  AND (? = '' OR v.result = ?)
-  AND (? = '' OR v.bill_id = ?)
+WHERE (CAST(?1 AS TEXT) = '' OR v.chamber_id = ?1)
+  AND (CAST(?2 AS TEXT) = '' OR v.result = ?2)
+  AND (CAST(?3 AS TEXT) = '' OR v.bill_id = ?3)
 ORDER BY v.date DESC
-LIMIT ? OFFSET ?
+LIMIT CAST(?5 AS INTEGER) OFFSET CAST(?4 AS INTEGER)
 `
 
 type ListVotationsParams struct {
-	Column1   interface{}    `json:"column_1"`
-	ChamberID string         `json:"chamber_id"`
-	Column3   interface{}    `json:"column_3"`
-	Result    sql.NullString `json:"result"`
-	Column5   interface{}    `json:"column_5"`
-	BillID    sql.NullString `json:"bill_id"`
-	Limit     int64          `json:"limit"`
-	Offset    int64          `json:"offset"`
+	Chamber string `json:"chamber"`
+	Result  string `json:"result"`
+	Bill    string `json:"bill"`
+	Offset  int64  `json:"offset"`
+	Limit   int64  `json:"limit"`
 }
 
 type ListVotationsRow struct {
@@ -143,16 +130,16 @@ type ListVotationsRow struct {
 	BillTitle       sql.NullString `json:"bill_title"`
 }
 
+// Optional filters (analytics.sql spelling): an empty string disables its
+// filter; named sqlc.args make the one-arg-per-filter invariant a compile
+// fact instead of a positional coincidence bound twice.
 func (q *Queries) ListVotations(ctx context.Context, arg ListVotationsParams) ([]ListVotationsRow, error) {
 	rows, err := q.db.QueryContext(ctx, listVotations,
-		arg.Column1,
-		arg.ChamberID,
-		arg.Column3,
+		arg.Chamber,
 		arg.Result,
-		arg.Column5,
-		arg.BillID,
-		arg.Limit,
+		arg.Bill,
 		arg.Offset,
+		arg.Limit,
 	)
 	if err != nil {
 		return nil, err

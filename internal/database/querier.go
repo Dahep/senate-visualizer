@@ -26,7 +26,7 @@ type Querier interface {
 	CountBills(ctx context.Context, id string) (int64, error)
 	CountPendingCandidates(ctx context.Context, maxAttempts int64) (int64, error)
 	CountRepresentativeVotes(ctx context.Context, representativeID int64) (int64, error)
-	CountRepresentatives(ctx context.Context, arg CountRepresentativesParams) (int64, error)
+	CountRepresentatives(ctx context.Context, chamber string) (int64, error)
 	CountVotations(ctx context.Context, arg CountVotationsParams) (int64, error)
 	DeleteCuratedAffiliations(ctx context.Context) error
 	DeleteVotesByVotation(ctx context.Context, votationID int64) error
@@ -80,7 +80,11 @@ type Querier interface {
 	// matches with a caller-supplied pattern (%term% built in Go)
 	ListBills(ctx context.Context, arg ListBillsParams) ([]Bill, error)
 	ListParties(ctx context.Context) ([]Party, error)
+	// Optional chamber filter (analytics.sql spelling): empty string = no filter.
 	ListRepresentatives(ctx context.Context, arg ListRepresentativesParams) ([]ListRepresentativesRow, error)
+	// Optional filters (analytics.sql spelling): an empty string disables its
+	// filter; named sqlc.args make the one-arg-per-filter invariant a compile
+	// fact instead of a positional coincidence bound twice.
 	ListVotations(ctx context.Context, arg ListVotationsParams) ([]ListVotationsRow, error)
 	MarkCandidateFetched(ctx context.Context, arg MarkCandidateFetchedParams) error
 	// Current members of one party (membership with end_date IS NULL).
