@@ -33,14 +33,16 @@ type LoyaltyRow struct {
 // party-votation pair...).
 type VCount struct{ Yes, No, Abstain int64 }
 
-// Add folds one (vote, n) pair in; non-cast labels are ignored defensively.
-func (v *VCount) Add(vote string, n int64) {
+// Add folds one (vote, n) pair in, decoding through the Vote vocabulary;
+// non-cast values are ignored defensively (the queries feeding it are
+// cast_votes-filtered already).
+func (v *VCount) Add(vote Vote, n int64) {
 	switch vote {
-	case "yes":
+	case VoteYes:
 		v.Yes += n
-	case "no":
+	case VoteNo:
 		v.No += n
-	case "abstain":
+	case VoteAbstain:
 		v.Abstain += n
 	}
 }
@@ -93,7 +95,7 @@ func Cohesion(rows []CohesionRow) Aggregate {
 	votes := map[int64]VCount{}
 	for _, r := range rows {
 		v := votes[r.VotationID]
-		v.Add(r.Vote, r.N)
+		v.Add(Vote(r.Vote), r.N)
 		votes[r.VotationID] = v
 	}
 	cast, majority := Rice(votes)
@@ -127,7 +129,7 @@ func CohesionSeries(rows []CohesionRow) []TrendPoint {
 			months[ym] = m
 		}
 		v := m[r.VotationID]
-		v.Add(r.Vote, r.N)
+		v.Add(Vote(r.Vote), r.N)
 		m[r.VotationID] = v
 	}
 	out := make([]TrendPoint, 0, len(months))
@@ -169,7 +171,7 @@ func Loyalty(rows []LoyaltyRow) []RepLoyalty {
 	for _, r := range rows {
 		k := pvKey{r.PartyID, r.VotationID}
 		v := tallies[k]
-		v.Add(r.Vote, 1)
+		v.Add(Vote(r.Vote), 1)
 		tallies[k] = v
 	}
 	for k, v := range tallies {

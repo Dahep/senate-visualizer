@@ -4,6 +4,8 @@ import (
 	"database/sql"
 	"fmt"
 	"html/template"
+
+	"congress-visualizer/internal/analytics"
 )
 
 // FuncMap supplies the shared template helpers. Nothing here bypasses the
@@ -40,20 +42,21 @@ func FuncMap() template.FuncMap {
 			return v.String
 		},
 		// votelabel renders the Spanish display label of a stored vote value
-		// (the closed enum of docs/DESIGN.md gap 4).
+		// (the closed enum of docs/DESIGN.md gap 4), decoded through the
+		// shared Vote vocabulary.
 		"votelabel": func(v string) string {
-			switch v {
-			case "yes":
+			switch analytics.Vote(v) {
+			case analytics.VoteYes:
 				return "Sí"
-			case "no":
+			case analytics.VoteNo:
 				return "No"
-			case "abstain":
+			case analytics.VoteAbstain:
 				return "Abstención"
-			case "absent":
+			case analytics.VoteAbsent:
 				return "No vota"
-			case "dispensed":
+			case analytics.VoteDispensed:
 				return "Dispensado"
-			case "paired":
+			case analytics.VotePaired:
 				return "Pareo"
 			default:
 				return "Otro"

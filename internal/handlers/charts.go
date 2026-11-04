@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"sort"
 
+	"congress-visualizer/internal/analytics"
 	"congress-visualizer/internal/charts"
 	"congress-visualizer/internal/database"
 )
@@ -57,12 +58,12 @@ func partyLayers(rows []database.GetPartyVoteCountsRow) []charts.PartyLayer {
 				Label: r.ShortName, Color: r.Color,
 			})
 		}
-		switch r.Vote {
-		case "yes":
+		switch analytics.Vote(r.Vote) {
+		case analytics.VoteYes:
 			layers[i].Yes += r.N
-		case "no":
+		case analytics.VoteNo:
 			layers[i].No += r.N
-		case "abstain":
+		case analytics.VoteAbstain:
 			layers[i].Abstain += r.N
 		}
 	}

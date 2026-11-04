@@ -9,6 +9,8 @@ import (
 	"regexp"
 	"strings"
 	"time"
+
+	"congress-visualizer/internal/analytics"
 )
 
 // MapVotacion is a pure function translating a verified XML payload into the
@@ -18,20 +20,21 @@ import (
 //   - vote_date is the date-only prefix of Fecha; unparseable -> "0000-00-00"
 //   - no malformed source value fails ingest
 
-// Vote is the internal closed enum; the individual_votes CHECK mirrors it.
-type Vote string
+// Vote is the stored vote vocabulary. Its single definition lives in
+// internal/analytics (vote.go) — the exact type VCount counts with — so
+// the ingest closed enum, the schema CHECK's legal set, and every count
+// route through one owner; this alias keeps the camara boundary names.
+type Vote = analytics.Vote
 
 const (
-	VoteYes       Vote = "yes"
-	VoteNo        Vote = "no"
-	VoteAbstain   Vote = "abstain"
-	VoteAbsent    Vote = "absent"
-	VoteDispensed Vote = "dispensed"
-	VotePaired    Vote = "paired"
-	VoteOther     Vote = "other"
+	VoteYes       = analytics.VoteYes
+	VoteNo        = analytics.VoteNo
+	VoteAbstain   = analytics.VoteAbstain
+	VoteAbsent    = analytics.VoteAbsent
+	VoteDispensed = analytics.VoteDispensed
+	VotePaired    = analytics.VotePaired
+	VoteOther     = analytics.VoteOther
 )
-
-func (v Vote) String() string { return string(v) }
 
 // NormalizeVoteOption maps the <Opcion> text to the closed vote enum.
 // Observed source values: Afirmativo, En Contra, Abstencion, No Vota,
@@ -153,6 +156,10 @@ func ParseVotation(x VotacionXML) (VotationData, error) {
 	}
 	if len(x.Votos) > 0 {
 		var cast int
+		// Membership here is deliberately wider than the Rice cast rule
+		// (analytics.Vote.Cast, the cast_votes view subset): this probe
+		// mirrors the API counters, where dispensed and unmapped rows
+		// are still logged values.
 		for _, v := range d.Votes {
 			if v.Vote != VoteAbsent && v.Vote != VotePaired {
 				cast++

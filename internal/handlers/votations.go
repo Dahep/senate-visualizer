@@ -3,6 +3,7 @@ package handlers
 import (
 	"net/http"
 
+	"congress-visualizer/internal/analytics"
 	"congress-visualizer/internal/database"
 	"congress-visualizer/internal/render"
 )
@@ -87,18 +88,18 @@ func buildBreakdown(rows []database.GetVotesByVotationRow) VoteBreakdown {
 			})
 		}
 		p := &b.Parties[i]
-		switch r.Vote {
-		case "yes":
+		switch analytics.Vote(r.Vote) {
+		case analytics.VoteYes:
 			p.Yes++
-		case "no":
+		case analytics.VoteNo:
 			p.No++
-		case "abstain":
+		case analytics.VoteAbstain:
 			p.Abstain++
-		case "absent":
+		case analytics.VoteAbsent:
 			p.Absent++
-		case "dispensed":
+		case analytics.VoteDispensed:
 			p.Dispensed++
-		case "paired":
+		case analytics.VotePaired:
 			p.Paired++
 		default:
 			p.Other++
