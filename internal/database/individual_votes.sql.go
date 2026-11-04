@@ -127,14 +127,13 @@ SELECT iv.vote, iv.vote_raw,
        COALESCE(p.short_name, 'sin-partido') AS party_short,
        COALESCE(p.name, 'Sin partido') AS party_name,
        COALESCE(p.color, '#808080') AS party_color,
-       rp.id IS NOT NULL AS affiliated
+       pad.votation_id IS NOT NULL AS affiliated
 FROM individual_votes iv
 JOIN representatives r ON r.id = iv.representative_id
-LEFT JOIN representative_parties rp
-    ON rp.representative_id = r.id
-   AND rp.start_date <= (SELECT CASE WHEN vote_date='0000-00-00' THEN '' ELSE vote_date END FROM votations WHERE id = iv.votation_id)
-   AND (rp.end_date IS NULL OR rp.end_date >= (SELECT vote_date FROM votations WHERE id = iv.votation_id))
-LEFT JOIN parties p ON p.id = rp.party_id
+LEFT JOIN rep_party_at_date pad
+       ON pad.votation_id = iv.votation_id
+      AND pad.representative_id = iv.representative_id
+LEFT JOIN parties p ON p.id = pad.party_id
 WHERE iv.votation_id = ?
 ORDER BY party_name, r.last_name
 `

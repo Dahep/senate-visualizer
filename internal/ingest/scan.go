@@ -165,14 +165,20 @@ func pow10(k int64) int64 {
 }
 
 // afterSweep records the operator-visible results: the depth criterion
-// (MinVoteDate — a "complete" sweep spanning only recent days is loud). It
-// honors the caller's ctx, not context.Background().
+// (MinVoteDate — a "complete" sweep spanning only recent days is loud) and
+// the affiliation coverage-gap count (DESIGN.md 5/graft C, never a
+// failure). It honors the caller's ctx, not context.Background().
 func (s *Syncer) afterSweep(ctx context.Context, res *ScanResult) error {
 	minDate, err := s.q.GetMinVoteDate(ctx)
 	if err != nil {
 		return err
 	}
 	res.MinVoteDate = minDate
+	gaps, err := s.q.AffiliationGaps(ctx)
+	if err != nil {
+		return err
+	}
+	res.AffiliationGaps = len(gaps)
 	return nil
 }
 

@@ -15,7 +15,13 @@ type Querier interface {
 	// the lease is unclaimed (empty), expired (any owner may steal only AFTER
 	// expiry), or current-owner (renewal while the lease is still live).
 	AcquireSyncLock(ctx context.Context, arg AcquireSyncLockParams) (int64, error)
-	// Deputies with votes but no party-at-date or party membership at all.
+	// Coverage-gap signal the seed workflow reports to the operator (DESIGN.md
+	// 5/graft C): deputies WITH at least one vote the party-at-date rule (the
+	// rep_party_at_date view) does not cover - an uncovered vote is one gap. The
+	// '0000-00-00' unparseable-date sentinel is excluded: those votes render
+	// unaffiliated by ingest design, and no file row can ever cover them. True
+	// independents vs missing rows are the operator's decision - surfaced,
+	// never an ingest failure.
 	AffiliationGaps(ctx context.Context) ([]int64, error)
 	CountBills(ctx context.Context, id string) (int64, error)
 	CountPendingCandidates(ctx context.Context, maxAttempts int64) (int64, error)
@@ -51,7 +57,9 @@ type Querier interface {
 	GetPairAgreementRows(ctx context.Context, arg GetPairAgreementRowsParams) ([]GetPairAgreementRowsRow, error)
 	GetParty(ctx context.Context, id int64) (Party, error)
 	GetPartyByShortName(ctx context.Context, shortName string) (Party, error)
-	// Per-party vote counts for one votation (party-at-date join). Consumed by
+	// Party-at-date analytics: every query here joins rep_party_at_date (the
+	// view from migration 003), the ONE spelling of the party-at-date rule.
+	// Per-party vote counts for one votation via rep_party_at_date. Consumed by
 	// the breakdown chart and, in Phase 2, the Rice-cohesion arithmetic.
 	GetPartyVoteCounts(ctx context.Context, votationID int64) ([]GetPartyVoteCountsRow, error)
 	GetRepresentative(ctx context.Context, id int64) (GetRepresentativeRow, error)

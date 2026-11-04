@@ -14,11 +14,10 @@ const getCohesionRows = `-- name: GetCohesionRows :many
 SELECT p.id AS party_id, p.short_name, iv.votation_id, v.vote_date, iv.vote, COUNT(*) AS n
 FROM individual_votes iv
 JOIN votations v ON v.id = iv.votation_id
-JOIN representative_parties rp
-  ON rp.representative_id = iv.representative_id
- AND rp.start_date <= v.vote_date
- AND (rp.end_date IS NULL OR rp.end_date >= v.vote_date)
-JOIN parties p ON p.id = rp.party_id
+JOIN rep_party_at_date pad
+  ON pad.votation_id = iv.votation_id
+ AND pad.representative_id = iv.representative_id
+JOIN parties p ON p.id = pad.party_id
 WHERE v.chamber_id = ?1
   AND iv.vote IN ('yes', 'no', 'abstain')
   AND (CAST(?2 AS TEXT) = '' OR v.vote_date >= CAST(?2 AS TEXT))
@@ -91,11 +90,10 @@ SELECT iv.representative_id AS rep_id,
 FROM individual_votes iv
 JOIN votations v ON v.id = iv.votation_id
 JOIN representatives r ON r.id = iv.representative_id
-JOIN representative_parties rp
-  ON rp.representative_id = iv.representative_id
- AND rp.start_date <= v.vote_date
- AND (rp.end_date IS NULL OR rp.end_date >= v.vote_date)
-JOIN parties p ON p.id = rp.party_id
+JOIN rep_party_at_date pad
+  ON pad.votation_id = iv.votation_id
+ AND pad.representative_id = iv.representative_id
+JOIN parties p ON p.id = pad.party_id
 WHERE v.chamber_id = ?1
   AND iv.vote IN ('yes', 'no', 'abstain')
   AND (CAST(?2 AS TEXT) = '' OR v.vote_date >= CAST(?2 AS TEXT))
@@ -170,15 +168,15 @@ WHERE v.chamber_id = ?1
   AND (CAST(?2 AS TEXT) = '' OR v.vote_date >= CAST(?2 AS TEXT))
   AND (CAST(?3 AS TEXT) = '' OR v.vote_date <= CAST(?3 AS TEXT))
   AND (CAST(?4 AS INTEGER) = 0 OR EXISTS (
-        SELECT 1 FROM representative_parties rpa JOIN parties pa ON pa.id = rpa.party_id
-        WHERE rpa.representative_id = a.representative_id AND pa.id = CAST(?4 AS INTEGER)
-          AND rpa.start_date <= v.vote_date
-          AND (rpa.end_date IS NULL OR rpa.end_date >= v.vote_date)))
+        SELECT 1 FROM rep_party_at_date pad
+        WHERE pad.representative_id = a.representative_id
+          AND pad.votation_id = a.votation_id
+          AND pad.party_id = CAST(?4 AS INTEGER)))
   AND (CAST(?4 AS INTEGER) = 0 OR EXISTS (
-        SELECT 1 FROM representative_parties rpb JOIN parties pb ON pb.id = rpb.party_id
-        WHERE rpb.representative_id = b.representative_id AND pb.id = CAST(?4 AS INTEGER)
-          AND rpb.start_date <= v.vote_date
-          AND (rpb.end_date IS NULL OR rpb.end_date >= v.vote_date)))
+        SELECT 1 FROM rep_party_at_date pad
+        WHERE pad.representative_id = b.representative_id
+          AND pad.votation_id = b.votation_id
+          AND pad.party_id = CAST(?4 AS INTEGER)))
 GROUP BY a.representative_id, b.representative_id
 `
 
@@ -233,16 +231,14 @@ func (q *Queries) GetPairAgreementRows(ctx context.Context, arg GetPairAgreement
 }
 
 const getPartyVoteCounts = `-- name: GetPartyVoteCounts :many
+
 SELECT p.id AS party_id, p.short_name, p.name AS party_name, p.color,
        iv.vote AS vote, COUNT(*) AS n
 FROM individual_votes iv
-JOIN representatives r ON r.id = iv.representative_id
-JOIN votations v ON v.id = iv.votation_id
-JOIN representative_parties rp
-    ON rp.representative_id = r.id
-   AND rp.start_date <= v.vote_date
-   AND (rp.end_date IS NULL OR rp.end_date >= v.vote_date)
-JOIN parties p ON p.id = rp.party_id
+JOIN rep_party_at_date pad
+  ON pad.votation_id = iv.votation_id
+ AND pad.representative_id = iv.representative_id
+JOIN parties p ON p.id = pad.party_id
 WHERE iv.votation_id = ?
 GROUP BY p.id, iv.vote
 `
@@ -256,7 +252,9 @@ type GetPartyVoteCountsRow struct {
 	N         int64  `json:"n"`
 }
 
-// Per-party vote counts for one votation (party-at-date join). Consumed by
+// Party-at-date analytics: every query here joins rep_party_at_date (the
+// view from migration 003), the ONE spelling of the party-at-date rule.
+// Per-party vote counts for one votation via rep_party_at_date. Consumed by
 // the breakdown chart and, in Phase 2, the Rice-cohesion arithmetic.
 func (q *Queries) GetPartyVoteCounts(ctx context.Context, votationID int64) ([]GetPartyVoteCountsRow, error) {
 	rows, err := q.db.QueryContext(ctx, getPartyVoteCounts, votationID)

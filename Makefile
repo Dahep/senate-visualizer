@@ -1,6 +1,6 @@
 DB_PATH ?= data/congress.db
 
-.PHONY: setup generate migrate test run build tidy ingest-full dev seed
+.PHONY: setup generate migrate test run build tidy ingest-full dev seed seed-check
 
 setup: ## install pinned codegen/migration tools
 	go install github.com/sqlc-dev/sqlc/cmd/sqlc@v1.31.1
@@ -27,6 +27,9 @@ ingest-full: ## one-shot historical load (resumable; single-writer)
 
 seed: ## parties registry + deputies + validated affiliations
 	go run ./cmd/sync -seed-parties data/parties.json -seed data/affiliations.json
+
+seed-check: ## validate parties + affiliations (pure + DB) without applying
+	go run ./cmd/sync -seed-check
 
 dev: ## web server on :8080 with background incremental sync
 	go run ./cmd/server
