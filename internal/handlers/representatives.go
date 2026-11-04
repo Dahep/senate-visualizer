@@ -18,16 +18,14 @@ func (s *Server) Representatives(w http.ResponseWriter, req *http.Request) {
 	page := pageParam(req)
 	pg := newPagination(page, 0)
 	rows, err := s.Q.ListRepresentatives(req.Context(), database.ListRepresentativesParams{
-		Column1: "camara", ChamberID: "camara",
-		Limit: pageSize, Offset: pg.offset(),
+		Chamber: "camara",
+		Limit:   pageSize, Offset: pg.offset(),
 	})
 	if err != nil {
 		s.dbErr(w, req, err)
 		return
 	}
-	total, err := s.Q.CountRepresentatives(req.Context(), database.CountRepresentativesParams{
-		Column1: "camara", ChamberID: "camara",
-	})
+	total, err := s.Q.CountRepresentatives(req.Context(), "camara")
 	if err != nil {
 		s.dbErr(w, req, err)
 		return

@@ -13,16 +13,11 @@ import (
 
 const countRepresentatives = `-- name: CountRepresentatives :one
 SELECT COUNT(*) FROM representatives
-WHERE (? = '' OR chamber_id = ?)
+WHERE (CAST(?1 AS TEXT) = '' OR chamber_id = ?1)
 `
 
-type CountRepresentativesParams struct {
-	Column1   interface{} `json:"column_1"`
-	ChamberID string      `json:"chamber_id"`
-}
-
-func (q *Queries) CountRepresentatives(ctx context.Context, arg CountRepresentativesParams) (int64, error) {
-	row := q.db.QueryRowContext(ctx, countRepresentatives, arg.Column1, arg.ChamberID)
+func (q *Queries) CountRepresentatives(ctx context.Context, chamber string) (int64, error) {
+	row := q.db.QueryRowContext(ctx, countRepresentatives, chamber)
 	var count int64
 	err := row.Scan(&count)
 	return count, err
@@ -167,16 +162,15 @@ SELECT r.id, r.chamber_id, r.external_id, r.first_name, r.last_name, r.second_la
 FROM representatives r
 LEFT JOIN representative_parties rp ON rp.representative_id = r.id AND rp.end_date IS NULL
 LEFT JOIN parties p ON p.id = rp.party_id
-WHERE (? = '' OR r.chamber_id = ?)
+WHERE (CAST(?1 AS TEXT) = '' OR r.chamber_id = ?1)
 ORDER BY r.active DESC, r.last_name
-LIMIT ? OFFSET ?
+LIMIT CAST(?3 AS INTEGER) OFFSET CAST(?2 AS INTEGER)
 `
 
 type ListRepresentativesParams struct {
-	Column1   interface{} `json:"column_1"`
-	ChamberID string      `json:"chamber_id"`
-	Limit     int64       `json:"limit"`
-	Offset    int64       `json:"offset"`
+	Chamber string `json:"chamber"`
+	Offset  int64  `json:"offset"`
+	Limit   int64  `json:"limit"`
 }
 
 type ListRepresentativesRow struct {
@@ -193,13 +187,9 @@ type ListRepresentativesRow struct {
 	PartyName      sql.NullString `json:"party_name"`
 }
 
+// Optional chamber filter (analytics.sql spelling): empty string = no filter.
 func (q *Queries) ListRepresentatives(ctx context.Context, arg ListRepresentativesParams) ([]ListRepresentativesRow, error) {
-	rows, err := q.db.QueryContext(ctx, listRepresentatives,
-		arg.Column1,
-		arg.ChamberID,
-		arg.Limit,
-		arg.Offset,
-	)
+	rows, err := q.db.QueryContext(ctx, listRepresentatives, arg.Chamber, arg.Offset, arg.Limit)
 	if err != nil {
 		return nil, err
 	}

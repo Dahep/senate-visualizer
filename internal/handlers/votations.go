@@ -1,8 +1,6 @@
 package handlers
 
 import (
-	"database/sql"
-
 	"net/http"
 
 	"congress-visualizer/internal/database"
@@ -20,8 +18,8 @@ func (s *Server) Votations(w http.ResponseWriter, req *http.Request) {
 	page := pageParam(req)
 	pg := newPagination(page, 0)
 	filter := database.ListVotationsParams{
-		Column1: "camara", ChamberID: "camara", Column3: "", Result: sql.NullString{}, Column5: "", BillID: sql.NullString{},
-		Limit: pageSize, Offset: pg.offset(),
+		Chamber: "camara",
+		Limit:   pageSize, Offset: pg.offset(),
 	}
 	rows, err := s.Q.ListVotations(req.Context(), filter)
 	if err != nil {
@@ -29,7 +27,7 @@ func (s *Server) Votations(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 	total, err := s.Q.CountVotations(req.Context(), database.CountVotationsParams{
-		Column1: "camara", ChamberID: "camara", Column3: "", Result: sql.NullString{}, Column5: "", BillID: sql.NullString{},
+		Chamber: "camara",
 	})
 	if err != nil {
 		s.dbErr(w, req, err)
